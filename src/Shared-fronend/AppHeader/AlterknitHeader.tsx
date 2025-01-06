@@ -57,8 +57,13 @@ export default function AlterknitHeader({
   };
 
   return (
-    <Box bgcolor={"white"} width="100%" borderBottom={"1px solid black"}>
-      <AppContainer display={{ xs: "none", xl: "flex" }}>
+    <Box
+      bgcolor={"black"}
+      width="100%"
+      borderBottom={"1px solid black"}
+      display={{ xs: "none", sm: "none", md: "flex", lg: "flex" }}
+    >
+      <AppContainer>
         <Stack
           pt={isSmallScreen ? 3 : 4.5}
           pb={4}
