@@ -1,10 +1,10 @@
 import { Box, Stack, Typography, useMediaQuery } from "@mui/material";
-import { Link, useLocation } from "react-router-dom";
 
 import AppContainer from "./AppContainer";
 import Colors from "./Colors";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { Link } from "react-router-dom";
 import routes from "../routes/routes";
 import styled from "@emotion/styled";
 
@@ -41,24 +41,11 @@ export default function AppFooter({
   setActiveTab,
 }: Readonly<FooterProps>) {
   const isSmScreen = useMediaQuery("(max-width:950px)");
-  const services = [
-    { linkname: "Home", url: routes.ROOT },
-    { linkname: "About Us", url: routes.ROOT },
-    { linkname: "Work", url: routes.ROOT },
-
-    { linkname: "Contact Us", url: routes.ROOT },
-  ];
-  const handleMenuClick = (menu: string) => {
-    localStorage.setItem(activeTab, menu);
-    setActiveTab(menu);
-  };
-
-  const location = useLocation();
 
   return (
     <Box bgcolor={Colors.BLACK}>
       <Box borderBottom="1px solid #272727">
-        <AppContainer maxWidth={1500} paddingLeft={0} paddingRight={0}>
+        <AppContainer maxWidth={1300} paddingLeft={0} paddingRight={0}>
           <Stack
             padding={"4rem 2rem"}
             direction={"row"}

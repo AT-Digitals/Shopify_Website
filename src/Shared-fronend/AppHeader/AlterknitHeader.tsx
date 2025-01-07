@@ -66,7 +66,7 @@ export default function AlterknitHeader({
       borderBottom={"1px solid black"}
       display={{ xs: "none", sm: "none", md: "flex", lg: "flex" }}
     >
-      <AppContainer maxWidth={1500}>
+      <AppContainer maxWidth={1300}>
         <Stack
           pt={3}
           pb={3}
