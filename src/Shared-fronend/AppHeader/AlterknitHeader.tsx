@@ -38,10 +38,10 @@ export default function AlterknitHeader({
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const services = [
     { linkname: "Home", url: routes.ROOT },
-    { linkname: "About Us", url: routes.ABOUT },
-    { linkname: "Work", url: routes.ROOT },
-
-    { linkname: "Contact Us", url: routes.ROOT },
+    { linkname: "About", url: routes.ROOT },
+    { linkname: "Work", url: routes.ABOUT },
+    { linkname: "Services", url: routes.ROOT },
+    { linkname: "Industries", url: routes.ROOT },
   ];
 
   const handleMenuClick = (menu: string) => {
@@ -142,7 +142,7 @@ export default function AlterknitHeader({
           <Stack
             whiteSpace="nowrap"
             alignItems="center"
-            spacing={isSmallScreen ? 2 : 6}
+            spacing={isSmallScreen ? 2 : 4}
             direction={isSmallScreen ? "column" : "row"}
           >
             {services.map((service, index) => (
@@ -157,8 +157,14 @@ export default function AlterknitHeader({
               </HeaderLink>
             ))}
             <HeaderLink href={"/"} className="service-item">
-              <Typography fontSize="17px" fontWeight={400}>
-                Get in Touch
+              <Typography
+                border={"1px solid white"}
+                borderRadius={"50px"}
+                padding={"10px 15px"}
+                fontSize="17px"
+                fontWeight={400}
+              >
+                Get In Touch
               </Typography>
             </HeaderLink>
           </Stack>
