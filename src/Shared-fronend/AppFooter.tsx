@@ -1,4 +1,11 @@
-import { Box, Stack, Typography, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  Button,
+  Stack,
+  TextField,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 
 import AppContainer from "./AppContainer";
 import Colors from "./Colors";
@@ -237,7 +244,7 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={""}>Shopify Store Setup</StyleLink>
+                <StyleLink to={""}>Work</StyleLink>
               </li>
               <li
                 style={{
@@ -245,7 +252,7 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={""}>Shopify Theme Customisation</StyleLink>
+                <StyleLink to={""}>Industries</StyleLink>
               </li>
               <li
                 style={{
@@ -253,7 +260,7 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={""}>Shopify Custom theme</StyleLink>
+                <StyleLink to={""}>Privacy Policy</StyleLink>
               </li>
               <li
                 style={{
@@ -261,50 +268,56 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={""}>Shopify Migration</StyleLink>
+                <StyleLink to={""}>Terms and Conditions</StyleLink>
               </li>
             </ul>
-            <ul
-              style={{
-                flexWrap: "wrap",
-                justifyContent: "center",
-                display: "flex",
-                flexDirection: "column",
-                gap: "1rem",
-                padding: 0,
-                marginTop: "0px",
-              }}
-            >
-              <Typography color={"white"}> Quick Links</Typography>
-              <li
+            <Box display={"flex"} flexDirection={"column"}>
+              <Typography mb={2} color={"white"}>
+                Newsletter Sign Up
+              </Typography>
+              <Typography color={"white"}>Email</Typography>
+              <TextField
+                variant="standard"
+                sx={{
+                  marginTop: 1,
+                  color: "white",
+                  border: "none",
+                  background: "white",
+                  padding: "0 15px",
+                }}
+                placeholder="email"
+              />
+              <Typography
+                border={"1px solid white"}
+                borderRadius={"50px"}
+                padding={"10px 15px"}
+                fontSize="17px"
+                fontWeight={400}
+                color={"white"}
+                textAlign={"center"}
+                sx={{
+                  cursor: "pointer",
+                  marginTop: 3,
+                }}
+              >
+                Send
+              </Typography>{" "}
+            </Box>
+
+            {/* <li
                 style={{
                   listStyleType: "none",
                 }}
               >
-                <StyleLink to={""}>Shopify Store Setup</StyleLink>
+                <StyleLink to={""}>Email: info@comerce.com</StyleLink>
               </li>
               <li
                 style={{
                   listStyleType: "none",
                 }}
               >
-                <StyleLink to={""}>Shopify Theme Customisation</StyleLink>
-              </li>
-              <li
-                style={{
-                  listStyleType: "none",
-                }}
-              >
-                <StyleLink to={""}>Shopify Custom theme</StyleLink>
-              </li>
-              <li
-                style={{
-                  listStyleType: "none",
-                }}
-              >
-                <StyleLink to={""}>Shopify Migration</StyleLink>
-              </li>
-            </ul>
+                <StyleLink to={""}>+91 1234567890</StyleLink>
+              </li> */}
 
             {/* <ul
               style={{
