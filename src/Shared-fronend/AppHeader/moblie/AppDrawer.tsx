@@ -1,13 +1,25 @@
-import { Drawer, List, Stack, Typography, styled } from "@mui/material";
+import {
+  Collapse,
+  Drawer,
+  List,
+  ListItemButton,
+  Stack,
+  Typography,
+  styled,
+} from "@mui/material";
 
 import Colors from "../../Colors";
 import CustomButton from "../../CustomButton";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import routes from "../../../routes/routes";
+import { useState } from "react";
 
 const HeaderLink = styled("a")`
   text-decoration: none;
   position: relative;
   color: graytext;
+  font-size: 14px;
 
   &:hover {
     color: black;
@@ -19,23 +31,13 @@ const StyledDrawer = styled(Drawer)({
   "& .MuiDrawer-paper": {
     width: "300px",
     boxSizing: "border-box",
-    backgroundColor: Colors.WHITE,
+    backgroundColor: Colors.BLACK,
     padding: "20px",
     "& .MuiListItemButton-root:hover": {
       backgroundColor: Colors.WHITE,
       color: Colors.WHITE,
     },
   },
-});
-
-const StyledButton = styled(CustomButton)({
-  borderRadius: "5px",
-  fontSize: "22px",
-  fontWeight: 600,
-  padding: "16px 30px",
-  textTransform: "none",
-  whiteSpace: "nowrap",
-  fontFamily: `"ProximaNovaSemibold", sans-serif !important`,
 });
 
 interface AppDrawerProps {
@@ -51,29 +53,31 @@ export default function AppDrawer({
   setActiveTab,
   activeTab,
 }: Readonly<AppDrawerProps>) {
+  const [servicesOpen, setServicesOpen] = useState(false);
+
   const services = [
     { linkname: "Home", url: routes.ROOT },
-    { linkname: "About Us", url: routes.ROOT },
-    { linkname: "Work", url: routes.ROOT },
-
-    { linkname: "Contact Us", url: routes.ROOT },
+    { linkname: "About", url: routes.ABOUT },
+    { linkname: "Work", url: "/work" },
   ];
+
+  const services2 = [{ linkname: "Industries", url: "/Indus" }];
 
   const handleMenuClick = (menu: string) => {
     localStorage.setItem(activeTab, menu);
     setActiveTab(menu);
   };
 
-  function clearCaches() {
-    if ("caches" in window) {
-      caches.keys().then(function (cacheNames) {
-        cacheNames.forEach(function (cacheName) {
-          caches.delete(cacheName);
-          console.log(`${cacheName} cache cleared`);
-        });
-      });
-    }
-  }
+  const subServices = [
+    { linkname: "Shopify Store Setup", url: "/ShopifySetup" },
+    { linkname: "Shopify Theme Customisation", url: "ShopifyCustomisation" },
+    { linkname: "Shopify Custom theme", url: "/ShopifyCustomtheme" },
+    { linkname: "Shopify Migration", url: "/ShopifyMigration" },
+  ];
+
+  const toggleServices = () => {
+    setServicesOpen(!servicesOpen);
+  };
 
   return (
     <StyledDrawer
@@ -81,7 +85,6 @@ export default function AppDrawer({
       anchor="left"
       open={open}
       onClose={onClose}
-      // onEscapeKeyDown={onClose}
     >
       <List>
         {services.map((service, index) => (
@@ -92,49 +95,94 @@ export default function AppDrawer({
             className="service-item"
           >
             <Typography
-              fontSize="22px"
+              fontSize="16px"
               fontFamily={`"ProximaNovaMedium", sans-serif`}
               fontWeight={500}
               padding={2}
-              color={Colors.BLACK}
+              color={Colors.WHITE}
             >
               {service.linkname}
             </Typography>
           </HeaderLink>
         ))}
-      </List>
-      <Stack direction={"column"} spacing={3} alignItems="start">
-        <HeaderLink
-          href={routes.ROOT}
-          onClick={() => handleMenuClick(routes.ROOT)}
-          className="service-item"
-        >
-          <Typography
-            fontSize="22px"
-            fontFamily={`"ProximaNovaMedium", sans-serif`}
-            fontWeight={500}
-            padding={2}
-            color={Colors.BLACK}
-          >
-            get in touch
-          </Typography>
-        </HeaderLink>
 
-        <HeaderLink
-          // href={routes.SCHEDULE_REPAIR}
-          className="service-item"
-          style={{ marginTop: 0 }}
+        {/* Toggleable Services Section */}
+        <ListItemButton
+          sx={{
+            justifyContent: "space-between",
+          }}
+          onClick={toggleServices}
         >
           <Typography
-            fontSize="22px"
+            fontSize="16px"
+            fontFamily={`"ProximaNovaMedium", sans-serif`}
+            fontWeight={500}
+            color={Colors.WHITE}
+          >
+            Services
+          </Typography>
+          {servicesOpen ? (
+            <ExpandLessIcon sx={{ color: Colors.WHITE }} />
+          ) : (
+            <ExpandMoreIcon sx={{ color: Colors.WHITE }} />
+          )}
+        </ListItemButton>
+        <Collapse in={servicesOpen} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            {subServices.map((subService, index) => (
+              <HeaderLink
+                href={subService.url}
+                onClick={() => handleMenuClick(subService.url)}
+                key={index}
+                className="sub-service-item"
+              >
+                <Typography
+                  fontSize="14px"
+                  fontFamily={`"ProximaNovaMedium", sans-serif`}
+                  fontWeight={400}
+                  padding={2}
+                  color={Colors.WHITE}
+                  sx={{ paddingLeft: "20px" }}
+                >
+                  {subService.linkname}
+                </Typography>
+              </HeaderLink>
+            ))}
+          </List>
+        </Collapse>
+      </List>
+      {services2.map((service, index) => (
+        <HeaderLink
+          href={service.url}
+          onClick={() => handleMenuClick(service.url)}
+          key={index}
+          className="service-item"
+        >
+          <Typography
+            fontSize="16px"
             fontFamily={`"ProximaNovaMedium", sans-serif`}
             fontWeight={500}
             padding={2}
-            color={Colors.BLACK}
+            color={Colors.WHITE}
           >
-            button 1
+            {service.linkname}
           </Typography>
         </HeaderLink>
+      ))}
+      <Stack direction={"column"} spacing={3} alignItems="start">
+        <Typography
+          border={"1px solid white"}
+          borderRadius={"50px"}
+          padding={"10px 15px"}
+          fontSize="17px"
+          fontWeight={400}
+          color={"white"}
+          sx={{
+            cursor: "pointer",
+          }}
+        >
+          Get In Touch
+        </Typography>
       </Stack>
     </StyledDrawer>
   );
