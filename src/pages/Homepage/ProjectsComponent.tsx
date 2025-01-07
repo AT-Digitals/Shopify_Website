@@ -57,14 +57,22 @@ export default function ProjectsComponent({
   };
 
   return (
-    <Box margin={"30px"} display={"flex"} flexDirection={flexDirection}>
+    <Box
+      sx={{
+        flexDirection: { xs: "column", sm: flexDirection }, // Responsive handling
+        gap: "10px",
+      }}
+      margin={{ xs: "0px", lg: "30px" }}
+      display={"flex"}
+      flexDirection={flexDirection}
+    >
       {/* Big Image Container */}
       <Box
         sx={{
           width: "100%",
-          maxWidth: "980px",
+          maxWidth: { xs: "340px", lg: "980px" },
           padding: "16px",
-          height: "500px",
+          height: { xs: "224px", lg: "500px" },
           backgroundColor: "#f9f9f9",
           marginBottom: "30px",
         }}
@@ -87,7 +95,7 @@ export default function ProjectsComponent({
             sx={{
               position: "absolute",
               top: "34px",
-              left: "40px",
+              left: { xs: "20px", lg: "40px" },
               display: "flex",
               gap: "8px",
               zIndex: 2,
@@ -100,7 +108,7 @@ export default function ProjectsComponent({
                 sx={{
                   backgroundColor: "#ffffff",
                   fontWeight: "700",
-                  fontSize: "13px",
+                  fontSize: { xs: "10px", lg: "13px" },
                   textTransform: "uppercase",
                   letterSpacing: ".1em",
                 }}
@@ -111,10 +119,10 @@ export default function ProjectsComponent({
             sx={{
               position: "absolute",
               bottom: "45px",
-              left: "40px",
+              left: { xs: "20px", lg: "40px" },
               color: "white",
               fontWeight: "bold",
-              fontSize: "32px",
+              fontSize: { xs: "24px", lg: "32px" },
               textShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
               zIndex: 2,
             }}
@@ -125,10 +133,10 @@ export default function ProjectsComponent({
             sx={{
               position: "absolute",
               bottom: "90px",
-              left: "40px",
+              left: { xs: "20px", lg: "40px" },
               color: "white",
               fontWeight: "bold",
-              fontSize: "32px",
+              fontSize: { xs: "20px", lg: "32px" },
               textShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
               zIndex: 2,
             }}
@@ -142,7 +150,7 @@ export default function ProjectsComponent({
             sx={{
               position: "absolute",
               bottom: "22px",
-              left: "40px",
+              left: { xs: "20px", lg: "40px" },
               color: "white",
               fontSize: "16px",
               textShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
@@ -158,9 +166,9 @@ export default function ProjectsComponent({
       <Box
         sx={{
           width: "100%",
-          maxWidth: "460px",
+          maxWidth: { xs: "340px", lg: "460px" },
           padding: "16px",
-          height: "500px",
+          height: { xs: "224px", lg: "500px" },
           backgroundColor: "#f9f9f9",
           marginBottom: "30px",
         }}
@@ -183,7 +191,7 @@ export default function ProjectsComponent({
             sx={{
               position: "absolute",
               top: "34px",
-              left: "40px",
+              left: { xs: "20px", lg: "40px" },
               display: "flex",
               gap: "8px",
               zIndex: 2,
@@ -196,7 +204,7 @@ export default function ProjectsComponent({
                 sx={{
                   backgroundColor: "#ffffff",
                   fontWeight: "700",
-                  fontSize: "13px",
+                  fontSize: { xs: "10px", lg: "13px" },
                   textTransform: "uppercase",
                   letterSpacing: ".1em",
                 }}
@@ -206,11 +214,11 @@ export default function ProjectsComponent({
           <Typography
             sx={{
               position: "absolute",
-              bottom: "45px",
-              left: "40px",
+              bottom: { xs: "30px", lg: "45px" },
+              left: { xs: "20px", lg: "40px" },
               color: "white",
               fontWeight: "bold",
-              fontSize: "32px",
+              fontSize: { xs: "24px", lg: "32px" },
               textShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
               zIndex: 2,
             }}
@@ -220,11 +228,11 @@ export default function ProjectsComponent({
           <Rating
             sx={{
               position: "absolute",
-              bottom: "90px",
-              left: "40px",
+              bottom: { xs: "60px", lg: "90px" },
+              left: { xs: "20px", lg: "40px" },
               color: "white",
               fontWeight: "bold",
-              fontSize: "24px",
+              fontSize: { xs: "20px", lg: "24px" },
               textShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
               zIndex: 2,
             }}
@@ -237,8 +245,8 @@ export default function ProjectsComponent({
           <Typography
             sx={{
               position: "absolute",
-              bottom: "22px",
-              left: "40px",
+              bottom: { xs: "10px", lg: "22px" },
+              left: { xs: "20px", lg: "40px" },
               color: "white",
               fontSize: "16px",
               textShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
