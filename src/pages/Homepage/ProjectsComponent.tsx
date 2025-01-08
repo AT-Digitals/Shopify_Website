@@ -72,9 +72,9 @@ export default function ProjectsComponent({
         <Box
           sx={{
             width: "100%",
-            maxWidth: { xs: "340px", sm: "650px", lg: "980px" },
+            maxWidth: { xs: "340px", sm: "650px", md: "870px", lg: "980px" },
             padding: "16px",
-            height: { xs: "224px", sm: "280px", lg: "500px" },
+            height: { xs: "224px", sm: "280px", md: "390px", lg: "500px" },
             backgroundColor: "#f9f9f9",
             marginBottom: "30px",
           }}
@@ -168,9 +168,9 @@ export default function ProjectsComponent({
         <Box
           sx={{
             width: "100%",
-            maxWidth: { xs: "340px", lg: "460px" },
+            maxWidth: { xs: "340px", sm: "650px", md: "870px", lg: "460px" },
             padding: "16px",
-            height: { xs: "224px", lg: "500px" },
+            height: { xs: "224px", sm: "280px", md: "390px", lg: "500px" },
             backgroundColor: "#f9f9f9",
             marginBottom: "30px",
           }}
