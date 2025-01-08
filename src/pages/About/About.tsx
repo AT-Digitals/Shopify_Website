@@ -37,7 +37,7 @@ export default function AboutPage() {
   return (
     <Box>
       <Typography
-        margin={"20px 70px"}
+        margin={"20px 40px"}
         variant="h2"
         sx={{
           fontSize: "2.5rem",
@@ -49,7 +49,7 @@ export default function AboutPage() {
         How do we do it?
       </Typography>
       <Typography
-        margin={"0px 70px"}
+        margin={"0px 40px"}
         sx={{
           fontSize: "1.2rem",
           lineHeight: "1.8",
@@ -82,6 +82,12 @@ export default function AboutPage() {
             key={index}
             sx={{
               textAlign: "center",
+              width: "100%",
+              maxWidth: "300px", // Adjust width if needed
+              borderTop: "2px solid #1e3a8a",
+              borderBottom: "2px solid #1e3a8a",
+              padding: "10px",
+              marginBottom: "20px",
             }}
           >
             <Box
@@ -100,6 +106,7 @@ export default function AboutPage() {
                   color: "#1e3a8a",
                   flex: 1,
                   textAlign: "left",
+                  padding: "10px 0",
                 }}
               >
                 {step.title}
@@ -110,13 +117,12 @@ export default function AboutPage() {
             </Box>
             {expanded === index && (
               <Typography
-                width={"100%"}
-                maxWidth={"220px"}
                 sx={{
                   marginTop: "10px",
                   textAlign: "left",
                   fontSize: "1rem",
                   color: "#555",
+                  paddingTop: "10px",
                 }}
               >
                 {step.content}
