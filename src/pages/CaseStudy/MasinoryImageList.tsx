@@ -13,6 +13,7 @@ export default function MasonryImageList() {
         overflowY: "scroll",
         scrollbarWidth: "none",
       }}
+      marginTop={"-80px"}
     >
       <ImageList
         variant="masonry"

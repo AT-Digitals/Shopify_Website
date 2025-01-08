@@ -220,14 +220,14 @@ export default function Homepage() {
         <ServiceSection />
       </Box>
 
-      <AppContainer marginBottom={"-80px"} maxWidth={1350}>
+      <AppContainer maxWidth={1350}>
         <Typography
           padding={"2rem 0"}
           fontFamily={"Robato"}
           fontSize={"60px"}
           textAlign={"center"}
         >
-          Gallery of Innovation and <br /> Creativity
+          Gallery of Innovation and Creativity
         </Typography>
       </AppContainer>
       <Box
