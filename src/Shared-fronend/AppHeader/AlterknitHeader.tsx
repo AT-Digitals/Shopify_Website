@@ -45,9 +45,9 @@ export default function AlterknitHeader({
   const services = [
     { linkname: "Home", url: routes.ROOT },
     { linkname: "About", url: routes.ABOUT },
-    { linkname: "Work", url: "/work" },
+    { linkname: "Work", url: routes.WORK },
     { linkname: "Services", url: "/Service" },
-    { linkname: "Industries", url: "/Indus" },
+    // { linkname: "Industries", url: "/Indus" },
   ];
 
   const handleMenuClick = (menu: string) => {

@@ -3,6 +3,7 @@ import { Box, IconButton, Typography } from "@mui/material";
 import AppContainer from "../../Shared-fronend/AppContainer";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { Link } from "react-router-dom";
+import MasonryImageList from "../CaseStudy/MasinoryImageList";
 import ProjectsComponent from "./ProjectsComponent";
 import ReviewsSection from "./ReviewsSection";
 import ServiceSection from "./ServiceSection";
@@ -192,6 +193,7 @@ export default function Homepage() {
       >
         <ServiceSection />
       </Box>
+      <MasonryImageList />
     </>
   );
 }
