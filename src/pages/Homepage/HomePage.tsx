@@ -1,6 +1,12 @@
-import { Box, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 
+import AppContainer from "../../Shared-fronend/AppContainer";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { Link } from "react-router-dom";
 import ProjectsComponent from "./ProjectsComponent";
+import ReviewsSection from "./ReviewsSection";
+import ServiceSection from "./ServiceSection";
+import routes from "../../routes/routes";
 import { useState } from "react";
 
 export default function Homepage() {
@@ -52,28 +58,80 @@ export default function Homepage() {
           />
         </Box>
       </div>
-
-      <Box maxWidth={1350} margin={"auto"} padding={"2rem 0"}>
-        <Typography
-          fontFamily={"Robato"}
-          fontSize={"50px"}
-          textAlign={"center"}
-          lineHeight={1.2}
-        >
-          Crafting Shopify <br /> Solutions for Success
-        </Typography>
-        <Typography
-          fontFamily={"Robato"}
-          fontSize={"16px"}
-          textAlign={"center"}
-          maxWidth={700}
-        >
-          "Our Shopify projects deliver tailored e-commerce solutions for
-          leading brands. We specialize in building scalable, user-focused
-          stores and creating seamless integrations to help businesses thrive in
-          the digital marketplace."
-        </Typography>
+      <Box bgcolor={"black"}>
+        <ReviewsSection />
       </Box>
+
+      <Box
+        margin={"auto"}
+        display={"flex"}
+        gap={"20px"}
+        textAlign={"start"}
+        flexDirection={"column"}
+        padding={"2rem 0"}
+      ></Box>
+      <AppContainer maxWidth={1350}>
+        <Typography fontFamily={"Robato"} fontSize={"22px"} lineHeight={1.2}>
+          Our work
+        </Typography>
+        <Box
+          mt={"0px !important"}
+          display={"flex"}
+          justifyContent={"space-between"}
+          alignItems={"baseline"}
+        >
+          <Box display={"flex"} gap={"20px"}>
+            <Box display={"flex"} alignItems={"baseline"} gap={"20px"}>
+              <Typography
+                fontFamily={"Robato"}
+                fontSize={"70px"}
+                maxWidth={700}
+              >
+                700
+              </Typography>
+              <Typography
+                fontFamily={"Robato"}
+                fontSize={"22px"}
+                textAlign={"center"}
+                maxWidth={700}
+              >
+                Completed projects
+              </Typography>
+            </Box>
+            <Box display={"flex"} alignItems={"baseline"} gap={"20px"}>
+              <Typography
+                fontFamily={"Robato"}
+                fontSize={"70px"}
+                maxWidth={700}
+              >
+                65
+              </Typography>
+              <Typography
+                fontFamily={"Robato"}
+                fontSize={"22px"}
+                textAlign={"center"}
+                maxWidth={700}
+              >
+                Clients{" "}
+              </Typography>
+            </Box>
+          </Box>
+          <Box display={"flex"} alignItems={"center"} gap={"10px"}>
+            <Typography fontSize={"18px"} fontFamily={"Robato"}>
+              View all case studies
+            </Typography>
+            <Link to={routes.WORK}>
+              <IconButton
+                sx={{
+                  background: "lightgray",
+                }}
+              >
+                <ChevronRightIcon />
+              </IconButton>
+            </Link>
+          </Box>
+        </Box>
+      </AppContainer>
       <ProjectsComponent
         flexDirection="row"
         Bigimg={
@@ -125,6 +183,15 @@ export default function Homepage() {
         bigChips={["Beauty & Personal Care", "Shopify Plus"]}
         smallChips={["Health & Wellness", "Shopify Plus"]}
       />
+
+      <Box
+        textAlign={"start"}
+        padding={"2rem 0"}
+        width={"100%"}
+        bgcolor={"black"}
+      >
+        <ServiceSection />
+      </Box>
     </>
   );
 }
