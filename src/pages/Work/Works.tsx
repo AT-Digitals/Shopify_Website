@@ -1,4 +1,4 @@
-import { Box, Button, Stack } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 
 import { useState } from "react";
 import ProjectsComponent from "../Homepage/ProjectsComponent";
@@ -40,7 +40,7 @@ export default function WorkPage() {
   const [filter, setFilter] = useState<string | null>(null);
   const [blur, setBlur] = useState(false); // State for blur animation
 
-  const handleFilter = (category: string) => {
+  const handleFilter = (category: string | null) => {
     setBlur(true); // Trigger blur effect
     setTimeout(() => {
       setFilter(category);
@@ -58,8 +58,25 @@ export default function WorkPage() {
 
   return (
     <Box>
-      {/* Filter Buttons */}
-      <Stack direction="row" spacing={2} mb={4} margin={"30px 70px"}>
+      <Typography
+        sx={{
+          paddingTop: "20px",
+          fontSize: { xs: "25px", sm: "30px", md: "50px" },
+          fontWeight: "700",
+        }}
+        variant="h5"
+        textAlign="center"
+        gutterBottom
+      >
+        Projects by Category
+      </Typography>
+      <Stack
+        direction="row"
+        spacing={2}
+        mb={4}
+        justifyContent={"center"}
+        mt={"25px"}
+      >
         <Button
           sx={{
             border: "1px solid black",
@@ -97,6 +114,23 @@ export default function WorkPage() {
           onClick={() => handleFilter("Beauty & Personal Care")}
         >
           Beauty & Personal Care
+        </Button>
+        <Button
+          sx={{
+            border: "1px solid black",
+            color: filter === null ? "black" : "black", // Ensure it is not pre-selected
+            backgroundColor: "transparent", // Always transparent on load
+            fontWeight: "700",
+            fontSize: "16px",
+            "&:hover": {
+              backgroundColor: "black",
+              color: "white",
+            },
+          }}
+          variant="outlined" // Always outlined unless explicitly selected
+          onClick={() => handleFilter(null)} // Reset filter to show all
+        >
+          Show All
         </Button>
       </Stack>
 
