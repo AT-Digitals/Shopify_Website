@@ -193,7 +193,42 @@ export default function Homepage() {
       >
         <ServiceSection />
       </Box>
-      <MasonryImageList />
+      <Box
+        sx={{
+          height: "100vh", // Full viewport height
+          overflowY: "scroll", // Enable scrolling
+        }}
+      >
+        {/* Text Overlay */}
+        <Box
+          sx={{
+            position: "sticky",
+            top: "50%", // Keeps the text at the top
+            zIndex: 2,
+
+            maxWidth: 600,
+            margin: "auto",
+            backdropFilter: "blur(5px)", // Applies blur effect
+            backgroundColor: "rgba(0, 0, 0, 0.5)", // Black with transparency
+            padding: "1rem",
+            color: "white",
+            textAlign: "center",
+            borderRadius: "50px",
+          }}
+        >
+          <Typography
+            variant="h6"
+            padding={"1rem 0"}
+            color="white"
+            textAlign="center"
+          >
+            Scroll to see the images below
+          </Typography>
+        </Box>
+
+        {/* Masonry Image List */}
+        <MasonryImageList />
+      </Box>
     </>
   );
 }
