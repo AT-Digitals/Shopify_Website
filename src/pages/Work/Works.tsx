@@ -81,11 +81,12 @@ export default function WorkPage() {
         Projects by Category
       </Typography>
       <Stack
-        direction="row"
+        direction={{ xs: "column", sm: "row" }} // Stack buttons in a column for xs screen size
         spacing={2}
         mb={4}
-        justifyContent={"center"}
-        mt={"25px"}
+        justifyContent="center"
+        mt="25px"
+        alignItems={"center"}
       >
         <Button
           sx={{
@@ -95,6 +96,7 @@ export default function WorkPage() {
               filter === "Health & Wellness" ? "black" : "transparent",
             fontWeight: "700",
             fontSize: "16px",
+            padding: { xs: "10px 20px", sm: "8px 16px" }, // Adjust padding for smaller screens
             "&:hover": {
               backgroundColor: "black",
               color: "white",
@@ -113,6 +115,7 @@ export default function WorkPage() {
               filter === "Beauty & Personal Care" ? "black" : "transparent",
             fontWeight: "700",
             fontSize: "16px",
+            padding: { xs: "10px 20px", sm: "8px 16px" }, // Adjust padding for smaller screens
             "&:hover": {
               backgroundColor: "black",
               color: "white",
@@ -132,6 +135,7 @@ export default function WorkPage() {
             backgroundColor: "transparent", // Always transparent on load
             fontWeight: "700",
             fontSize: "16px",
+            padding: { xs: "10px 20px", sm: "8px 16px" }, // Adjust padding for smaller screens
             "&:hover": {
               backgroundColor: "black",
               color: "white",
