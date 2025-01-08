@@ -1,13 +1,14 @@
 import { Box, IconButton, Typography } from "@mui/material";
 
-import AppContainer from "../../Shared-fronend/AppContainer";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { useState } from "react";
+import CountUp from "react-countup";
 import { Link } from "react-router-dom";
+import routes from "../../routes/routes";
+import AppContainer from "../../Shared-fronend/AppContainer";
 import ProjectsComponent from "./ProjectsComponent";
 import ReviewsSection from "./ReviewsSection";
 import ServiceSection from "./ServiceSection";
-import routes from "../../routes/routes";
-import { useState } from "react";
 
 export default function Homepage() {
   const [backgroundPosition, setBackgroundPosition] = useState({
@@ -71,23 +72,38 @@ export default function Homepage() {
         padding={"2rem 0"}
       ></Box>
       <AppContainer maxWidth={1350}>
-        <Typography fontFamily={"Robato"} fontSize={"22px"} lineHeight={1.2}>
+        <Typography
+          paddingLeft={{ xs: "0px", sm: "30px", lg: "0px" }}
+          fontFamily={"Robato"}
+          fontSize={"22px"}
+          lineHeight={1.2}
+        >
           Our work
         </Typography>
         <Box
           mt={"0px !important"}
           display={"flex"}
-          justifyContent={"space-between"}
+          justifyContent={{
+            xs: "space-between",
+            sm: "space-around",
+            lg: "space-between",
+          }}
           alignItems={"baseline"}
+          flexDirection={{ xs: "column", sm: "row", lg: "row" }}
         >
           <Box display={"flex"} gap={"20px"}>
-            <Box display={"flex"} alignItems={"baseline"} gap={"20px"}>
+            <Box
+              display={"flex"}
+              alignItems={"baseline"}
+              flexDirection={{ xs: "column", lg: "row" }}
+              gap={"20px"}
+            >
               <Typography
                 fontFamily={"Robato"}
                 fontSize={"70px"}
                 maxWidth={700}
               >
-                700
+                <CountUp start={0} end={700} duration={6} />
               </Typography>
               <Typography
                 fontFamily={"Robato"}
@@ -98,13 +114,18 @@ export default function Homepage() {
                 Completed projects
               </Typography>
             </Box>
-            <Box display={"flex"} alignItems={"baseline"} gap={"20px"}>
+            <Box
+              display={"flex"}
+              flexDirection={{ xs: "column", lg: "row" }}
+              alignItems={"baseline"}
+              gap={"20px"}
+            >
               <Typography
                 fontFamily={"Robato"}
                 fontSize={"70px"}
                 maxWidth={700}
               >
-                65
+                <CountUp start={0} end={65} duration={6} />
               </Typography>
               <Typography
                 fontFamily={"Robato"}
@@ -112,11 +133,16 @@ export default function Homepage() {
                 textAlign={"center"}
                 maxWidth={700}
               >
-                Clients{" "}
+                Clients
               </Typography>
             </Box>
           </Box>
-          <Box display={"flex"} alignItems={"center"} gap={"10px"}>
+          <Box
+            display={"flex"}
+            paddingTop={{ xs: "10px", lg: "0px" }}
+            alignItems={"center"}
+            gap={"10px"}
+          >
             <Typography fontSize={"18px"} fontFamily={"Robato"}>
               View all case studies
             </Typography>
