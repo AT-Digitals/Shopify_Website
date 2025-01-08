@@ -72,7 +72,7 @@ export default function Homepage() {
         flexDirection={"column"}
         padding={"2rem 0"}
       ></Box>
-      <AppContainer maxWidth={1350}>
+      <AppContainer padding={"20px !important"} maxWidth={1350}>
         <Typography
           paddingLeft={{ xs: "0px", sm: "30px", lg: "0px" }}
           fontFamily={"Robato"}
@@ -104,7 +104,7 @@ export default function Homepage() {
                 fontSize={"70px"}
                 maxWidth={700}
               >
-                <CountUp start={0} end={700} duration={6} />
+                <CountUp start={0} end={700} duration={10} />
               </Typography>
               <Typography
                 fontFamily={"Robato"}
@@ -126,7 +126,7 @@ export default function Homepage() {
                 fontSize={"70px"}
                 maxWidth={700}
               >
-                <CountUp start={0} end={65} duration={6} />
+                <CountUp start={0} end={65} duration={10} />
               </Typography>
               <Typography
                 fontFamily={"Robato"}
@@ -140,7 +140,7 @@ export default function Homepage() {
           </Box>
           <Box
             display={"flex"}
-            paddingTop={{ xs: "10px", lg: "0px" }}
+            padding={{ xs: "20px", lg: "0px" }}
             alignItems={"center"}
             gap={"10px"}
           >
@@ -224,7 +224,7 @@ export default function Homepage() {
         <Typography
           padding={"2rem 0"}
           fontFamily={"Robato"}
-          fontSize={"60px"}
+          fontSize={{ xs: "25px", sm: "30px", md: "60px" }}
           textAlign={"center"}
         >
           Gallery of Innovation and Creativity
@@ -232,9 +232,7 @@ export default function Homepage() {
       </AppContainer>
       <Box
         sx={{
-          height: "100vh", // Full viewport height
           overflowY: "scroll", // Enable scrolling
-          // marginTop: "-65px",
           scrollbarWidth: "none",
         }}
       >
@@ -242,7 +240,7 @@ export default function Homepage() {
         <Box
           sx={{
             position: "sticky",
-            top: "50%", // Keeps the text at the top
+            top: "40%", // Keeps the text at the top
             zIndex: 2,
 
             maxWidth: 600,

@@ -68,7 +68,7 @@ const ServicesWeProviding = [
 
 export default function ServiceSection() {
   return (
-    <Box maxWidth={1350} margin={"auto"}>
+    <Box maxWidth={1350} padding={"0 20px"} margin={"auto"}>
       <Typography
         fontFamily={"Robato"}
         fontSize={"22px"}
@@ -83,7 +83,7 @@ export default function ServiceSection() {
         {ServicesWeProviding.map((service, index) => (
           <Box
             display={"flex"}
-            justifyContent={"space-between"}
+            justifyContent={{ xs: "center", sm: "center", md: "space-between" }}
             alignItems={"center"}
             flexWrap={"wrap"}
             key={index}
@@ -91,7 +91,7 @@ export default function ServiceSection() {
             <Box mt={2}>
               <Typography
                 fontFamily={"Robato"}
-                fontSize={"60px"}
+                fontSize={{ xs: "32px", sm: "32px", md: "60px" }}
                 textAlign={"start"}
                 lineHeight={1.2}
                 color={"white"}

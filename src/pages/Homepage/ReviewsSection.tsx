@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 export default function ReviewsSection() {
   return (
     <Box
-      padding={"2rem"}
+      padding={"2rem 0"}
       display={"flex"}
       justifyContent={"space-between"}
       maxWidth={1000}
