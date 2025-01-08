@@ -1,15 +1,15 @@
 import { Box, IconButton, Typography } from "@mui/material";
 
+import AppContainer from "../../Shared-fronend/AppContainer";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { useState } from "react";
 import CountUp from "react-countup";
 import { Link } from "react-router-dom";
 import MasonryImageList from "../CaseStudy/MasinoryImageList";
-import routes from "../../routes/routes";
-import AppContainer from "../../Shared-fronend/AppContainer";
 import ProjectsComponent from "./ProjectsComponent";
 import ReviewsSection from "./ReviewsSection";
 import ServiceSection from "./ServiceSection";
+import routes from "../../routes/routes";
+import { useState } from "react";
 
 export default function Homepage() {
   const [backgroundPosition, setBackgroundPosition] = useState({
@@ -219,10 +219,23 @@ export default function Homepage() {
       >
         <ServiceSection />
       </Box>
+
+      <AppContainer marginBottom={"-80px"} maxWidth={1350}>
+        <Typography
+          padding={"2rem 0"}
+          fontFamily={"Robato"}
+          fontSize={"60px"}
+          textAlign={"center"}
+        >
+          Gallery of Innovation and <br /> Creativity
+        </Typography>
+      </AppContainer>
       <Box
         sx={{
           height: "100vh", // Full viewport height
           overflowY: "scroll", // Enable scrolling
+          // marginTop: "-65px",
+          scrollbarWidth: "none",
         }}
       >
         {/* Text Overlay */}
