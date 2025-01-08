@@ -1,7 +1,8 @@
 import { Box, Chip, Rating, Typography } from "@mui/material";
 
-import React from "react";
 import AppContainer from "../../Shared-fronend/AppContainer";
+import { Link } from "react-router-dom";
+import React from "react";
 
 type ProjectsComponentProps = {
   flexDirection?: "row" | "row-reverse"; // Add a flexDirection prop
@@ -15,6 +16,8 @@ type ProjectsComponentProps = {
   rating: number | null;
   status1: string;
   status2: string;
+  BigProjectClick?: any;
+  smallProjectClick?: any;
 };
 
 export default function ProjectsComponent({
@@ -28,6 +31,8 @@ export default function ProjectsComponent({
   rating,
   status1,
   status2,
+  BigProjectClick,
+  smallProjectClick,
 }: ProjectsComponentProps) {
   const [value, setValue] = React.useState<number | null>(5);
 
@@ -70,6 +75,7 @@ export default function ProjectsComponent({
       >
         {/* Big Image Container */}
         <Box
+          onClick={BigProjectClick}
           sx={{
             width: "100%",
             maxWidth: { xs: "340px", sm: "650px", md: "870px", lg: "980px" },
@@ -166,6 +172,7 @@ export default function ProjectsComponent({
 
         {/* Small Image Container */}
         <Box
+          onClick={smallProjectClick}
           sx={{
             width: "100%",
             maxWidth: { xs: "340px", sm: "650px", md: "870px", lg: "460px" },
