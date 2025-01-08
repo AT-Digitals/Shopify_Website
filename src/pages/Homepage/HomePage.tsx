@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 
-import { useState } from "react";
 import ProjectsComponent from "./ProjectsComponent";
+import { useState } from "react";
 
 export default function Homepage() {
   const [backgroundPosition, setBackgroundPosition] = useState({
@@ -52,6 +52,31 @@ export default function Homepage() {
           />
         </Box>
       </div>
+
+      <Box maxWidth={1350} margin={"auto"} padding={"2rem 0"}>
+        <Typography
+          fontFamily={"Robato"}
+          fontSize={"50px"}
+          textAlign={"center"}
+          lineHeight={1.2}
+        >
+          Crafting Shopify <br /> Solutions for Success
+        </Typography>
+        <Typography
+          fontFamily={"Robato"}
+          fontSize={"16px"}
+          textAlign={"center"}
+        >
+          From bespoke e-commerce designs to seamless Shopify integrations, our
+          team specializes in crafting tailored solutions for businesses of all
+          sizes. Whether it's enhancing store functionality, optimizing user
+          experience, or implementing custom Shopify apps, we bring expertise
+          and creativity to every project. Our proven track record of working
+          with industry-leading brands ensures that your Shopify store not only
+          meets but exceeds expectations, empowering your business to scale and
+          thrive in the digital marketplace.
+        </Typography>
+      </Box>
       <ProjectsComponent
         flexDirection="row"
         Bigimg={
