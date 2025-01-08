@@ -66,15 +66,12 @@ export default function Homepage() {
           fontFamily={"Robato"}
           fontSize={"16px"}
           textAlign={"center"}
+          maxWidth={700}
         >
-          From bespoke e-commerce designs to seamless Shopify integrations, our
-          team specializes in crafting tailored solutions for businesses of all
-          sizes. Whether it's enhancing store functionality, optimizing user
-          experience, or implementing custom Shopify apps, we bring expertise
-          and creativity to every project. Our proven track record of working
-          with industry-leading brands ensures that your Shopify store not only
-          meets but exceeds expectations, empowering your business to scale and
-          thrive in the digital marketplace.
+          "Our Shopify projects deliver tailored e-commerce solutions for
+          leading brands. We specialize in building scalable, user-focused
+          stores and creating seamless integrations to help businesses thrive in
+          the digital marketplace."
         </Typography>
       </Box>
       <ProjectsComponent

@@ -36,7 +36,7 @@ export default function ProjectsComponent({
     height: "100%",
     borderRadius: "15px",
     objectFit: "cover",
-    transition: "transform 0.3s ease-in-out", // Smooth zoom transition
+    transition: "transform 0.5s ease-in-out", // Smooth zoom transition
   };
 
   const containerStyles = {
