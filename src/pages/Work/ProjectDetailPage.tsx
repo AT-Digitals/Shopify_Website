@@ -5,6 +5,7 @@ import {
   Card,
   CardContent,
   Chip,
+  Divider,
   Stack,
   Typography,
 } from "@mui/material";
@@ -22,6 +23,11 @@ const projectData = [
     image:
       "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/663af09b40262b45c1563c88_Frame%2012352%20copy.webp",
     tags: ["Health & Wellness", "Shopify Plus"],
+    siteLink: "https://www.upure.com",
+    location: "San fransico,US",
+    Technology: "Shopify Plus",
+    subImage1:
+      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/660f8a30d085aac8281aae2a_image-final-3-1%20copy.webp",
   },
   {
     id: "1",
@@ -32,6 +38,11 @@ const projectData = [
     image:
       "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/635b5c4b26c897e86ed3a95d_Frame%201198(2).jpg",
     tags: ["Health & Wellness"],
+    siteLink: "https://www.Ingarden.com",
+    location: "San fransico,US",
+    Technology: "Shopify Plus",
+    subImage1:
+      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/63522a7ced30bfda3d4f745a_title-image%20copy.webp",
   },
   {
     id: "2",
@@ -42,6 +53,11 @@ const projectData = [
     image:
       "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/62d749256bb311283bed562d_607d8f9932261b46db184cdc_Frame%20181(1).webp",
     tags: ["Beauty & Personal Care", "Shopify Plus"],
+    siteLink: "https://www.DS Laboratories.com",
+    location: "San fransico,US",
+    Technology: "Shopify ",
+    subImage1:
+      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/60aba81c6c028daeef36004a_title-image.jpg",
   },
   {
     id: "2",
@@ -52,6 +68,11 @@ const projectData = [
     image:
       "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/65fcffb8d4eef1ebc6bb64dd_Frame%2012349%20copy.webp",
     tags: ["Beauty & Personal Care"],
+    siteLink: "https://www.AwareNutrition.com",
+    location: "San fransico,US",
+    Technology: "Shopify Plus",
+    subImage1:
+      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/65fd00661d264d1857909790_title-image%20copy.webp",
   },
   // 3
 
@@ -64,6 +85,11 @@ const projectData = [
     image:
       "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/65811b35ec3819bfd7b85f96_Frame%202563.webp",
     tags: ["Beauty & Personal Care"],
+    siteLink: "https://www.Lakanto.com",
+    location: "San fransico,US",
+    Technology: "Shopify ",
+    subImage1:
+      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/658124e023f87c32766f4f59_title-image.webp",
   },
   {
     id: "3",
@@ -74,6 +100,10 @@ const projectData = [
     image:
       "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/663c5601bef4c956d4ac7aa1_Frame%2012353%20copy.webp",
     tags: ["Beauty & Personal Care"],
+    siteLink: "https://www.Avon.com",
+    location: "San fransico,US",
+    Technology: "Shopify Plus",
+    subImage1: "https://cssnectar.com/wp-content/uploads/2019/09/avone.jpg",
   },
 ];
 
@@ -115,7 +145,7 @@ const ProjectDetailPage = () => {
   const nextProject = projectData[(projectIndex + 1) % projectData.length];
   return (
     <Box>
-      <Box sx={{ position: "relative" }}>
+      <Box sx={{ position: "relative", marginBottom: "-10px" }}>
         <img
           style={{
             objectFit: "cover",
@@ -150,27 +180,175 @@ const ProjectDetailPage = () => {
           ))}
         </Stack>
       </Box>
-      <Box padding={"2rem 0"}>
-        <Typography
-          fontSize={"60px"}
-          fontFamily={"robato"}
-          textAlign={"center"}
+      <Box bgcolor={"black"}>
+        <Box maxWidth={1350} margin={"auto"} padding={"2rem 0"}>
+          <Typography
+            mb={2}
+            fontSize={"60px"}
+            fontFamily={"robato"}
+            textAlign={"start"}
+            color={"white"}
+          >
+            {project.title}{" "}
+          </Typography>
+          <Button
+            sx={{
+              borderRadius: "50px",
+              textTransform: "capitalize",
+              color: "white",
+              padding: "10px",
+              border: "1px solid white",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px", // Space between icon and text
+              maxWidth: 220,
+
+              width: "100%",
+              "&:hover": {
+                backgroundColor: "white",
+                color: "black",
+                border: "1px solid white",
+              },
+              "&:hover .MuiSvgIcon-root": {
+                transform: "scale(1.2) translateX(20px)", // Move icon to the right and scale
+                transition: "all 1s ease", // Smooth transition for the icon
+              },
+            }}
+            variant="outlined"
+          >
+            Visit the website
+            <ArrowForward /> {/* Right Arrow Icon */}
+          </Button>
+          <Divider
+            orientation="horizontal"
+            sx={{
+              background: "white",
+              width: "100%", // Use 'width' instead of 'maxWidth'
+              margin: "2rem auto", // Centers the divider
+            }}
+          />
+        </Box>
+        <Box
+          maxWidth={1350}
+          margin={"auto"}
+          padding={"20px 0"}
+          display={"flex"}
+          justifyContent={"space-between"}
         >
-          {project.title}{" "}
-        </Typography>
-      </Box>
-      <Box sx={{ padding: "20px" }}>
-        <Card sx={{ maxWidth: 900, margin: "0 auto", boxShadow: 3 }}>
-          <CardContent>
-            <Typography variant="h4" gutterBottom>
+          <Box>
+            <Typography
+              fontSize={"18px"}
+              fontFamily={"robato"}
+              textAlign={"center"}
+              color={"white"}
+            >
+              Brand Name{" "}
+            </Typography>
+            <Typography
+              fontSize={"16px"}
+              fontFamily={"robato"}
+              textAlign={"center"}
+              color={"white"}
+            >
               {project.title}
             </Typography>
-            <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
-              {project.description}
+          </Box>
+          <Box>
+            <Typography
+              fontSize={"18px"}
+              fontFamily={"robato"}
+              textAlign={"center"}
+              color={"white"}
+            >
+              Partnering since
             </Typography>
-          </CardContent>
-        </Card>
+            <Typography
+              fontSize={"16px"}
+              fontFamily={"robato"}
+              textAlign={"center"}
+              color={"white"}
+            >
+              2018
+            </Typography>
+          </Box>
+          <Box>
+            <Typography
+              fontSize={"18px"}
+              fontFamily={"robato"}
+              textAlign={"center"}
+              color={"white"}
+            >
+              Projects completed
+            </Typography>
+            <Typography
+              fontSize={"16px"}
+              fontFamily={"robato"}
+              textAlign={"center"}
+              color={"white"}
+            >
+              40+{" "}
+            </Typography>
+          </Box>
+          <Box>
+            <Typography
+              fontSize={"18px"}
+              fontFamily={"robato"}
+              textAlign={"center"}
+              color={"white"}
+            >
+              Location{" "}
+            </Typography>
+            <Typography
+              fontSize={"16px"}
+              fontFamily={"robato"}
+              textAlign={"center"}
+              color={"white"}
+            >
+              {project.location}
+            </Typography>
+          </Box>
+
+          <Box>
+            <Typography
+              fontSize={"18px"}
+              fontFamily={"robato"}
+              textAlign={"center"}
+              color={"white"}
+            >
+              Technology{" "}
+            </Typography>
+            <Typography
+              fontSize={"16px"}
+              fontFamily={"robato"}
+              textAlign={"center"}
+              color={"white"}
+            >
+              {project.Technology}
+            </Typography>
+          </Box>
+        </Box>
       </Box>
+      <Box textAlign={"center"} mt={2} p={"10px 0"}>
+        <img
+          style={{
+            objectFit: "cover",
+            height: "auto", // Default to auto for responsiveness
+            maxWidth: 1000,
+          }}
+          width="100%"
+          src={project.subImage1}
+          alt="siteImage"
+        />
+      </Box>
+
+      <Divider
+        orientation="horizontal"
+        sx={{
+          background: "black",
+          width: "90%", // Use 'width' instead of 'maxWidth'
+          margin: "2rem auto", // Centers the divider
+        }}
+      />
 
       <Box
         display={"flex"}
