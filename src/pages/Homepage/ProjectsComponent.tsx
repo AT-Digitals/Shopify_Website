@@ -1,14 +1,13 @@
 import { Box, Chip, Rating, Typography } from "@mui/material";
 
 import AppContainer from "../../Shared-fronend/AppContainer";
-import { Link } from "react-router-dom";
 import React from "react";
 
 type ProjectsComponentProps = {
   flexDirection?: "row" | "row-reverse"; // Add a flexDirection prop
   Bigimg: string;
   Smallimg: string;
-  altText: string;
+  altText?: string;
   bigChips: string[]; // Chips for the big image
   smallChips: string[]; // Chips for the small image
   title1: string;
@@ -33,7 +32,7 @@ export default function ProjectsComponent({
   status2,
   BigProjectClick,
   smallProjectClick,
-}: ProjectsComponentProps) {
+}: Readonly<ProjectsComponentProps>) {
   const [value, setValue] = React.useState<number | null>(5);
 
   const imageStyles: React.CSSProperties = {

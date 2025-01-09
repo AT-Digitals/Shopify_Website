@@ -52,6 +52,28 @@ const projectData = [
       "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/65fcffb8d4eef1ebc6bb64dd_Frame%2012349%20copy.webp",
     tags: ["Beauty & Personal Care"],
   },
+  // 3
+
+  {
+    id: "3",
+    type: "small",
+    title: "Lakanto",
+    description:
+      "Aware Nutrition offers personalized nutrition products crafted to meet individual dietary needs.",
+    image:
+      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/65811b35ec3819bfd7b85f96_Frame%202563.webp",
+    tags: ["Beauty & Personal Care"],
+  },
+  {
+    id: "3",
+    type: "big",
+    title: "Avon",
+    description:
+      "Aware Nutrition offers personalized nutrition products crafted to meet individual dietary needs.",
+    image:
+      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/663c5601bef4c956d4ac7aa1_Frame%2012353%20copy.webp",
+    tags: ["Beauty & Personal Care"],
+  },
 ];
 
 const ProjectDetailPage = () => {

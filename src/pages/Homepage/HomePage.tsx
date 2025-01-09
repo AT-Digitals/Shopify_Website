@@ -1,10 +1,11 @@
 import { Box, Divider, IconButton, Typography } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
 
 import AppContainer from "../../Shared-fronend/AppContainer";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import CountUp from "react-countup";
-import { Link } from "react-router-dom";
 import MasonryImageList from "../CaseStudy/MasinoryImageList";
+import ProjectData from "../Data/ProjectData";
 import ProjectsComponent from "./ProjectsComponent";
 import ReviewsSection from "./ReviewsSection";
 import ServiceSection from "./ServiceSection";
@@ -22,6 +23,11 @@ export default function Homepage() {
     const x = (clientX / window.innerWidth) * 100; // Normalize to percentage (left/right)
     const y = (clientY / window.innerHeight) * 100; // Normalize to percentage (up/down)
     setBackgroundPosition({ x, y });
+  };
+  const navigate = useNavigate();
+
+  const handleProjectClick = (id: string, type: string) => {
+    navigate(`/project/${id}/${type}`);
   };
   return (
     <>
@@ -159,7 +165,27 @@ export default function Homepage() {
           </Box>
         </Box>
       </AppContainer>
-      <ProjectsComponent
+      {ProjectData.map((project, index) => (
+        <ProjectsComponent
+          key={index}
+          flexDirection={project.flexDirection}
+          Bigimg={project.Bigimg}
+          Smallimg={project.Smallimg}
+          altText={project.altText}
+          title1={project.title1}
+          title2={project.title2}
+          rating={project.rating}
+          status1={project.status1}
+          status2={project.status2}
+          bigChips={project.bigChips}
+          smallChips={project.smallChips}
+          BigProjectClick={() => handleProjectClick(project.id, project.title1)}
+          smallProjectClick={() =>
+            handleProjectClick(project.id, project.title2)
+          }
+        />
+      ))}
+      {/* <ProjectsComponent
         flexDirection="row"
         Bigimg={
           "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/663c5601bef4c956d4ac7aa1_Frame%2012353%20copy.webp"
@@ -209,7 +235,7 @@ export default function Homepage() {
         status2={""}
         bigChips={["Beauty & Personal Care", "Shopify Plus"]}
         smallChips={["Health & Wellness", "Shopify Plus"]}
-      />
+      /> */}
 
       <Box
         textAlign={"start"}
