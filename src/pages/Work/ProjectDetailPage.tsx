@@ -180,6 +180,7 @@ const ProjectDetailPage = () => {
           ))}
         </Stack>
       </Box>
+
       <Box bgcolor={"black"}>
         <Box maxWidth={1350} margin={"auto"} padding={"2rem 0"}>
           <Typography
@@ -339,6 +340,96 @@ const ProjectDetailPage = () => {
           src={project.subImage1}
           alt="siteImage"
         />
+      </Box>
+
+      <Box bgcolor={"white"}>
+        <Box
+          display={"flex"}
+          maxWidth={1300}
+          margin={"auto"}
+          justifyContent={"space-between"}
+          padding={"3rem 0"}
+          flexWrap={"wrap"}
+        >
+          <Typography fontFamily={"Robato"} color={"black"} fontSize={"45px"}>
+            Context
+          </Typography>
+          <Box
+            maxWidth={600}
+            display={"flex"}
+            flexDirection={"column"}
+            gap={"20px"}
+          >
+            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+              In 2018, Nicole reached craftberry to rebuild and redesign her
+              Shopify store. <br />
+            </Typography>
+
+            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+              In 2024, the Nicole Rose brand gained popularity and had a
+              significant amount of loyal customers. <br />
+            </Typography>
+            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+              Still, the design was outdated and the store needed refreshments
+              for easier management and conversion rate optimization.
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+      <Divider
+        orientation="horizontal"
+        sx={{
+          background: "black",
+          width: "90%", // Use 'width' instead of 'maxWidth'
+          margin: "2rem auto", // Centers the divider
+        }}
+      />
+      <Box bgcolor={"white"}>
+        <Box
+          display={"flex"}
+          maxWidth={1300}
+          margin={"auto"}
+          justifyContent={"space-between"}
+          padding={"3rem 0"}
+          flexWrap={"wrap"}
+        >
+          <Typography fontFamily={"Robato"} color={"black"} fontSize={"45px"}>
+            The Design Process
+          </Typography>
+          <Box
+            maxWidth={600}
+            display={"flex"}
+            flexDirection={"column"}
+            gap={"20px"}
+          >
+            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+              To create a store that matched Nicole Rose’s commitment to quality
+              gemstones, we started with rebranding.
+            </Typography>
+
+            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+              Our partners CreativeCorner developed a sophisticated, soft-toned
+              brand book, which served as our guide throughout the design
+              process.
+            </Typography>
+            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+              We set out to create a data-driven design and implement tailored
+              strategies best suited to Nicole Rose’s audience.
+            </Typography>
+            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+              To achieve this, we leveraged GA4 and Mouseflow and conducted
+              thorough research.
+            </Typography>
+
+            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+              Based on the data, we identified conversion blockers and applied
+              proven CRO strategies.
+            </Typography>
+            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+              The result: an elegant, feminine, and vibrant Shopify store.
+            </Typography>
+          </Box>
+        </Box>
       </Box>
 
       <Divider
