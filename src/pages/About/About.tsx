@@ -57,7 +57,7 @@ export default function AboutPage() {
         sx={{
           fontSize: "2.5rem",
           fontWeight: "bold",
-          color: "#1e3a8a",
+          color: "black",
           marginBottom: "20px",
         }}
       >
@@ -65,11 +65,12 @@ export default function AboutPage() {
       </Typography>
       <Typography
         margin={{ xs: "0px 20px", lg: "0px 40px" }}
-        paddingTop={{ xs: "10px", lg: "0px" }}
+        paddingTop={{ xs: "10px", lg: "10px" }}
+        paddingBottom={"20px"}
         sx={{
           fontSize: "1.2rem",
           lineHeight: "1.8",
-          color: "#333",
+          color: "black",
           marginBottom: "40px",
           width: "100%",
           maxWidth: { xs: "385px", lg: "660px" },
@@ -102,10 +103,10 @@ export default function AboutPage() {
               textAlign: "center",
               width: "100%",
               maxWidth: "270px",
-              borderTop: "2px solid #1e3a8a",
+              borderTop: "2px solid black",
               borderBottom: expandedIndices[index]
-                ? "3px solid #1e3a8a"
-                : "2px solid #1e3a8a",
+                ? "3px solid black"
+                : "2px solid black",
               padding: "10px",
               marginBottom: "20px",
               height: expandedIndices[index] ? "auto" : "50px", // Adjust height dynamically
@@ -126,7 +127,7 @@ export default function AboutPage() {
                 sx={{
                   fontSize: "1.2rem",
                   fontWeight: "bold",
-                  color: "#1e3a8a",
+                  color: "black",
                   flex: 1,
                   textAlign: "left",
                   padding: "10px 0",
@@ -135,6 +136,9 @@ export default function AboutPage() {
                 {step.title}
               </Typography>
               <IconButton
+                sx={{
+                  color: "black",
+                }}
                 onClick={() => handleToggle(index)}
                 aria-expanded={!!expandedIndices[index]}
                 aria-label={`Toggle ${step.title}`}
@@ -148,7 +152,7 @@ export default function AboutPage() {
                   marginTop: "10px",
                   textAlign: "left",
                   fontSize: "1rem",
-                  color: "#555",
+                  color: "black",
                   paddingTop: "10px",
                 }}
               >
