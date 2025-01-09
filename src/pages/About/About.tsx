@@ -1,4 +1,4 @@
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, Collapse, IconButton, Typography } from "@mui/material";
 
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
@@ -28,16 +28,31 @@ const steps = [
 ];
 
 export default function AboutPage() {
-  const [expanded, setExpanded] = useState(null);
+  const [expandedIndices, setExpandedIndices] = useState<
+    Record<number, boolean>
+  >({});
 
-  const handleToggle = (index: any) => {
-    setExpanded(expanded === index ? null : index);
+  const handleToggle = (index: number) => {
+    setExpandedIndices((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index], // Toggle the state of the clicked index
+    }));
   };
 
   return (
     <Box>
+      <Box
+        sx={{
+          height: "450px",
+          backgroundImage:
+            "url('https://getshogun.com/learn/wp-content/uploads/2024/06/ft-img-add-shopify-about-us-page-.jpeg')", // Replace with your image URL
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          marginBottom: "40px",
+        }}
+      />
       <Typography
-        margin={"20px 40px"}
+        margin={{ xs: "0px 20px", lg: "0px 40px" }}
         variant="h2"
         sx={{
           fontSize: "2.5rem",
@@ -49,14 +64,15 @@ export default function AboutPage() {
         How do we do it?
       </Typography>
       <Typography
-        margin={"0px 40px"}
+        margin={{ xs: "0px 20px", lg: "0px 40px" }}
+        paddingTop={{ xs: "10px", lg: "0px" }}
         sx={{
           fontSize: "1.2rem",
           lineHeight: "1.8",
           color: "#333",
           marginBottom: "40px",
           width: "100%",
-          maxWidth: "660px",
+          maxWidth: { xs: "385px", lg: "660px" },
         }}
       >
         Our niche - give us the replatforms, the complex builds, all the fun
@@ -70,11 +86,13 @@ export default function AboutPage() {
       </Typography>
 
       <Box
+        mt={{ xs: "20px", lg: "0px" }}
         sx={{
           display: "flex",
           flexDirection: "row",
           gap: "20px",
           justifyContent: "space-around",
+          flexWrap: "wrap",
         }}
       >
         {steps.map((step, index) => (
@@ -83,11 +101,16 @@ export default function AboutPage() {
             sx={{
               textAlign: "center",
               width: "100%",
-              maxWidth: "300px", // Adjust width if needed
+              maxWidth: "270px",
               borderTop: "2px solid #1e3a8a",
-              borderBottom: "2px solid #1e3a8a",
+              borderBottom: expandedIndices[index]
+                ? "3px solid #1e3a8a"
+                : "2px solid #1e3a8a",
               padding: "10px",
               marginBottom: "20px",
+              height: expandedIndices[index] ? "auto" : "50px", // Adjust height dynamically
+              overflow: "hidden", // Ensure content doesn't spill out
+              transition: "height 0.3s ease, border-bottom 0.3s ease", // Smooth transition
             }}
           >
             <Box
@@ -111,11 +134,15 @@ export default function AboutPage() {
               >
                 {step.title}
               </Typography>
-              <IconButton onClick={() => handleToggle(index)}>
-                {expanded === index ? <RemoveIcon /> : <AddIcon />}
+              <IconButton
+                onClick={() => handleToggle(index)}
+                aria-expanded={!!expandedIndices[index]}
+                aria-label={`Toggle ${step.title}`}
+              >
+                {expandedIndices[index] ? <RemoveIcon /> : <AddIcon />}
               </IconButton>
             </Box>
-            {expanded === index && (
+            <Collapse in={!!expandedIndices[index]}>
               <Typography
                 sx={{
                   marginTop: "10px",
@@ -127,7 +154,7 @@ export default function AboutPage() {
               >
                 {step.content}
               </Typography>
-            )}
+            </Collapse>
           </Box>
         ))}
       </Box>
