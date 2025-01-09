@@ -1,4 +1,4 @@
-import { Box, Collapse, IconButton, Typography } from "@mui/material";
+import { Box, Button, Collapse, IconButton, Typography } from "@mui/material";
 
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
@@ -161,6 +161,164 @@ export default function AboutPage() {
             </Collapse>
           </Box>
         ))}
+      </Box>
+      <Box
+        sx={{
+          backgroundColor: "#f6f6f6",
+          borderRadius: "60px",
+          margin: "90px",
+        }}
+      >
+        <Box
+          sx={{
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "space-around",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: "20px",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                width={"250px"}
+                src={
+                  "https://cdn.prod.website-files.com/6033a386edbf915204542100/65d3aed4b7aa2377d8eec1ff_target%201.svg"
+                }
+                alt="image1"
+              />
+            </Box>
+          </Box>
+          <Box display={"flex"} flexDirection={"column"}>
+            <Typography
+              pt={"70px"}
+              ml={"35px"}
+              lineHeight={1.2}
+              sx={{
+                fontWeight: "700",
+                marginBottom: "20px",
+                color: "black",
+                textAlign: "justify",
+                fontSize: "55px",
+              }}
+            >
+              Your goals are our
+              <br />
+              focus in Shopify
+              <br /> ecommerce
+              <br />
+              development
+            </Typography>
+            <Typography
+              ml={"35px"}
+              sx={{
+                fontSize: "22px",
+                color: "black",
+                marginBottom: "30px",
+                lineHeight: "1.6",
+                textAlign: "justify",
+                width: "100%",
+                maxWidth: "568px",
+              }}
+            >
+              As a professional team, we understand the importance of creating
+              tailor-made solutions for our partners' needs. That's why we
+              always offer custom Shopify development services to every
+              business. This helps us meet your expectations regarding the
+              project's final results.
+            </Typography>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "#79b316",
+                color: "black",
+                padding: "12px 20px",
+                fontSize: "26px",
+                fontWeight: "700",
+                borderRadius: "35px",
+                width: "100%",
+                maxWidth: "250px",
+                textTransform: "capitalize",
+                marginLeft: "35px",
+                ":hover": {
+                  backgroundColor: "#79b316",
+                  color: "black",
+                  borderRadius: "35px",
+                },
+              }}
+            >
+              Get in Touch
+            </Button>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            width: "100%",
+            overflow: "hidden",
+            mt: "30px",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              gap: "70px",
+              filter: "brightness(0%)",
+              animation: "scroll 15s linear infinite",
+              "@keyframes scroll": {
+                "0%": { transform: "translateX(0)" },
+                "100%": { transform: "translateX(-100%)" },
+              },
+            }}
+          >
+            {[
+              "https://cdn.prod.website-files.com/6033a386edbf915204542100/65d5761bf5e597cf4aaaaec5_avon-p.png",
+              "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0acc1a82cef1814455_partner-logo-alyve.png",
+              "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0a69ae4d60492dfec5_partner-logo-obaku.png",
+              "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0adf998299c0037368_partner-logo-tbi.png",
+              "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0a8e795f829f5bdf37_partner-logo-karmaluck-p-500.png",
+              "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0a7c43e75852d2800f_partner-logo-banana.png",
+              "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0abe913dce288194a3_partner-logo-giordano-p-500.png",
+              "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0aa05664372ddabf2b_partner-logo-ds.png",
+              "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0bfe3715263a6c2b51_partner-logo-ingarden.png",
+            ]
+              .concat([
+                "https://cdn.prod.website-files.com/6033a386edbf915204542100/65d5761bf5e597cf4aaaaec5_avon-p.png",
+                "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0acc1a82cef1814455_partner-logo-alyve.png",
+                "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0a69ae4d60492dfec5_partner-logo-obaku.png",
+                "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0adf998299c0037368_partner-logo-tbi.png",
+                "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0a8e795f829f5bdf37_partner-logo-karmaluck-p-500.png",
+                "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0a7c43e75852d2800f_partner-logo-banana.png",
+                "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0abe913dce288194a3_partner-logo-giordano-p-500.png",
+                "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0aa05664372ddabf2b_partner-logo-ds.png",
+                "https://cdn.prod.website-files.com/6033a386edbf915204542100/65cf0a0bfe3715263a6c2b51_partner-logo-ingarden.png",
+              ]) // Duplicate array to loop seamlessly
+              .map((logo, index) => (
+                <img
+                  key={index}
+                  src={logo}
+                  alt={`logo-${index}`}
+                  style={{
+                    marginRight: "20px",
+                    width: "130px",
+                    height: "130px",
+                    objectFit: "contain",
+                  }}
+                />
+              ))}
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
