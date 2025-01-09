@@ -13,12 +13,12 @@ export default function MasonryImageList() {
         overflowY: "scroll",
         scrollbarWidth: "none",
       }}
-      marginTop={{ xs: 0, sm: 0, md: "-80px" }}
+      // marginTop={{ xs: 0, sm: 0, md: "-80px" }}
     >
       <ImageList
         variant="masonry"
         cols={3}
-        gap={5}
+        gap={10}
         style={{
           marginTop: 0,
           marginBottom: 0,
@@ -32,6 +32,9 @@ export default function MasonryImageList() {
               alt={item.title}
               loading="lazy"
               width={"100%"}
+              style={{
+                borderRadius: "20px",
+              }}
             />
           </ImageListItem>
         ))}

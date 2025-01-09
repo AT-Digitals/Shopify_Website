@@ -1,4 +1,4 @@
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, Divider, IconButton, Typography } from "@mui/material";
 
 import AppContainer from "../../Shared-fronend/AppContainer";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -220,24 +220,24 @@ export default function Homepage() {
         <ServiceSection />
       </Box>
 
-      <AppContainer maxWidth={1350}>
-        <Typography
-          padding={"2rem 0"}
-          fontFamily={"Robato"}
-          fontSize={{ xs: "25px", sm: "30px", md: "60px" }}
-          textAlign={"center"}
-        >
-          Gallery of Innovation and Creativity
-        </Typography>
-      </AppContainer>
       <Box
+        bgcolor={"black"}
         sx={{
           overflowY: "scroll", // Enable scrolling
           scrollbarWidth: "none",
         }}
+        padding={"0 20px"}
       >
+        <Divider
+          orientation="horizontal"
+          sx={{
+            background: "white",
+            width: "80%", // Use 'width' instead of 'maxWidth'
+            margin: "2rem auto", // Centers the divider
+          }}
+        />
         {/* Text Overlay */}
-        <Box
+        {/* <Box
           sx={{
             position: "sticky",
             top: "40%", // Keeps the text at the top
@@ -261,7 +261,16 @@ export default function Homepage() {
           >
             Scroll to see the images below
           </Typography>
-        </Box>
+        </Box> */}
+        <Typography
+          padding={"2rem 0"}
+          color={"white"}
+          fontFamily={"Robato"}
+          fontSize={{ xs: "25px", sm: "30px", md: "60px" }}
+          textAlign={"center"}
+        >
+          Gallery of Innovation and Creativity
+        </Typography>
 
         {/* Masonry Image List */}
         <MasonryImageList />
