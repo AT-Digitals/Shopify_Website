@@ -1,19 +1,18 @@
 import {
   Box,
-  Button,
   Stack,
   TextField,
   Typography,
   useMediaQuery,
 } from "@mui/material";
 
-import AppContainer from "./AppContainer";
-import Colors from "./Colors";
+import styled from "@emotion/styled";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
 import routes from "../routes/routes";
-import styled from "@emotion/styled";
+import AppContainer from "./AppContainer";
+import Colors from "./Colors";
 
 interface FooterProps {
   activeTab: string;
@@ -52,7 +51,7 @@ export default function AppFooter({
   return (
     <Box bgcolor={Colors.BLACK}>
       <Box borderBottom="1px solid #272727">
-        <AppContainer maxWidth={1300} paddingLeft={0} paddingRight={0}>
+        <AppContainer maxWidth={1300} padding={"0px !important"}>
           <Stack
             padding={"4rem 2rem"}
             direction={"row"}

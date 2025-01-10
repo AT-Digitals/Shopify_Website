@@ -279,15 +279,15 @@ export default function Homepage() {
         pt={"30px"}
         sx={{
           width: "100%",
-          height: "480px",
+          paddingBottom: { xs: "50px", lg: "140px" },
           background: "rgb(184, 0, 64)",
         }}
       >
         <Typography
-          pt={"70px"}
-          pl={"50px"}
+          pt={{ xs: "30px", lg: "70px" }}
+          pl={{ xs: "25px", lg: "50px" }}
           sx={{
-            fontSize: "55px",
+            fontSize: { xs: "28px", lg: "55px" },
             fontWeight: "100",
             color: "white",
           }}
@@ -307,7 +307,7 @@ export default function Homepage() {
             maxWidth: "250px",
             textTransform: "capitalize",
             color: "black",
-            marginLeft: "50px",
+            marginLeft: { xs: "25px", lg: "50px" },
             marginTop: "30px",
             background: "white",
             overflow: "hidden",
