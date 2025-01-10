@@ -65,7 +65,7 @@ export default function ProjectsComponent({
     <AppContainer maxWidth={1350}>
       <Box
         sx={{
-          flexDirection: { xs: "column", md: "column", lg: flexDirection }, // Responsive handling
+          flexDirection: { xs: "column", md: flexDirection, lg: flexDirection }, // Responsive handling
           gap: "10px",
         }}
         margin={{ xs: "0px", lg: "30px" }}
@@ -76,8 +76,8 @@ export default function ProjectsComponent({
         <Box
           onClick={BigProjectClick}
           sx={{
-            width: "100%",
-            maxWidth: { xs: "340px", sm: "650px", md: "870px", lg: "980px" },
+            // width: "100%",
+            maxWidth: { xs: "100%", sm: "100%", md: "870px", lg: "980px" },
             padding: "16px",
             height: { xs: "224px", sm: "280px", md: "390px", lg: "500px" },
             backgroundColor: "#f9f9f9",
