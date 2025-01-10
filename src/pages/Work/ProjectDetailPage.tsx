@@ -1,14 +1,5 @@
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Chip,
-  Divider,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Chip, Divider, Stack, Typography } from "@mui/material";
 
 import { useParams } from "react-router-dom";
 
@@ -329,12 +320,12 @@ const ProjectDetailPage = () => {
           </Box>
         </Box>
       </Box>
-      <Box textAlign={"center"} mt={2} p={"10px 0"}>
+      <Box textAlign={"center"}>
         <img
           style={{
             objectFit: "cover",
             height: "auto", // Default to auto for responsiveness
-            maxWidth: 1000,
+            // maxWidth: 1000,
           }}
           width="100%"
           src={project.subImage1}
