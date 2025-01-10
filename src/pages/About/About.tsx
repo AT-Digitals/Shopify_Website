@@ -85,7 +85,7 @@ export default function AboutPage() {
           color: "black",
           marginBottom: "40px",
           width: "100%",
-          maxWidth: { xs: "385px", lg: "660px" },
+          maxWidth: { xs: "385px", sm: "600px", md: "600px", lg: "660px" },
         }}
       >
         Our niche - give us the replatforms, the complex builds, all the fun
@@ -178,7 +178,7 @@ export default function AboutPage() {
         sx={{
           backgroundColor: "#f6f6f6",
           borderRadius: "60px",
-          margin: "90px",
+          margin: { xs: "30px", lg: "90px" },
         }}
       >
         <Box
@@ -186,6 +186,7 @@ export default function AboutPage() {
             textAlign: "center",
             display: "flex",
             justifyContent: "space-around",
+            flexDirection: { xs: "column", sm: "row", md: "row", lg: "row" },
           }}
         >
           <Box
@@ -215,15 +216,15 @@ export default function AboutPage() {
           </Box>
           <Box display={"flex"} flexDirection={"column"}>
             <Typography
-              pt={"70px"}
-              ml={"35px"}
+              pt={{ xs: "25px", lg: "70px" }}
+              ml={{ xs: "20px", lg: "35px" }}
               lineHeight={1.2}
               sx={{
                 fontWeight: "700",
                 marginBottom: "20px",
                 color: "black",
                 textAlign: "justify",
-                fontSize: "55px",
+                fontSize: { xs: "28px", lg: "55px" },
               }}
             >
               Your goals are our
@@ -234,15 +235,15 @@ export default function AboutPage() {
               development
             </Typography>
             <Typography
-              ml={"35px"}
+              ml={{ xs: "20px", lg: "35px" }}
               sx={{
-                fontSize: "22px",
+                fontSize: { xs: "16px", lg: "22px" },
                 color: "black",
                 marginBottom: "30px",
                 lineHeight: "1.6",
                 textAlign: "justify",
                 width: "100%",
-                maxWidth: "568px",
+                maxWidth: { xs: "270px", lg: "568px" },
               }}
             >
               As a professional team, we understand the importance of creating

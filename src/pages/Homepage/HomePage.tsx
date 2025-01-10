@@ -1,11 +1,14 @@
-import { Box, Divider, IconButton, Typography } from "@mui/material";
+import { Box, Button, Divider, IconButton, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 
 import AppContainer from "../../Shared-fronend/AppContainer";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import React from "react";
 import CountUp from "react-countup";
+import AppContainer from "../../Shared-fronend/AppContainer";
+import GetinTouch from "../../Shared-fronend/GetIntouch/GetInTouch";
 import FaqAccordion from "../Faq/Faq";
 import MasonryImageList from "../CaseStudy/MasinoryImageList";
 import ProjectData from "../Data/ProjectData";
@@ -41,6 +44,12 @@ export default function Homepage() {
     if (ourWorkRef.current) {
       ourWorkRef.current.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen: boolean) => () => {
+    setOpen(newOpen);
   };
 
   return (
@@ -263,6 +272,74 @@ export default function Homepage() {
           Gallery of Innovation and Creativity
         </Typography>
         <MasonryImageList />
+        <Box
+          mt={"30px"}
+          sx={{
+            width: "100%",
+            height: "500px",
+            background: "rgb(184, 0, 64)",
+          }}
+        >
+          <Typography
+            pt={"90px"}
+            pl={"50px"}
+            sx={{
+              fontSize: "55px",
+              fontWeight: "100",
+              color: "white",
+            }}
+          >
+            Let us take your business
+            <br />
+            further than it has ever been
+          </Typography>
+          <Button
+            onClick={toggleDrawer(true)}
+            sx={{
+              position: "relative",
+              fontSize: "26px",
+              fontWeight: "700",
+              borderRadius: "35px",
+              width: "100%",
+              maxWidth: "250px",
+              textTransform: "capitalize",
+              color: "black",
+              marginLeft: "50px",
+              marginTop: "30px",
+              background: "white",
+              overflow: "hidden",
+              zIndex: 1,
+              border: "3px solid transparent",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "10px",
+              ":before": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                background: "white",
+                transition: "transform 0.5s ease",
+                transformOrigin: "right",
+                transform: "scaleX(1)",
+                zIndex: -1,
+              },
+              ":hover:before": {
+                transform: "scaleX(0)",
+              },
+              ":hover": {
+                color: "white",
+                border: "3px solid white",
+              },
+            }}
+          >
+            Get in Scope
+          </Button>
+          <GetinTouch open={open} toggleDrawer={toggleDrawer(false)} />
+        </Box>
       </Box>
       <Box bgcolor={"black"}>
         <FaqAccordion />
