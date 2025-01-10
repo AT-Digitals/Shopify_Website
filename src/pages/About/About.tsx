@@ -1,10 +1,10 @@
 import { Box, Button, Collapse, IconButton, Typography } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
-import GetinTouch from "../../Shared-fronend/GetIntouch/GetInTouch";
 import { useEffect, useState } from "react";
+
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import React from "react";
+import GetinTouch from "../../Shared-fronend/GetIntouch/GetInTouch";
 
 const steps = [
   {
@@ -46,7 +46,7 @@ export default function AboutPage() {
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
   };
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
