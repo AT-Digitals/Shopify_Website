@@ -1,7 +1,17 @@
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
-import { Box, Button, Chip, Divider, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Chip,
+  Divider,
+  IconButton,
+  Stack,
+  Typography,
+} from "@mui/material";
+import { Link, useParams } from "react-router-dom";
 
-import { useParams } from "react-router-dom";
+import routes from "../../routes/routes";
+import { useEffect } from "react";
 
 // Sample data for projects (you can replace this with an API call or context)
 const projectData = [
@@ -99,6 +109,9 @@ const projectData = [
 ];
 
 const ProjectDetailPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { id, type } = useParams<{ id: string; type: string }>(); // Extract ID and type from URL
   const projectIndex = projectData.findIndex(
     (p) => p.id === id && p.title === type
@@ -134,6 +147,7 @@ const ProjectDetailPage = () => {
   const prevProject =
     projectData[(projectIndex - 1 + projectData.length) % projectData.length];
   const nextProject = projectData[(projectIndex + 1) % projectData.length];
+
   return (
     <Box>
       <Box sx={{ position: "relative", marginBottom: "-10px" }}>
@@ -173,7 +187,11 @@ const ProjectDetailPage = () => {
       </Box>
 
       <Box bgcolor={"black"}>
-        <Box maxWidth={1350} margin={"auto"} padding={"2rem 0"}>
+        <Box
+          maxWidth={1350}
+          margin={"auto"}
+          padding={{ xs: "2rem ", sm: "2rem ", md: "2rem 0" }}
+        >
           <Typography
             mb={2}
             fontSize={"60px"}
@@ -182,6 +200,16 @@ const ProjectDetailPage = () => {
             color={"white"}
           >
             {project.title}{" "}
+          </Typography>
+          <Typography
+            mb={2}
+            fontSize={"40px"}
+            fontFamily={"robato"}
+            textAlign={"start"}
+            color={"white"}
+          >
+            End-to-end Shopify Plus solution with a <br /> custom iOS & Android
+            App
           </Typography>
           <Button
             sx={{
@@ -226,6 +254,8 @@ const ProjectDetailPage = () => {
           padding={"20px 0"}
           display={"flex"}
           justifyContent={"space-between"}
+          flexDirection={{ xs: "column", sm: "column", md: "row" }}
+          gap="2rem"
         >
           <Box>
             <Typography
@@ -339,7 +369,7 @@ const ProjectDetailPage = () => {
           maxWidth={1300}
           margin={"auto"}
           justifyContent={"space-between"}
-          padding={"3rem 0"}
+          padding={{ xs: "2rem ", sm: "2rem ", md: "3rem 0" }}
           flexWrap={"wrap"}
         >
           <Typography fontFamily={"Robato"} color={"black"} fontSize={"45px"}>
@@ -381,7 +411,7 @@ const ProjectDetailPage = () => {
           maxWidth={1300}
           margin={"auto"}
           justifyContent={"space-between"}
-          padding={"3rem 0"}
+          padding={{ xs: "2rem ", sm: "2rem ", md: "3rem 0" }}
           flexWrap={"wrap"}
         >
           <Typography fontFamily={"Robato"} color={"black"} fontSize={"45px"}>
@@ -437,37 +467,146 @@ const ProjectDetailPage = () => {
         justifyContent={"space-between"}
         maxWidth={"1350px"}
         margin={" 2rem auto"}
+        flexDirection={"column"}
+        gap={"2rem"}
       >
-        <Button
-          sx={{
-            borderRadius: "50px",
-            textTransform: "capitalize",
-            color: "black",
-            border: "1px solid black",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px", // Space between icon and text
-            maxWidth: 220,
-            width: "100%",
-            padding: "10px",
-            "&:hover": {
-              backgroundColor: "black",
-              color: "white",
-              border: "1px solid black",
-            },
-            "&:hover .MuiSvgIcon-root": {
-              transform: "scale(1.2) translateX(-20px)", // Move icon to the right and scale
-              transition: "all 1s ease", // Smooth transition for the icon
-            }, // Smooth transition for the icon
-          }}
-          variant="outlined"
-          onClick={handlePrev}
-        >
-          <ArrowBack /> {/* Left Arrow Icon */}
-          {prevProject.title}
-        </Button>
+        <Box display={"flex"} justifyContent={"space-between"}>
+          <Typography fontSize={"30px"} fontFamily={"Robato"} color={"black"}>
+            Related case studies{" "}
+          </Typography>
+          <Box display={"flex"} alignItems={"center"} gap={"10px"}>
+            <Typography fontSize={"22px"} fontFamily={"Robato"} color={"black"}>
+              View all case studies{" "}
+            </Typography>
+            <Link to={routes.WORK}>
+              <IconButton
+                style={{
+                  background: "lightgray",
+                }}
+              >
+                <ArrowForward />
+              </IconButton>
+            </Link>
+          </Box>
+        </Box>
 
-        <Button
+        <Box
+          display={"flex"}
+          justifyContent={"space-between"}
+          // flexWrap={"wrap"}
+          gap={"2rem"}
+          flexDirection={{ xs: "column", sm: "column", md: "row" }}
+        >
+          <Box sx={{ position: "relative", marginBottom: "-10px" }}>
+            <img
+              style={{
+                objectFit: "cover",
+                height: "auto", // Default to auto for responsiveness
+                maxHeight: 600,
+              }}
+              width="100%"
+              src={prevProject.image}
+              alt="projectbanner"
+            />
+            <Stack
+              direction="row"
+              spacing={1}
+              sx={{
+                position: "absolute",
+                bottom: "10%", // Adjust distance from the bottom
+                left: { xs: "20%", sm: "20%", md: "8%" }, // Adjust distance from the left
+              }}
+            >
+              <Button
+                sx={{
+                  borderRadius: "50px",
+                  textTransform: "capitalize",
+                  color: "white",
+                  border: "1px solid black",
+                  display: "flex",
+                  alignItems: "center",
+                  backgroundColor: "black",
+
+                  gap: "8px", // Space between icon and text
+                  minWidth: 250,
+                  width: "100%",
+                  padding: "10px",
+                  "&:hover": {
+                    backgroundColor: "black",
+                    color: "white",
+                    border: "1px solid black",
+                  },
+                  "&:hover .MuiSvgIcon-root": {
+                    transform: "scale(1.2) translateX(-20px)", // Move icon to the right and scale
+                    transition: "all 1s ease", // Smooth transition for the icon
+                  }, // Smooth transition for the icon
+                }}
+                variant="outlined"
+                onClick={handlePrev}
+              >
+                <ArrowBack /> {/* Left Arrow Icon */}
+                {prevProject.title}
+              </Button>
+            </Stack>
+          </Box>
+          <Box sx={{ position: "relative" }}>
+            <img
+              style={{
+                objectFit: "cover",
+                height: "auto", // Default to auto for responsiveness
+                maxHeight: 600,
+              }}
+              width="100%"
+              src={nextProject.image}
+              alt="projectbanner"
+            />
+            <Stack
+              direction="row"
+              spacing={1}
+              sx={{
+                position: "absolute",
+                bottom: "10%", // Adjust distance from the bottom
+                right: { xs: "20%", sm: "20%", md: "8%" }, // Adjust distance from the left
+              }}
+            >
+              <Button
+                sx={{
+                  borderRadius: "50px",
+                  textTransform: "capitalize",
+                  color: "white",
+                  padding: "10px",
+                  border: "1px solid black",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px", // Space between icon and text
+                  minWidth: 250,
+                  width: "100%",
+                  backgroundColor: "black",
+
+                  "&:hover": {
+                    backgroundColor: "black",
+                    color: "white",
+                    border: "1px solid black",
+                  },
+                  "&:hover .MuiSvgIcon-root": {
+                    transform: "scale(1.2) translateX(20px)", // Move icon to the right and scale
+                    transition: "all 1s ease", // Smooth transition for the icon
+                  },
+                }}
+                variant="outlined"
+                onClick={handleNext}
+              >
+                {nextProject.title}
+                <ArrowForward /> {/* Right Arrow Icon */}
+              </Button>
+            </Stack>
+          </Box>
+        </Box>
+
+        {/* <img width={"50%"} src={prevProject.image} alt="" />
+        <img width={"50%"} src={nextProject.image} alt="" /> */}
+
+        {/* <Button
           sx={{
             borderRadius: "50px",
             textTransform: "capitalize",
@@ -494,8 +633,15 @@ const ProjectDetailPage = () => {
         >
           {nextProject.title}
           <ArrowForward /> {/* Right Arrow Icon */}
-        </Button>
+        {/* </Button> */}
       </Box>
+
+      <Box
+        display={"flex"}
+        justifyContent={"space-between"}
+        maxWidth={"1350px"}
+        margin={" 2rem auto"}
+      ></Box>
     </Box>
   );
 };
