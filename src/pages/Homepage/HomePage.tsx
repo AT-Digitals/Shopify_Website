@@ -271,77 +271,77 @@ export default function Homepage() {
           Gallery of Innovation and Creativity
         </Typography>
         <MasonryImageList />
-        <Box
-          mt={"30px"}
-          sx={{
-            width: "100%",
-            height: "500px",
-            background: "rgb(184, 0, 64)",
-          }}
-        >
-          <Typography
-            pt={"90px"}
-            pl={"50px"}
-            sx={{
-              fontSize: "55px",
-              fontWeight: "100",
-              color: "white",
-            }}
-          >
-            Let us take your business
-            <br />
-            further than it has ever been
-          </Typography>
-          <Button
-            onClick={toggleDrawer(true)}
-            sx={{
-              position: "relative",
-              fontSize: "26px",
-              fontWeight: "700",
-              borderRadius: "35px",
-              width: "100%",
-              maxWidth: "250px",
-              textTransform: "capitalize",
-              color: "black",
-              marginLeft: "50px",
-              marginTop: "30px",
-              background: "white",
-              overflow: "hidden",
-              zIndex: 1,
-              border: "3px solid transparent",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "10px",
-              ":before": {
-                content: '""',
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                background: "white",
-                transition: "transform 0.5s ease",
-                transformOrigin: "right",
-                transform: "scaleX(1)",
-                zIndex: -1,
-              },
-              ":hover:before": {
-                transform: "scaleX(0)",
-              },
-              ":hover": {
-                color: "white",
-                border: "3px solid white",
-              },
-            }}
-          >
-            Get in Scope
-          </Button>
-          <GetinTouch open={open} toggleDrawer={toggleDrawer(false)} />
-        </Box>
       </Box>
       <Box bgcolor={"black"}>
         <FaqAccordion />
+      </Box>
+      <Box
+        pt={"30px"}
+        sx={{
+          width: "100%",
+          height: "480px",
+          background: "rgb(184, 0, 64)",
+        }}
+      >
+        <Typography
+          pt={"70px"}
+          pl={"50px"}
+          sx={{
+            fontSize: "55px",
+            fontWeight: "100",
+            color: "white",
+          }}
+        >
+          Let us take your business
+          <br />
+          further than it has ever been
+        </Typography>
+        <Button
+          onClick={toggleDrawer(true)}
+          sx={{
+            position: "relative",
+            fontSize: "26px",
+            fontWeight: "700",
+            borderRadius: "35px",
+            width: "100%",
+            maxWidth: "250px",
+            textTransform: "capitalize",
+            color: "black",
+            marginLeft: "50px",
+            marginTop: "30px",
+            background: "white",
+            overflow: "hidden",
+            zIndex: 1,
+            border: "3px solid transparent",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "10px",
+            ":before": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background: "white",
+              transition: "transform 0.5s ease",
+              transformOrigin: "right",
+              transform: "scaleX(1)",
+              zIndex: -1,
+            },
+            ":hover:before": {
+              transform: "scaleX(0)",
+            },
+            ":hover": {
+              color: "white",
+              border: "3px solid white",
+            },
+          }}
+        >
+          Get in Scope
+        </Button>
+        <GetinTouch open={open} toggleDrawer={toggleDrawer(false)} />
       </Box>
     </>
   );
