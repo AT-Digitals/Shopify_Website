@@ -1,8 +1,9 @@
 import { Box, Button, Collapse, IconButton, Typography } from "@mui/material";
+import React, { useState } from "react";
 
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { useState } from "react";
+import GetinTouch from "../../Shared-fronend/GetIntouch/GetInTouch";
 
 const steps = [
   {
@@ -37,6 +38,12 @@ export default function AboutPage() {
       ...prevState,
       [index]: !prevState[index], // Toggle the state of the clicked index
     }));
+  };
+
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen: boolean) => () => {
+    setOpen(newOpen);
   };
 
   return (
@@ -240,6 +247,7 @@ export default function AboutPage() {
               project's final results.
             </Typography>
             <Button
+              onClick={toggleDrawer(true)}
               variant="contained"
               sx={{
                 backgroundColor: "#79b316",
@@ -262,6 +270,7 @@ export default function AboutPage() {
               Get in Touch
             </Button>
           </Box>
+          <GetinTouch open={open} toggleDrawer={toggleDrawer(false)} />
         </Box>
         <Box
           sx={{
