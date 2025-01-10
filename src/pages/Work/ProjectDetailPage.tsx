@@ -250,12 +250,13 @@ const ProjectDetailPage = () => {
         </Box>
         <Box
           maxWidth={1350}
-          margin={"auto"}
+          margin={"2rem auto"}
           padding={"20px 0"}
           display={"flex"}
           justifyContent={"space-between"}
           flexDirection={{ xs: "column", sm: "column", md: "row" }}
           gap="2rem"
+          paddingBottom={"2rem"}
         >
           <Box>
             <Typography
