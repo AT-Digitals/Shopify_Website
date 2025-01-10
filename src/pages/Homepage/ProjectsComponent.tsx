@@ -1,7 +1,7 @@
 import { Box, Chip, Rating, Typography } from "@mui/material";
 
-import AppContainer from "../../Shared-fronend/AppContainer";
 import React from "react";
+import AppContainer from "../../Shared-fronend/AppContainer";
 
 type ProjectsComponentProps = {
   flexDirection?: "row" | "row-reverse"; // Add a flexDirection prop
@@ -62,7 +62,7 @@ export default function ProjectsComponent({
   };
 
   return (
-    <AppContainer maxWidth={1350}>
+    <AppContainer maxWidth={1350} padding={"0px !important"}>
       <Box
         sx={{
           flexDirection: { xs: "column", md: flexDirection, lg: flexDirection }, // Responsive handling
