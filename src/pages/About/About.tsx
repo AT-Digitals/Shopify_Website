@@ -1,8 +1,8 @@
 import { Box, Button, Collapse, IconButton, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { useState } from "react";
 
 const steps = [
   {
@@ -38,6 +38,10 @@ export default function AboutPage() {
       [index]: !prevState[index], // Toggle the state of the clicked index
     }));
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Box>
