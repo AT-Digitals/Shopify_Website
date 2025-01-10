@@ -1,16 +1,17 @@
 import { Box, Divider, IconButton, Typography } from "@mui/material";
+import { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import AppContainer from "../../Shared-fronend/AppContainer";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import CountUp from "react-countup";
+import routes from "../../routes/routes";
+import AppContainer from "../../Shared-fronend/AppContainer";
 import MasonryImageList from "../CaseStudy/MasinoryImageList";
 import ProjectData from "../Data/ProjectData";
 import ProjectsComponent from "./ProjectsComponent";
 import ReviewsSection from "./ReviewsSection";
 import ServiceSection from "./ServiceSection";
-import routes from "../../routes/routes";
-import { useState } from "react";
 
 export default function Homepage() {
   const [backgroundPosition, setBackgroundPosition] = useState({
@@ -24,13 +25,41 @@ export default function Homepage() {
     const y = (clientY / window.innerHeight) * 100; // Normalize to percentage (up/down)
     setBackgroundPosition({ x, y });
   };
+
   const navigate = useNavigate();
 
   const handleProjectClick = (id: string, type: string) => {
     navigate(`/project/${id}/${type}`);
   };
+
+  // Reference for "Our Work" section
+  const ourWorkRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to "Our Work" section
+  const scrollToOurWork = () => {
+    if (ourWorkRef.current) {
+      ourWorkRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
+      <style>
+        {`
+          @keyframes bounce {
+            0%, 100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(10px);
+            }
+          }
+
+          .bounce:hover {
+            animation: bounce 0.6s ease-in-out infinite;
+          }
+        `}
+      </style>
       <div
         className="container"
         onMouseMove={handleMouseMove}
@@ -65,106 +94,121 @@ export default function Homepage() {
             alt=""
           />
         </Box>
+
+        {/* Down Arrow */}
+        <Box textAlign="center" mt={3}>
+          <IconButton
+            onClick={scrollToOurWork}
+            className="bounce"
+            sx={{
+              color: "black",
+              background: "lightgray",
+              "&:hover": {
+                background: "transparent",
+                color: "white",
+              },
+            }}
+          >
+            <ArrowDownwardIcon />
+          </IconButton>
+        </Box>
       </div>
+
       <Box bgcolor={"black"}>
         <ReviewsSection />
       </Box>
 
-      <Box
-        margin={"auto"}
-        display={"flex"}
-        gap={"20px"}
-        textAlign={"start"}
-        flexDirection={"column"}
-        padding={"2rem 0"}
-      ></Box>
-      <AppContainer padding={"20px !important"} maxWidth={1350}>
-        <Typography
-          paddingLeft={{ xs: "0px", sm: "30px", lg: "0px" }}
-          fontFamily={"Robato"}
-          fontSize={"22px"}
-          lineHeight={1.2}
-        >
-          Our work
-        </Typography>
-        <Box
-          mt={"0px !important"}
-          display={"flex"}
-          justifyContent={{
-            xs: "space-between",
-            sm: "space-around",
-            lg: "space-between",
-          }}
-          alignItems={"baseline"}
-          flexDirection={{ xs: "column", sm: "row", lg: "row" }}
-        >
-          <Box display={"flex"} gap={"20px"}>
-            <Box
-              display={"flex"}
-              alignItems={"baseline"}
-              flexDirection={{ xs: "column", lg: "row" }}
-              gap={"20px"}
-            >
-              <Typography
-                fontFamily={"Robato"}
-                fontSize={"70px"}
-                maxWidth={700}
-              >
-                <CountUp start={0} end={700} duration={10} />
-              </Typography>
-              <Typography
-                fontFamily={"Robato"}
-                fontSize={"22px"}
-                textAlign={"center"}
-                maxWidth={700}
-              >
-                Completed projects
-              </Typography>
-            </Box>
-            <Box
-              display={"flex"}
-              flexDirection={{ xs: "column", lg: "row" }}
-              alignItems={"baseline"}
-              gap={"20px"}
-            >
-              <Typography
-                fontFamily={"Robato"}
-                fontSize={"70px"}
-                maxWidth={700}
-              >
-                <CountUp start={0} end={65} duration={10} />
-              </Typography>
-              <Typography
-                fontFamily={"Robato"}
-                fontSize={"22px"}
-                textAlign={"center"}
-                maxWidth={700}
-              >
-                Clients
-              </Typography>
-            </Box>
-          </Box>
-          <Box
-            display={"flex"}
-            padding={{ xs: "20px", lg: "0px" }}
-            alignItems={"center"}
-            gap={"10px"}
+      {/* Our Work Section */}
+      <div ref={ourWorkRef}>
+        <AppContainer mt={"20px"} padding={"20px !important"} maxWidth={1350}>
+          <Typography
+            paddingLeft={{ xs: "0px", sm: "30px", lg: "0px" }}
+            fontFamily={"Robato"}
+            fontSize={"28px"}
+            lineHeight={1.2}
           >
-            <Typography fontSize={"18px"} fontFamily={"Robato"}>
-              View all case studies
-            </Typography>
-            <Link to={routes.WORK}>
-              <IconButton
-                sx={{
-                  background: "lightgray",
-                }}
+            Our work
+          </Typography>
+          <Box
+            mt={"0px !important"}
+            display={"flex"}
+            justifyContent={{
+              xs: "space-between",
+              sm: "space-around",
+              lg: "space-between",
+            }}
+            alignItems={"baseline"}
+            flexDirection={{ xs: "column", sm: "row", lg: "row" }}
+          >
+            <Box display={"flex"} gap={"20px"}>
+              <Box
+                display={"flex"}
+                alignItems={"baseline"}
+                flexDirection={{ xs: "column", lg: "row" }}
+                gap={"20px"}
               >
-                <ChevronRightIcon />
-              </IconButton>
-            </Link>
+                <Typography
+                  fontFamily={"Robato"}
+                  fontSize={"70px"}
+                  maxWidth={700}
+                >
+                  <CountUp start={0} end={700} duration={10} />
+                </Typography>
+                <Typography
+                  fontFamily={"Robato"}
+                  fontSize={"22px"}
+                  textAlign={"center"}
+                  maxWidth={700}
+                >
+                  Completed projects
+                </Typography>
+              </Box>
+              <Box
+                display={"flex"}
+                flexDirection={{ xs: "column", lg: "row" }}
+                alignItems={"baseline"}
+                gap={"20px"}
+              >
+                <Typography
+                  fontFamily={"Robato"}
+                  fontSize={"70px"}
+                  maxWidth={700}
+                >
+                  <CountUp start={0} end={65} duration={10} />
+                </Typography>
+                <Typography
+                  fontFamily={"Robato"}
+                  fontSize={"22px"}
+                  textAlign={"center"}
+                  maxWidth={700}
+                >
+                  Clients
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              display={"flex"}
+              padding={{ xs: "20px", lg: "0px" }}
+              alignItems={"center"}
+              gap={"10px"}
+            >
+              <Typography fontSize={"18px"} fontFamily={"Robato"}>
+                View all case studies
+              </Typography>
+              <Link to={routes.WORK}>
+                <IconButton
+                  sx={{
+                    background: "lightgray",
+                  }}
+                >
+                  <ChevronRightIcon />
+                </IconButton>
+              </Link>
+            </Box>
           </Box>
-        </Box>
-      </AppContainer>
+        </AppContainer>
+      </div>
+
       {ProjectData.map((project, index) => (
         <ProjectsComponent
           key={index}
@@ -211,32 +255,6 @@ export default function Homepage() {
             margin: "2rem auto", // Centers the divider
           }}
         />
-        {/* Text Overlay */}
-        {/* <Box
-          sx={{
-            position: "sticky",
-            top: "40%", // Keeps the text at the top
-            zIndex: 2,
-
-            maxWidth: 600,
-            margin: "auto",
-            backdropFilter: "blur(5px)", // Applies blur effect
-            backgroundColor: "rgba(0, 0, 0, 0.5)", // Black with transparency
-            padding: "1rem",
-            color: "white",
-            textAlign: "center",
-            borderRadius: "50px",
-          }}
-        >
-          <Typography
-            variant="h6"
-            padding={"1rem 0"}
-            color="white"
-            textAlign="center"
-          >
-            Scroll to see the images below
-          </Typography>
-        </Box> */}
         <Typography
           padding={"2rem 0"}
           color={"white"}
@@ -246,8 +264,6 @@ export default function Homepage() {
         >
           Gallery of Innovation and Creativity
         </Typography>
-
-        {/* Masonry Image List */}
         <MasonryImageList />
       </Box>
     </>

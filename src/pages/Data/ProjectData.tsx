@@ -34,7 +34,7 @@ const ProjectData = [
   },
   {
     id: "3",
-    flexDirection: "row" as const,
+    flexDirection: "row-reverse" as const,
     Bigimg:
       "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/663c5601bef4c956d4ac7aa1_Frame%2012353%20copy.webp",
     Smallimg:

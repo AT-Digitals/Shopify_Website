@@ -1,6 +1,8 @@
 import { Box, Button, Collapse, IconButton, Typography } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import GetinTouch from "../../Shared-fronend/GetIntouch/GetInTouch";
 import { useEffect, useState } from "react";
-
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
@@ -39,6 +41,12 @@ export default function AboutPage() {
     }));
   };
 
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen: boolean) => () => {
+    setOpen(newOpen);
+  };
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -244,6 +252,7 @@ export default function AboutPage() {
               project's final results.
             </Typography>
             <Button
+              onClick={toggleDrawer(true)}
               variant="contained"
               sx={{
                 backgroundColor: "#79b316",
@@ -266,6 +275,7 @@ export default function AboutPage() {
               Get in Touch
             </Button>
           </Box>
+          <GetinTouch open={open} toggleDrawer={toggleDrawer(false)} />
         </Box>
         <Box
           sx={{
