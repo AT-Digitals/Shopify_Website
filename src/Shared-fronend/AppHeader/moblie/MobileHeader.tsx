@@ -109,7 +109,9 @@ export default function MoblieHeader({
             </svg>
           </Link>
           <IconButton size="large" onClick={handleDrawerOpen}>
-            <DragHandleIcon style={{ fontSize: 40, color: Colors.WHITE }} />
+            <DragHandleIcon
+              style={{ fontSize: 40, color: "rgb(184, 0, 64)" }}
+            />
           </IconButton>
         </Stack>
       </Box>

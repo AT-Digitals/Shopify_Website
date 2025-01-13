@@ -6,13 +6,13 @@ import {
   useMediaQuery,
 } from "@mui/material";
 
-import styled from "@emotion/styled";
+import AppContainer from "./AppContainer";
+import Colors from "./Colors";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
 import routes from "../routes/routes";
-import AppContainer from "./AppContainer";
-import Colors from "./Colors";
+import styled from "@emotion/styled";
 
 interface FooterProps {
   activeTab: string;
@@ -251,7 +251,7 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={""}>Industries</StyleLink>
+                <StyleLink to={routes.SERVICE}>Services</StyleLink>
               </li>
               <li
                 style={{
@@ -287,7 +287,7 @@ export default function AppFooter({
                 placeholder="email"
               />
               <Typography
-                border={"1px solid white"}
+                border={"1px solid rgb(184, 0, 64)"}
                 borderRadius={"50px"}
                 padding={"10px 15px"}
                 fontSize="17px"
@@ -297,6 +297,7 @@ export default function AppFooter({
                 sx={{
                   cursor: "pointer",
                   marginTop: 3,
+                  background: "rgb(184, 0, 64)",
                 }}
               >
                 Send

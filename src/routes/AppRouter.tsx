@@ -4,6 +4,7 @@ import Aboutpage from "../pages/About/About";
 import AppLayout from "../Shared-fronend/AppLayout";
 import HomePage from "../pages/Homepage/HomePage";
 import ProjectDetailPage from "../pages/Work/ProjectDetailPage";
+import ServicePage from "../pages/Service/ServicePage";
 import WorkPage from "../pages/Work/Works";
 import routes from "./routes";
 
@@ -16,6 +17,7 @@ export default function AppRouter() {
           <Route path={routes.ABOUT} element={<Aboutpage />} />
           <Route path={routes.WORK} element={<WorkPage />} />
           <Route path="/project/:id/:type" element={<ProjectDetailPage />} />
+          <Route path={routes.SERVICE} element={<ServicePage />} />
         </Route>
       </Routes>
     </Router>

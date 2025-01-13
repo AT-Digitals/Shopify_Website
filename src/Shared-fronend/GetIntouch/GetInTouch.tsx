@@ -80,7 +80,7 @@ export default function GetinTouch({
             variant="contained"
             fullWidth
             style={{
-              backgroundColor: "black",
+              backgroundColor: "rgb(184, 0, 64)",
               color: "white",
               marginTop: "20px",
               padding: "10px 0",

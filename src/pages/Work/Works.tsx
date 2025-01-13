@@ -58,12 +58,14 @@ export default function WorkPage() {
             border: "1px solid black",
             color: filter === "Health & Wellness" ? "white" : "black",
             backgroundColor:
-              filter === "Health & Wellness" ? "black" : "transparent",
+              filter === "Health & Wellness"
+                ? "rgb(184, 0, 64)"
+                : "transparent",
             fontWeight: "700",
             fontSize: "16px",
             padding: { xs: "10px 20px", sm: "8px 16px" }, // Adjust padding for smaller screens
             "&:hover": {
-              backgroundColor: "black",
+              backgroundColor: "rgb(184, 0, 64)",
               color: "white",
             },
           }}
@@ -77,12 +79,14 @@ export default function WorkPage() {
             border: "1px solid black",
             color: filter === "Beauty & Personal Care" ? "white" : "black",
             backgroundColor:
-              filter === "Beauty & Personal Care" ? "black" : "transparent",
+              filter === "Beauty & Personal Care"
+                ? "rgb(184, 0, 64)"
+                : "transparent",
             fontWeight: "700",
             fontSize: "16px",
             padding: { xs: "10px 20px", sm: "8px 16px" }, // Adjust padding for smaller screens
             "&:hover": {
-              backgroundColor: "black",
+              backgroundColor: "rgb(184, 0, 64)",
               color: "white",
             },
           }}
@@ -102,7 +106,7 @@ export default function WorkPage() {
             fontSize: "16px",
             padding: { xs: "10px 20px", sm: "8px 16px" }, // Adjust padding for smaller screens
             "&:hover": {
-              backgroundColor: "black",
+              backgroundColor: "rgb(184, 0, 64)",
               color: "white",
             },
           }}
