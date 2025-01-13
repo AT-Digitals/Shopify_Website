@@ -8,7 +8,7 @@ import { useState } from "react";
 const testimonials = [
   {
     rating: "★★★★★",
-    text: "They were able to keep us informed and not wondering what was going on.",
+    text: "They don't feel like an agency, but rather part of a team that is just as invested in our company's success as we are.",
     name: "Emily Iser",
     role: "Software Engineering Manager, Glowforge",
     imgSrc: "https://i.ibb.co/d5DY64w/img1.jpg",
@@ -22,7 +22,7 @@ const testimonials = [
   },
   {
     rating: "★★★★★",
-    text: "They have good communication and a timely response.",
+    text: "They don't feel like an agency, but rather part of a team that is just as invested in our company's success as we are.",
     name: "George Kuan",
     role: "Founder, Bang Cookies",
     imgSrc: "https://i.ibb.co/Trv7hDv/img3.jpg",
