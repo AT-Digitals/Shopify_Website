@@ -1,9 +1,9 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ProjectData from "../Data/ProjectData";
 import ProjectsComponent from "../Homepage/ProjectsComponent";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 export default function WorkPage() {
   const [filter, setFilter] = useState<string | null>(null);

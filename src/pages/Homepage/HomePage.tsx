@@ -344,7 +344,7 @@ export default function Homepage() {
             },
           }}
         >
-          Get in Scope
+          Get in Touch
         </Button>
         <GetinTouch open={open} toggleDrawer={toggleDrawer(false)} />
       </Box>
