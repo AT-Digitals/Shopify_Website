@@ -5,6 +5,7 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import React from "react";
 import GetinTouch from "../../Shared-fronend/GetIntouch/GetInTouch";
+import TestimonialsSection from "../Work/TestominialsSection";
 
 const steps = [
   {
@@ -335,6 +336,7 @@ export default function AboutPage() {
           </Box>
         </Box>
       </Box>
+      <TestimonialsSection />
     </Box>
   );
 }
