@@ -39,7 +39,7 @@ type FAQData = {
 
 export default function ServicePage() {
   const [selectedOption, setSelectedOption] = useState<string>(
-    "Shopify Design Agency"
+    "Shopify Store Setup"
   );
   const [loading, setLoading] = useState(false);
 
@@ -53,67 +53,71 @@ export default function ServicePage() {
 
   // FAQ data for each dropdown option
   const faqData: FAQData = {
-    "Shopify Design Agency": {
-      description:
-        "We specialize in creating custom designs for Shopify stores, helping you enhance the user experience and branding.",
-      faqs: [
-        {
-          question: "What is a Shopify Design Agency?",
-          answer:
-            "A Shopify Design Agency specializes in creating custom designs for Shopify stores to enhance user experience and branding.",
-        },
-        {
-          question: "Why choose us?",
-          answer:
-            "We deliver aesthetically pleasing designs tailored to your brand's identity.",
-        },
-      ],
-    },
-    "Shopify Development Agency": {
-      description:
-        "We focus on building, customizing, and maintaining Shopify stores to ensure your business runs smoothly.",
-      faqs: [
-        {
-          question: "What is a Shopify Development Agency?",
-          answer:
-            "A Shopify Development Agency focuses on building, customizing, and maintaining Shopify stores.",
-        },
-        {
-          question: "What services do we offer?",
-          answer:
-            "We offer theme development, app integration, and store customization.",
-        },
-      ],
-    },
-    "Shopify Marketing Agency": {
-      description:
-        "We help promote Shopify stores through SEO, social media marketing, and email campaigns to drive traffic and increase conversions.",
-      faqs: [
-        {
-          question: "What does a Shopify Marketing Agency do?",
-          answer:
-            "We specialize in promoting Shopify stores through SEO, social media marketing, and email campaigns.",
-        },
-        {
-          question: "How can we help your store grow?",
-          answer:
-            "By driving targeted traffic and increasing conversions through effective marketing strategies.",
-        },
-      ],
-    },
     "Shopify Store Setup": {
       description:
-        "We offer full-service Shopify store setup, including theme installation, product setup, and payment gateway integration.",
+        "We provide end-to-end Shopify store setup services, including theme installation, product configuration, and payment gateway integration. Our goal is to get your online store up and running quickly and efficiently.",
       faqs: [
         {
-          question: "What does a Shopify Marketing Agency do?",
+          question: "What does the Shopify Store Setup service include?",
           answer:
-            "We specialize in promoting Shopify stores through SEO, social media marketing, and email campaigns.",
+            "Our Shopify Store Setup service covers everything from installing a theme and setting up your products to integrating payment gateways and shipping methods.",
         },
         {
-          question: "How can we help your store grow?",
+          question: "How long does it take to set up a Shopify store?",
           answer:
-            "By driving targeted traffic and increasing conversions through effective marketing strategies.",
+            "Depending on the project’s complexity, it can take anywhere from a few days to a couple of weeks. We ensure a smooth and timely setup process.",
+        },
+      ],
+    },
+
+    "Shopify Theme Customization": {
+      description:
+        "We customize Shopify themes to fit your brand’s identity. Whether it’s modifying an existing theme or adding new features, we make sure your store stands out.",
+      faqs: [
+        {
+          question: "What is Shopify Theme Customization?",
+          answer:
+            "Shopify Theme Customization involves modifying the design and functionality of an existing theme to better match your brand and business needs.",
+        },
+        {
+          question: "Can I customize my Shopify theme without coding?",
+          answer:
+            "While Shopify allows for basic customizations without coding, our team can handle more advanced customizations to ensure your store is unique and professional.",
+        },
+      ],
+    },
+
+    "Shopify Custom Theme Development": {
+      description:
+        "We build fully custom Shopify themes from scratch, ensuring your store is unique, fast, and optimized for conversions. Perfect for businesses that need a distinctive online presence.",
+      faqs: [
+        {
+          question: "What is a custom Shopify theme?",
+          answer:
+            "A custom Shopify theme is built from the ground up to match your brand’s unique needs, providing complete control over design and functionality.",
+        },
+        {
+          question:
+            "Why should I choose a custom theme over a pre-built theme?",
+          answer:
+            "Custom themes offer flexibility and a unique design that aligns with your brand. They’re optimized for performance, SEO, and scalability.",
+        },
+      ],
+    },
+
+    "Shopify Migration": {
+      description:
+        "We help businesses migrate their online stores to Shopify from other platforms like WooCommerce, Magento, and BigCommerce. Our migration process ensures your data and design remain intact.",
+      faqs: [
+        {
+          question: "What is Shopify Migration?",
+          answer:
+            "Shopify Migration is the process of transferring your existing e-commerce store from another platform to Shopify while ensuring all data, including products, customers, and orders, is preserved.",
+        },
+        {
+          question: "How do you ensure a smooth migration process?",
+          answer:
+            "We use a detailed migration plan that includes data transfer, design replication, and SEO preservation to ensure your store doesn’t lose traffic or functionality during the migration.",
         },
       ],
     },
@@ -280,9 +284,31 @@ export default function ServicePage() {
                     </Typography>
                     <IconButton size="small" aria-label="expand">
                       {expandedIndex === index ? (
-                        <ExpandLessIcon />
+                        <IconButton
+                          sx={{
+                            background: "rgb(184, 0, 64)",
+                            color: "white",
+                            ":hover": {
+                              background: "rgb(184, 0, 64)",
+                            },
+                          }}
+                        >
+                          {" "}
+                          <ExpandLessIcon />{" "}
+                        </IconButton>
                       ) : (
-                        <ExpandMoreIcon />
+                        <IconButton
+                          sx={{
+                            background: "rgb(184, 0, 64)",
+                            color: "white",
+                            ":hover": {
+                              background: "rgb(184, 0, 64)",
+                            },
+                          }}
+                        >
+                          {" "}
+                          <ExpandMoreIcon />{" "}
+                        </IconButton>
                       )}
                     </IconButton>
                   </Box>
