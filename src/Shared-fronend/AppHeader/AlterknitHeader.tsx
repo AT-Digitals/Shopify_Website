@@ -169,14 +169,18 @@ export default function AlterknitHeader({
             ))}
             <Typography
               onClick={toggleDrawer(true)}
-              border={"1px solid white"}
+              border={"1px solid rgb(184, 0, 64)"}
               borderRadius={"50px"}
               padding={"10px 15px"}
               fontSize="17px"
               fontWeight={400}
               color={"white"}
               sx={{
+                background: "rgb(184, 0, 64)",
                 cursor: "pointer",
+                ":hover": {
+                  background: "rgb(184, 0, 64)",
+                },
               }}
             >
               Get In Touch

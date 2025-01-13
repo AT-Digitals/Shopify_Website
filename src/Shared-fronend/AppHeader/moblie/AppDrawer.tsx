@@ -58,7 +58,7 @@ export default function AppDrawer({
   const services = [
     { linkname: "Home", url: routes.ROOT },
     { linkname: "About", url: routes.ABOUT },
-    { linkname: "Work", url: "/work" },
+    { linkname: "Work", url: routes.WORK },
   ];
 
   const services2 = [{ linkname: "Industries", url: "/Indus" }];
@@ -122,9 +122,9 @@ export default function AppDrawer({
             Services
           </Typography>
           {servicesOpen ? (
-            <ExpandLessIcon sx={{ color: Colors.WHITE }} />
+            <ExpandLessIcon sx={{ color: "rgb(184, 0, 64)" }} />
           ) : (
-            <ExpandMoreIcon sx={{ color: Colors.WHITE }} />
+            <ExpandMoreIcon sx={{ color: "rgb(184, 0, 64)" }} />
           )}
         </ListItemButton>
         <Collapse in={servicesOpen} timeout="auto" unmountOnExit>
@@ -171,7 +171,7 @@ export default function AppDrawer({
       ))}
       <Stack direction={"column"} spacing={3} alignItems="start">
         <Typography
-          border={"1px solid white"}
+          border={"1px solid rgb(184, 0, 64)"}
           borderRadius={"50px"}
           padding={"10px 15px"}
           fontSize="17px"
@@ -179,6 +179,7 @@ export default function AppDrawer({
           color={"white"}
           sx={{
             cursor: "pointer",
+            background: "rgb(184, 0, 64)",
           }}
         >
           Get In Touch

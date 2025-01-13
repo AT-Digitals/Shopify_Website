@@ -26,6 +26,12 @@ code {
   background-position: center;
   transition: background-position 0.2s ease-in-out; /* Smooth transition for background movement */
 }
+@media (max-width: 768px) {
+  .container {
+    height: auto; /* Set height to auto on smaller screens */
+    background-size: cover; /* Optional: adjust background size */
+  }
+}
 
 .container::before {
   content: "";

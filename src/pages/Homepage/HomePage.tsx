@@ -1,20 +1,20 @@
 import { Box, Button, Divider, IconButton, Typography } from "@mui/material";
-import { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useRef, useState } from "react";
 
+import AppContainer from "../../Shared-fronend/AppContainer";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import React from "react";
 import CountUp from "react-countup";
-import routes from "../../routes/routes";
-import AppContainer from "../../Shared-fronend/AppContainer";
+import FaqAccordion from "../Faq/Faq";
 import GetinTouch from "../../Shared-fronend/GetIntouch/GetInTouch";
 import MasonryImageList from "../CaseStudy/MasinoryImageList";
 import ProjectData from "../Data/ProjectData";
-import FaqAccordion from "../Faq/Faq";
 import ProjectsComponent from "./ProjectsComponent";
+import React from "react";
 import ReviewsSection from "./ReviewsSection";
 import ServiceSection from "./ServiceSection";
+import routes from "../../routes/routes";
 
 export default function Homepage() {
   const [backgroundPosition, setBackgroundPosition] = useState({
@@ -69,7 +69,8 @@ export default function Homepage() {
           }
         `}
       </style>
-      <div
+      <Box
+        padding={{ xs: "2rem", sm: "2rem", md: 0 }}
         className="container"
         onMouseMove={handleMouseMove}
         style={{
@@ -78,7 +79,7 @@ export default function Homepage() {
       >
         <Typography
           lineHeight={1.2}
-          fontSize={"50px"}
+          fontSize={{ xs: "32px", sm: "32px", md: "50px" }}
           textAlign={"center"}
           fontWeight={"700"}
         >
@@ -121,7 +122,7 @@ export default function Homepage() {
             <ArrowDownwardIcon />
           </IconButton>
         </Box>
-      </div>
+      </Box>
       <Box bgcolor={"black"}>
         <ReviewsSection />
       </Box>
@@ -206,7 +207,11 @@ export default function Homepage() {
                 <Link to={routes.WORK}>
                   <IconButton
                     sx={{
-                      background: "lightgray",
+                      background: "rgb(184, 0, 64)",
+                      color: "white",
+                      ":hover": {
+                        background: "rgb(184, 0, 64)",
+                      },
                     }}
                   >
                     <ChevronRightIcon />

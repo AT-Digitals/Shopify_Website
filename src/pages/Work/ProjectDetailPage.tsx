@@ -225,9 +225,9 @@ const ProjectDetailPage = () => {
 
               width: "100%",
               "&:hover": {
-                backgroundColor: "white",
-                color: "black",
-                border: "1px solid white",
+                backgroundColor: "rgb(184, 0, 64)",
+                color: "white",
+                border: "1px solid rgb(184, 0, 64)",
               },
               "&:hover .MuiSvgIcon-root": {
                 transform: "scale(1.2) translateX(20px)", // Move icon to the right and scale
@@ -251,7 +251,7 @@ const ProjectDetailPage = () => {
         <Box
           maxWidth={1350}
           margin={"2rem auto"}
-          padding={"20px 0"}
+          padding={"20px"}
           display={"flex"}
           justifyContent={"space-between"}
           flexDirection={{ xs: "column", sm: "column", md: "row" }}
@@ -267,6 +267,14 @@ const ProjectDetailPage = () => {
             >
               Brand Name{" "}
             </Typography>
+            <Divider
+              orientation="horizontal"
+              sx={{
+                background: "white",
+                margin: "10px 0",
+                width: "100%", // Use 'width' instead of 'maxWidth'
+              }}
+            />
             <Typography
               fontSize={"16px"}
               fontFamily={"robato"}
@@ -285,6 +293,14 @@ const ProjectDetailPage = () => {
             >
               Partnering since
             </Typography>
+            <Divider
+              orientation="horizontal"
+              sx={{
+                background: "white",
+                margin: "10px 0",
+                width: "100%", // Use 'width' instead of 'maxWidth'
+              }}
+            />
             <Typography
               fontSize={"16px"}
               fontFamily={"robato"}
@@ -303,6 +319,14 @@ const ProjectDetailPage = () => {
             >
               Projects completed
             </Typography>
+            <Divider
+              orientation="horizontal"
+              sx={{
+                background: "white",
+                margin: "10px 0",
+                width: "100%", // Use 'width' instead of 'maxWidth'
+              }}
+            />
             <Typography
               fontSize={"16px"}
               fontFamily={"robato"}
@@ -321,6 +345,14 @@ const ProjectDetailPage = () => {
             >
               Location{" "}
             </Typography>
+            <Divider
+              orientation="horizontal"
+              sx={{
+                background: "white",
+                margin: "10px 0",
+                width: "100%", // Use 'width' instead of 'maxWidth'
+              }}
+            />
             <Typography
               fontSize={"16px"}
               fontFamily={"robato"}
@@ -340,6 +372,14 @@ const ProjectDetailPage = () => {
             >
               Technology{" "}
             </Typography>
+            <Divider
+              orientation="horizontal"
+              sx={{
+                background: "white",
+                margin: "10px 0",
+                width: "100%", // Use 'width' instead of 'maxWidth'
+              }}
+            />
             <Typography
               fontSize={"16px"}
               fontFamily={"robato"}
