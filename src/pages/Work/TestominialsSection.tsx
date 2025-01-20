@@ -31,14 +31,17 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState("right"); // Track animation direction
 
   const handlePrevTestimonial = () => {
+    setDirection("left");
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
   };
 
   const handleNextTestimonial = () => {
+    setDirection("right");
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
   };
 
@@ -47,8 +50,12 @@ export default function TestimonialsSection() {
   // Define animation using react-spring's useSpring hook
   const props = useSpring({
     opacity: 1,
-    transform: "translateX(0)",
-    from: { opacity: 0, transform: "translateX(-100%)" },
+    transform: direction === "right" ? "translateX(0%)" : "translateX(0%)",
+    from: {
+      opacity: 0,
+      transform:
+        direction === "right" ? "translateX(100%)" : "translateX(-100%)",
+    },
     reset: true,
     config: { duration: 600 },
   });
