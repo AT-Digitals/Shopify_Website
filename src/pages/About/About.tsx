@@ -2,9 +2,9 @@ import { Box, Button, Collapse, IconButton, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
 import AddIcon from "@mui/icons-material/Add";
-import GetinTouch from "../../Shared-fronend/GetIntouch/GetInTouch";
-import React from "react";
 import RemoveIcon from "@mui/icons-material/Remove";
+import React from "react";
+import GetinTouch from "../../Shared-fronend/GetIntouch/GetInTouch";
 import TestimonialsSection from "../Work/TestominialsSection";
 
 const steps = [
@@ -54,7 +54,10 @@ export default function AboutPage() {
 
   return (
     <Box bgcolor={"black"}>
-      <Box maxWidth={1300} margin={"auto"}>
+      <Box
+        maxWidth={1300}
+        margin={{ xs: "20px", sm: "20px", md: "20px", lg: "auto" }}
+      >
         <Typography
           mt="2rem"
           color={"#ffffff5e"}
@@ -79,44 +82,45 @@ export default function AboutPage() {
         </Typography>
       </Box>
       <Box bgcolor={"white"} paddingTop={"2rem"}>
-        <Typography
-          margin={{ xs: "0px 20px", lg: "0px 40px" }}
-          variant="h2"
-          sx={{
-            fontSize: "2.5rem",
-            fontWeight: "bold",
-            color: "black",
-            marginBottom: "20px",
-            marginTop: "20px",
-          }}
-        >
-          How do we do it?
-        </Typography>
-        <Typography
-          margin={{ xs: "0px 20px", lg: "0px 40px" }}
-          paddingTop={{ xs: "10px", lg: "10px" }}
-          paddingBottom={"20px"}
-          sx={{
-            fontSize: "1.2rem",
-            lineHeight: "1.8",
-            color: "black",
-            marginBottom: "40px",
-            width: "100%",
-            maxWidth: { xs: "385px", sm: "600px", md: "600px", lg: "660px" },
-          }}
-        >
-          Our niche - give us the replatforms, the complex builds, all the fun
-          stuff - we love the challenge. BlueSwitch is known as the Original
-          Shopify Plus agency, and we’ve been a trusted partner for all things
-          Shopify for the past 10+ years.
-          <br />
-          <br />
-          Curious about our process? The BlueSwitch approach is to make the
-          complex simple, and the impossible, possible.
-        </Typography>
-
         <Box
-          mt={{ xs: "20px", lg: "0px" }}
+          maxWidth={1300}
+          margin={{ xs: "20px", sm: "20px", md: "20px", lg: "auto" }}
+        >
+          <Typography
+            variant="h2"
+            sx={{
+              fontSize: "2.5rem",
+              fontWeight: "bold",
+              color: "black",
+              marginBottom: "20px",
+              marginTop: "10px",
+            }}
+          >
+            How do we do it?
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: "1.2rem",
+              lineHeight: "1.8",
+              color: "black",
+              marginBottom: "40px",
+              width: "100%",
+              maxWidth: { xs: "385px", sm: "600px", md: "600px", lg: "660px" },
+            }}
+          >
+            Our niche - give us the replatforms, the complex builds, all the fun
+            stuff - we love the challenge. BlueSwitch is known as the Original
+            Shopify Plus agency, and we’ve been a trusted partner for all things
+            Shopify for the past 10+ years.
+            <br />
+            <br />
+            Curious about our process? The BlueSwitch approach is to make the
+            complex simple, and the impossible, possible.
+          </Typography>
+        </Box>
+        <Box
+          maxWidth={1300}
+          margin={"auto"}
           sx={{
             display: "flex",
             flexDirection: "row",
@@ -273,8 +277,8 @@ export default function AboutPage() {
                 onClick={toggleDrawer(true)}
                 variant="contained"
                 sx={{
-                  backgroundColor: "#79b316",
-                  color: "black",
+                  backgroundColor: "rgb(184, 0, 64)",
+                  color: "white",
                   padding: "12px 20px",
                   fontSize: "26px",
                   fontWeight: "700",
@@ -284,8 +288,8 @@ export default function AboutPage() {
                   textTransform: "capitalize",
                   marginLeft: "35px",
                   ":hover": {
-                    backgroundColor: "#79b316",
-                    color: "black",
+                    backgroundColor: "rgb(184, 0, 64)",
+                    color: "white",
                     borderRadius: "35px",
                   },
                 }}
