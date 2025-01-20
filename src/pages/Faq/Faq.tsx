@@ -49,9 +49,10 @@ const FaqAccordion = () => {
   return (
     <div
       style={{
-        width: "100%",
+        // width: "100%",
         margin: "2rem auto",
         maxWidth: 1300,
+        padding: "2rem",
       }}
     >
       <h2
