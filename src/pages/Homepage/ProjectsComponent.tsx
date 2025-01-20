@@ -1,7 +1,7 @@
 import { Box, Chip, Rating, Typography } from "@mui/material";
 
-import AppContainer from "../../Shared-fronend/AppContainer";
 import React from "react";
+import AppContainer from "../../Shared-fronend/AppContainer";
 
 type ProjectsComponentProps = {
   flexDirection?: "row" | "row-reverse"; // Add a flexDirection prop
@@ -173,8 +173,8 @@ export default function ProjectsComponent({
         <Box
           onClick={smallProjectClick}
           sx={{
-            width: "100%",
-            maxWidth: { xs: "340px", sm: "650px", md: "870px", lg: "460px" },
+            // width: "100%",
+            maxWidth: { xs: "100%", sm: "100%", md: "870px", lg: "980px" },
             padding: "16px",
             height: { xs: "224px", sm: "280px", md: "390px", lg: "500px" },
             // backgroundColor: "#f9f9f9",

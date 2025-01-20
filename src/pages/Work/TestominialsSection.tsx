@@ -1,37 +1,52 @@
 import { Box, IconButton, Stack, Typography } from "@mui/material";
-import { animated, useSpring } from "@react-spring/web"; // Import from react-spring
+import { animated, useSpring } from "@react-spring/web";
+import { useEffect, useState } from "react";
 
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { useState } from "react";
 
 const testimonials = [
   {
     rating: "★★★★★",
-    text: "They don't feel like an agency, but rather part of a team that is just as invested in our company's success as we are.",
-    name: "Emily Iser",
-    role: "Software Engineering Manager, Glowforge",
-    imgSrc: "https://i.ibb.co/d5DY64w/img1.jpg",
+    text: "To create a store that matched Nicole Rose’s commitment to quality gemstones, we started with rebranding.",
+    name: "Gordon Edlin",
+    role: "Health Coaching, Personal Training, And Creating Wellness Committees",
+    imgSrc:
+      "https://media.istockphoto.com/id/1496615469/photo/serene-latin-woman-enjoy-sunset-with-gratitude.jpg?s=612x612&w=0&k=20&c=LXeGeLgKznGamU25tLajijCVuV5lxWIZH0RW5qN3k5g=",
+    heading: "Health & Wellness",
   },
   {
     rating: "★★★★★",
-    text: "They don't feel like an agency, but rather part of a team that is just as invested in our company's success as we are.",
+    text: "We set out to create a data-driven design and implement tailored strategies best Nicole Rose’s audience.",
     name: "Michael Silva",
-    role: "VP E-Commerce & DTC Marketing, Honest Baby Clothing",
-    imgSrc: "https://i.ibb.co/5FF1vqz/img2.jpg",
+    role: "Beauty Consultant, Esthetician, Or Beauty Advisor",
+    imgSrc:
+      "https://thumbs.dreamstime.com/b/beauty-cosmetics-makeup-woman-brushes-face-aesthetic-brown-background-studio-profile-skincare-facial-transformation-272735590.jpg",
+    heading: "Beauty & Personal Care",
   },
   {
     rating: "★★★★★",
-    text: "They don't feel like an agency, but rather part of a team that is just as invested in our company's success as we are.",
+    text: "To create a store that matched Nicole Rose’s commitment to quality gemstones, we started with rebranding.",
     name: "George Kuan",
-    role: "Founder, Bang Cookies",
-    imgSrc: "https://i.ibb.co/Trv7hDv/img3.jpg",
+    role: "Create Custom Roles To Suit Your Business Needs",
+    imgSrc:
+      "https://cdn.prod.website-files.com/635a76dc72a1554a18e33d3d/63f62f2eedfbfdb75e5023c8_63e0d4936bf1b115328ee3a3_37_biggest_brands_Shopify.jpeg",
+    heading: "Shopify Plus",
   },
 ];
 
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState("right"); // Track animation direction
+  const [direction, setDirection] = useState("right");
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setDirection("left");
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 4000); // Change every 3 seconds
+
+    return () => clearInterval(intervalId); // Cleanup on unmount
+  }, []); // Empty dependency array means this effect runs once on mount
 
   const handlePrevTestimonial = () => {
     setDirection("left");
@@ -68,7 +83,7 @@ export default function TestimonialsSection() {
     <Box
       sx={{
         backgroundImage:
-          'url("https://www.iifl.com/files/2022-04/about-us-banner-top-img.webp")',
+          'url("https://i0.wp.com/www.suretiimf.com/wp-content/uploads/2020/06/testimonials-background.jpg?ssl=1")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         color: "#ffffff",
@@ -77,8 +92,8 @@ export default function TestimonialsSection() {
       }}
     >
       <Typography
-        color={"black"}
-        variant="h4"
+        color={"white"}
+        fontSize={"50px"}
         textAlign="center"
         mb={4}
         fontWeight="700"
@@ -96,7 +111,7 @@ export default function TestimonialsSection() {
           sx={{
             color: "white",
             position: "absolute",
-            left: 0,
+            left: { xs: "-12px", sm: 0, md: 0, lg: 0 },
             top: "50%",
             transform: "translateY(-50%)",
             zIndex: 1,
@@ -104,7 +119,17 @@ export default function TestimonialsSection() {
           onClick={handlePrevTestimonial}
           aria-label="Previous"
         >
-          <ArrowBackIosIcon />
+          <ArrowBackIosIcon
+            sx={{
+              color: "white",
+              fontSize: {
+                xs: "1.5rem",
+                sm: "2.5rem",
+                md: "2.5rem",
+                lg: "2.5rem",
+              },
+            }}
+          />
         </IconButton>
         <animated.div style={props}>
           <Box
@@ -113,11 +138,11 @@ export default function TestimonialsSection() {
               justifyContent: "center",
               alignItems: "center",
               width: "100%",
-              maxWidth: "100%",
+              maxWidth: { xs: "90%", lg: "100%" },
               overflow: "hidden",
               textAlign: "center",
               backgroundColor: "#1e1e1e",
-              p: 3,
+              p: { xs: "10px", lg: "24px" },
               boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)",
             }}
           >
@@ -149,7 +174,7 @@ export default function TestimonialsSection() {
                 color="rgb(184, 0, 64)"
                 mb={1}
               >
-                Clutch
+                {displayedTestimonial.heading}
               </Typography>
               <Typography
                 variant="body1"
@@ -184,7 +209,7 @@ export default function TestimonialsSection() {
           sx={{
             color: "white",
             position: "absolute",
-            right: 0,
+            right: { xs: "-12px", sm: 0, md: 0, lg: 0 },
             top: "50%",
             transform: "translateY(-50%)",
             zIndex: 1,
@@ -192,7 +217,17 @@ export default function TestimonialsSection() {
           onClick={handleNextTestimonial}
           aria-label="Next"
         >
-          <ArrowForwardIosIcon />
+          <ArrowForwardIosIcon
+            sx={{
+              color: "white",
+              fontSize: {
+                xs: "1.5rem",
+                sm: "2.5rem",
+                md: "2.5rem",
+                lg: "2.5rem",
+              },
+            }}
+          />
         </IconButton>
       </Stack>
     </Box>
