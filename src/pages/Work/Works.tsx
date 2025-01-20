@@ -33,7 +33,7 @@ export default function WorkPage() {
 
   return (
     <Box bgcolor={"black"}>
-      <Box maxWidth={1300} margin={"auto"}>
+      <Box padding={"20px"} maxWidth={1300} margin={"auto"}>
         <Typography
           mt="2rem"
           color={"#ffffff5e"}

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 const FaqAccordion = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
