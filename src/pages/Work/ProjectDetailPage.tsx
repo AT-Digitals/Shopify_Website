@@ -190,11 +190,12 @@ const ProjectDetailPage = () => {
         <Box
           maxWidth={1350}
           margin={"auto"}
-          padding={{ xs: "2rem ", sm: "2rem ", md: "2rem 0" }}
+          padding={{ xs: "2rem ", sm: "2rem ", md: "2rem" }}
         >
           <Typography
             mb={2}
-            fontSize={"60px"}
+            // fontSize={"60px"}
+            fontSize={{ xs: "45px", sm: "45px", md: "60px" }}
             fontFamily={"robato"}
             textAlign={"start"}
             color={"white"}
@@ -203,7 +204,7 @@ const ProjectDetailPage = () => {
           </Typography>
           <Typography
             mb={2}
-            fontSize={"40px"}
+            fontSize={{ xs: "25px", sm: "40px", md: "40px" }}
             fontFamily={"robato"}
             textAlign={"start"}
             color={"white"}
@@ -271,8 +272,8 @@ const ProjectDetailPage = () => {
               orientation="horizontal"
               sx={{
                 background: "white",
-                margin: "10px 0",
-                width: "100%", // Use 'width' instead of 'maxWidth'
+                margin: "10px auto",
+                width: { xs: "70%", sm: "70%", md: "100%" }, // Use 'width' instead of 'maxWidth'
               }}
             />
             <Typography
@@ -297,8 +298,8 @@ const ProjectDetailPage = () => {
               orientation="horizontal"
               sx={{
                 background: "white",
-                margin: "10px 0",
-                width: "100%", // Use 'width' instead of 'maxWidth'
+                margin: "10px auto",
+                width: { xs: "70%", sm: "70%", md: "100%" }, // Use 'width' instead of 'maxWidth'
               }}
             />
             <Typography
@@ -323,8 +324,8 @@ const ProjectDetailPage = () => {
               orientation="horizontal"
               sx={{
                 background: "white",
-                margin: "10px 0",
-                width: "100%", // Use 'width' instead of 'maxWidth'
+                margin: "10px auto",
+                width: { xs: "70%", sm: "70%", md: "100%" }, // Use 'width' instead of 'maxWidth'
               }}
             />
             <Typography
@@ -349,8 +350,8 @@ const ProjectDetailPage = () => {
               orientation="horizontal"
               sx={{
                 background: "white",
-                margin: "10px 0",
-                width: "100%", // Use 'width' instead of 'maxWidth'
+                margin: "10px auto",
+                width: { xs: "70%", sm: "70%", md: "100%" }, // Use 'width' instead of 'maxWidth'
               }}
             />
             <Typography
@@ -376,8 +377,8 @@ const ProjectDetailPage = () => {
               orientation="horizontal"
               sx={{
                 background: "white",
-                margin: "10px 0",
-                width: "100%", // Use 'width' instead of 'maxWidth'
+                margin: "10px auto",
+                width: { xs: "70%", sm: "70%", md: "100%" }, // Use 'width' instead of 'maxWidth'
               }}
             />
             <Typography
@@ -410,7 +411,7 @@ const ProjectDetailPage = () => {
           maxWidth={1300}
           margin={"auto"}
           justifyContent={"space-between"}
-          padding={{ xs: "2rem ", sm: "2rem ", md: "3rem 0" }}
+          padding={{ xs: "2rem ", sm: "2rem ", md: "3rem" }}
           flexWrap={"wrap"}
         >
           <Typography fontFamily={"Robato"} color={"black"} fontSize={"45px"}>
@@ -452,7 +453,7 @@ const ProjectDetailPage = () => {
           maxWidth={1300}
           margin={"auto"}
           justifyContent={"space-between"}
-          padding={{ xs: "2rem ", sm: "2rem ", md: "3rem 0" }}
+          padding={{ xs: "2rem ", sm: "2rem ", md: "3rem " }}
           flexWrap={"wrap"}
         >
           <Typography fontFamily={"Robato"} color={"black"} fontSize={"45px"}>
@@ -510,8 +511,17 @@ const ProjectDetailPage = () => {
         margin={" 2rem auto"}
         flexDirection={"column"}
         gap={"2rem"}
+        p={"0 2rem"}
       >
-        <Box display={"flex"} justifyContent={"space-between"}>
+        <Box
+          display={"flex"}
+          flexWrap={"wrap"}
+          justifyContent={{
+            xs: "center",
+            sm: "space-between",
+            md: "space-between",
+          }}
+        >
           <Typography fontSize={"30px"} fontFamily={"Robato"} color={"black"}>
             Related case studies{" "}
           </Typography>
@@ -535,7 +545,7 @@ const ProjectDetailPage = () => {
           display={"flex"}
           justifyContent={"space-between"}
           // flexWrap={"wrap"}
-          gap={"2rem"}
+          gap={{ xs: 0, sm: 0, md: "2rem" }}
           flexDirection={{ xs: "column", sm: "column", md: "row" }}
         >
           <Box sx={{ position: "relative", marginBottom: "-10px" }}>

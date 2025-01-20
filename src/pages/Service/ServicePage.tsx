@@ -167,11 +167,16 @@ export default function ServicePage() {
         margin={{ xs: "2rem auto", sm: "2rem auto", md: " 4rem auto" }}
         width={"100%"}
         direction={{ xs: "column", sm: "column", md: "row" }}
-        justifyContent={"space-between"}
-        spacing={{ xs: 3, sm: 3, md: 0 }}
-        flexWrap={"wrap"}
+        justifyContent={{ xs: "center", sm: "center", md: "space-between" }}
+        alignItems={{ xs: "center", sm: "center", md: "self-start" }}
+        spacing={{ xs: 3, sm: 3, md: 4 }}
+        // flexWrap={"wrap"}
       >
-        <Box width={"100%"} maxWidth={600} sx={{ marginTop: "4rem" }}>
+        <Box
+          width={"100%"}
+          maxWidth={{ xs: "100%", sm: "100%", md: 600 }}
+          sx={{ marginTop: "4rem" }}
+        >
           <FormControl
             sx={{
               maxWidth: 400,
@@ -364,7 +369,11 @@ export default function ServicePage() {
             ✅ Design within Shopify’s capabilities
           </Typography>
         </Box>
-        <Box width={"100%"} maxWidth={600} sx={{ marginBottom: "20px" }}>
+        <Box
+          width={"100%"}
+          maxWidth={{ xs: "100%", sm: "100%", md: 600 }}
+          sx={{ marginBottom: "20px" }}
+        >
           <MyForm />
         </Box>
       </Stack>
