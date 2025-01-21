@@ -19,6 +19,7 @@ const HeaderLink = styled("a")`
   font-size: 16px;
   color: graytext;
   font-weight: 900;
+  font-family: Roboto;
 
   &:hover {
     color: white;
@@ -164,7 +165,11 @@ export default function AlterknitHeader({
                     activeTab === service.linkname ? "underline" : "none",
                 }}
               >
-                <Typography fontSize="17px" fontWeight={400}>
+                <Typography
+                  fontFamily={"Robato"}
+                  fontSize="20px"
+                  fontWeight={400}
+                >
                   {service.linkname}
                 </Typography>
               </HeaderLink>
@@ -176,6 +181,7 @@ export default function AlterknitHeader({
               padding={"10px 15px"}
               fontSize="17px"
               fontWeight={400}
+              fontFamily={"Robato"}
               color={"white"}
               sx={{
                 background: "rgb(184, 0, 64)",
