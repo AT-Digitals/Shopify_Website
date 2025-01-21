@@ -1,7 +1,7 @@
 import { Box, Divider, IconButton, Typography } from "@mui/material";
-import { useEffect } from "react";
 
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const opportunities = [
@@ -103,10 +103,15 @@ export default function CareersPage() {
                   onClick={() => Navigate(opportunity.link)}
                   sx={{
                     background: "rgb(184, 0, 64)",
-                    marginLeft: 1,
                     color: "white",
+                    width: "31px",
+                    height: "31px",
+                    transition: "width 0.3s ease",
+                    marginLeft: "10px",
                     ":hover": {
                       background: "rgb(184, 0, 64)",
+                      width: "51px",
+                      borderRadius: "30px",
                     },
                   }}
                 >
