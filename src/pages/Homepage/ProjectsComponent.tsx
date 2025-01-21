@@ -174,7 +174,7 @@ export default function ProjectsComponent({
           onClick={smallProjectClick}
           sx={{
             // width: "100%",
-            maxWidth: { xs: "100%", sm: "100%", md: "870px", lg: "980px" },
+            maxWidth: { xs: "100%", sm: "100%", md: "870px", lg: "450px" },
             padding: "16px",
             height: { xs: "224px", sm: "280px", md: "390px", lg: "500px" },
             // backgroundColor: "#f9f9f9",
