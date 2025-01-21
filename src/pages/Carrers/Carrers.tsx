@@ -1,7 +1,7 @@
 import { Box, Divider, IconButton, Typography } from "@mui/material";
+import React, { useEffect } from "react";
 
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const opportunities = [
@@ -26,6 +26,9 @@ const opportunities = [
 
 export default function CareersPage() {
   const Navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Box bgcolor="black" color="white" padding={"20px"}>
       <Box maxWidth={1300} margin={"auto"} mt={5} mb={3}>

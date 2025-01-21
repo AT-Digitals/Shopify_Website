@@ -1,6 +1,11 @@
 import { Box, Typography } from "@mui/material";
 
+import { useEffect } from "react";
+
 export default function TermsandConditions() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Box bgcolor={"White"}>
       <Box maxWidth={600} margin={"auto"}>
