@@ -1,6 +1,7 @@
 import { Box, IconButton, Stack, Typography } from "@mui/material";
 
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { useEffect } from "react";
 
 const careers = [
   {
@@ -66,6 +67,9 @@ const careers = [
 ];
 
 export default function JuniorDeveloperPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Box
       sx={{
@@ -81,6 +85,7 @@ export default function JuniorDeveloperPage() {
       >
         <Box padding={"20px 30px"}>
           <Typography
+            fontFamily="Roboto"
             sx={{
               color: "white",
               fontSize: "20px",
@@ -89,6 +94,7 @@ export default function JuniorDeveloperPage() {
             Full time | Varna, Bulgaria
           </Typography>
           <Typography
+            fontFamily="Roboto"
             sx={{
               fontSize: "50px",
               fontWeight: "400",
@@ -98,6 +104,7 @@ export default function JuniorDeveloperPage() {
             Junior Front End Developer
           </Typography>
           <Typography
+            fontFamily="Roboto"
             sx={{
               fontSize: "20px",
               fontWeight: "400",
@@ -121,6 +128,7 @@ export default function JuniorDeveloperPage() {
         }}
       >
         <Typography
+          fontFamily="Roboto"
           sx={{
             fontSize: "50px",
             fontWeight: "400",
@@ -135,6 +143,7 @@ export default function JuniorDeveloperPage() {
           sx={{ width: "100%", maxWidth: "850px" }}
         >
           <Typography
+            fontFamily="Roboto"
             sx={{
               fontSize: "20px",
               color: "white",
@@ -145,6 +154,7 @@ export default function JuniorDeveloperPage() {
             recognized, sustainable, and ethical brands?
           </Typography>
           <Typography
+            fontFamily="Roboto"
             sx={{
               fontSize: "20px",
               color: "white",
@@ -156,6 +166,7 @@ export default function JuniorDeveloperPage() {
             out.
           </Typography>
           <Typography
+            fontFamily="Roboto"
             sx={{
               fontSize: "20px",
               color: "white",
@@ -166,6 +177,7 @@ export default function JuniorDeveloperPage() {
             knowledge to the company.
           </Typography>
           <Typography
+            fontFamily="Roboto"
             sx={{
               fontSize: "20px",
               color: "white",
@@ -186,6 +198,7 @@ export default function JuniorDeveloperPage() {
           }}
         >
           <Typography
+            fontFamily="Roboto"
             sx={{
               fontSize: "50px",
               fontWeight: "400",
@@ -199,34 +212,64 @@ export default function JuniorDeveloperPage() {
             gap={"30px"}
             sx={{ width: "100%", maxWidth: "850px" }}
           >
-            <Typography sx={{ fontSize: "20px", color: "white" }}>
+            <Typography
+              fontFamily="Roboto"
+              sx={{ fontSize: "20px", color: "white" }}
+            >
               {task.task1}
             </Typography>
-            <Typography sx={{ fontSize: "20px", color: "white" }}>
+            <Typography
+              fontFamily="Roboto"
+              sx={{ fontSize: "20px", color: "white" }}
+            >
               {task.task2}
             </Typography>
-            <Typography sx={{ fontSize: "20px", color: "white" }}>
+            <Typography
+              fontFamily="Roboto"
+              sx={{ fontSize: "20px", color: "white" }}
+            >
               {task.task3}
             </Typography>
-            <Typography sx={{ fontSize: "20px", color: "white" }}>
+            <Typography
+              fontFamily="Roboto"
+              sx={{ fontSize: "20px", color: "white" }}
+            >
               {task.task4}
             </Typography>
-            <Typography sx={{ fontSize: "20px", color: "white" }}>
+            <Typography
+              fontFamily="Roboto"
+              sx={{ fontSize: "20px", color: "white" }}
+            >
               {task.task5}
             </Typography>
-            <Typography sx={{ fontSize: "20px", color: "white" }}>
+            <Typography
+              fontFamily="Roboto"
+              sx={{ fontSize: "20px", color: "white" }}
+            >
               {task.task6}
             </Typography>
-            <Typography sx={{ fontSize: "20px", color: "white" }}>
+            <Typography
+              fontFamily="Roboto"
+              sx={{ fontSize: "20px", color: "white" }}
+            >
               {task.task7}
             </Typography>
-            <Typography sx={{ fontSize: "20px", color: "white" }}>
+            <Typography
+              fontFamily="Roboto"
+              sx={{ fontSize: "20px", color: "white" }}
+            >
               {task.task8}
             </Typography>
-            <Typography sx={{ fontSize: "20px", color: "white" }}>
+            <Typography
+              fontFamily="Roboto"
+              sx={{ fontSize: "20px", color: "white" }}
+            >
               {task.task9}
             </Typography>
-            <Typography sx={{ fontSize: "20px", color: "white" }}>
+            <Typography
+              fontFamily="Roboto"
+              sx={{ fontSize: "20px", color: "white" }}
+            >
               {task.task10}
             </Typography>
           </Stack>
@@ -242,6 +285,7 @@ export default function JuniorDeveloperPage() {
         }}
       >
         <Typography
+          fontFamily="Roboto"
           sx={{
             fontSize: "50px",
             fontWeight: "400",
@@ -256,6 +300,7 @@ export default function JuniorDeveloperPage() {
           sx={{ width: "100%", maxWidth: "850px" }}
         >
           <Typography
+            fontFamily="Roboto"
             sx={{
               fontSize: "20px",
               color: "white",
@@ -267,6 +312,7 @@ export default function JuniorDeveloperPage() {
             motivational letter to hello@craftberry.co.
           </Typography>
           <Typography
+            fontFamily="Roboto"
             sx={{
               fontSize: "20px",
               color: "white",
@@ -278,6 +324,7 @@ export default function JuniorDeveloperPage() {
             confidentiality and without any form of discrimination.
           </Typography>
           <Typography
+            fontFamily="Roboto"
             display={"flex"}
             gap={"15px"}
             sx={{

@@ -1,5 +1,5 @@
 import { Box, Divider, IconButton, Typography } from "@mui/material";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const opportunities = [
   {
     title: "Junior Front-end Developer",
-    link: "/",
+    link: "/jobs-in-commerce-ui/junior",
     description1:
       "Are you a developer with a passion for clean and efficient code? Would you enjoy building complex Shopify stores for internationally recognized, sustainable, and ethical brands?",
     description2:
