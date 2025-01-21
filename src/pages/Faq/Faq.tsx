@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const FaqAccordion = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -59,6 +59,8 @@ const FaqAccordion = () => {
         style={{
           color: "white",
           fontWeight: 400,
+          fontSize: "50px",
+          fontFamily: "Roboto",
         }}
       >
         FAQ
@@ -78,7 +80,17 @@ const FaqAccordion = () => {
               color: "white",
             }}
           >
-            <span style={{ fontSize: "18px" }}>
+            <span
+              style={{
+                fontSize: "18px",
+                background: "rgb(184, 0, 64)",
+                color: "white",
+                borderRadius: "30px",
+                width: "27px",
+                height: "27px",
+                textAlign: "center",
+              }}
+            >
               {activeIndex === index ? "-" : "+"}
             </span>
             <span
