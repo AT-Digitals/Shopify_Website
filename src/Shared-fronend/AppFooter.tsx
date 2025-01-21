@@ -259,7 +259,7 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={""}>Privacy Policy</StyleLink>
+                <StyleLink to={routes.PRIVACY}>Privacy Policy</StyleLink>
               </li>
               <li
                 style={{
@@ -267,7 +267,7 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={""}>Terms and Conditions</StyleLink>
+                <StyleLink to={routes.TERMS}>Terms and Conditions</StyleLink>
               </li>
             </ul>
             <Box display={"flex"} flexDirection={"column"}>
