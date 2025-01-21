@@ -2,11 +2,11 @@ import { Box, Typography } from "@mui/material";
 
 export default function PrivacyPolicy() {
   return (
-    <Box bgcolor={"black"}>
+    <Box bgcolor={"White"}>
       <Box maxWidth={600} margin={"auto"}>
         <Typography
           fontFamily={"Roboto"}
-          color={"white"}
+          color={"black"}
           textAlign={"center"}
           fontSize={"32px"}
           margin={"20px auto"}
@@ -15,7 +15,12 @@ export default function PrivacyPolicy() {
           {" "}
           Privacy Policy{" "}
         </Typography>
-        <Typography fontFamily={"Roboto"} color={"white"} fontSize={"16px"}>
+        <Typography
+          fontFamily={"Roboto"}
+          color={"black"}
+          fontSize={"16px"}
+          mb={5}
+        >
           <br />
           <br />
           <strong>1. Introduction</strong> <br />

@@ -188,6 +188,7 @@ export default function AppFooter({
                 padding: 0,
                 marginTop: "0px",
                 color: "white",
+                fontFamily: "Robato",
               }}
             >
               <Typography color={"white"}>Service We Provide</Typography>
