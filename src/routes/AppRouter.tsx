@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import Aboutpage from "../pages/About/About";
 import AppLayout from "../Shared-fronend/AppLayout";
+import CareersPage from "../pages/Carrers/Carrers";
 import HomePage from "../pages/Homepage/HomePage";
 import PrivacyPolicy from "../pages/Terms&Conditions/Privacy";
 import ProjectDetailPage from "../pages/Work/ProjectDetailPage";
@@ -22,6 +23,7 @@ export default function AppRouter() {
           <Route path={routes.SERVICE} element={<ServicePage />} />
           <Route path={routes.TERMS} element={<TermsandConditions />} />
           <Route path={routes.PRIVACY} element={<PrivacyPolicy />} />
+          <Route path={routes.CARRERS} element={<CareersPage />} />
         </Route>
       </Routes>
     </Router>

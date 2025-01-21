@@ -41,7 +41,9 @@ export default function AlterknitHeader({
     { linkname: "Home", url: routes.ROOT },
     { linkname: "About", url: routes.ABOUT },
     { linkname: "Work", url: routes.WORK },
-    { linkname: "Services", url: "/Service" },
+    { linkname: "Services", url: routes.SERVICE },
+    { linkname: "Careers", url: routes.CARRERS },
+
     // { linkname: "Industries", url: "/Indus" },
   ];
 
