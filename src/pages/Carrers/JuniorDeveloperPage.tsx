@@ -120,11 +120,11 @@ export default function JuniorDeveloperPage() {
       </Box>
       <Box
         display={"flex"}
+        flexDirection={{ xs: "column", lg: "row" }}
         justifyContent={"space-between"}
-        padding={"80px 30px"}
+        padding={{ xs: "30px 30px 50px", lg: "80px 30px 100px" }}
         sx={{
           borderBottom: "1px solid lightgrey",
-          paddingBottom: "120px",
         }}
       >
         <Typography
@@ -190,11 +190,11 @@ export default function JuniorDeveloperPage() {
       {careers.map((task) => (
         <Box
           display={"flex"}
+          flexDirection={{ xs: "column", lg: "row" }}
           justifyContent={"space-between"}
-          padding={"80px 30px"}
+          padding={{ xs: "30px 30px 50px", lg: "80px 30px 100px" }}
           sx={{
             borderBottom: "1px solid lightgrey",
-            paddingBottom: "120px",
           }}
         >
           <Typography
@@ -277,11 +277,11 @@ export default function JuniorDeveloperPage() {
       ))}
       <Box
         display={"flex"}
+        flexDirection={{ xs: "column", lg: "row" }}
         justifyContent={"space-between"}
-        padding={"80px 30px"}
+        padding={{ xs: "30px 30px 50px", lg: "80px 30px 100px" }}
         sx={{
           borderBottom: "1px solid lightgrey",
-          paddingBottom: "120px",
         }}
       >
         <Typography

@@ -8,12 +8,12 @@ export default function PrivacyPolicy() {
   }, []);
   return (
     <Box bgcolor={"White"}>
-      <Box maxWidth={600} margin={"auto"}>
+      <Box maxWidth={1300} margin={"auto"}>
         <Typography
           fontFamily={"Roboto"}
           color={"black"}
           textAlign={"center"}
-          fontSize={"32px"}
+          fontSize={"50px"}
           margin={"20px auto"}
           textTransform={"uppercase"}
         >
@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
         <Typography
           fontFamily={"Roboto"}
           color={"black"}
-          fontSize={"16px"}
+          fontSize={"20px"}
           mb={5}
         >
           <br />
