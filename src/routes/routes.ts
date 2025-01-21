@@ -5,6 +5,8 @@ const SERVICE = "/service";
 const TERMS = "/terms&conditions";
 const PRIVACY = "/privacy";
 const CARRERS = "/jobs-in-commerce-ui";
+const SENIOR = "/jobs-in-commerce-ui/senior";
+const JUNIOR = "/jobs-in-commerce-ui/junior";
 
 const routes = {
   ROOT,
@@ -14,5 +16,7 @@ const routes = {
   TERMS,
   CARRERS,
   PRIVACY,
+  SENIOR,
+  JUNIOR,
 };
 export default routes;
