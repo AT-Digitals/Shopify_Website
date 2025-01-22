@@ -10,8 +10,8 @@ import {
 } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 
-import routes from "../../routes/routes";
 import { useEffect } from "react";
+import routes from "../../routes/routes";
 
 // Sample data for projects (you can replace this with an API call or context)
 const projectData = [
@@ -120,10 +120,14 @@ const ProjectDetailPage = () => {
   if (projectIndex === -1) {
     return (
       <Box sx={{ padding: "20px", textAlign: "center" }}>
-        <Typography variant="h4" gutterBottom>
+        <Typography
+          fontFamily={"'Codec pro', sans-serif"}
+          variant="h4"
+          gutterBottom
+        >
           Project Not Found
         </Typography>
-        <Typography variant="body1">
+        <Typography fontFamily={"'Codec pro', sans-serif"} variant="body1">
           The project you are looking for does not exist. Please try another.
         </Typography>
       </Box>
@@ -196,7 +200,7 @@ const ProjectDetailPage = () => {
             mb={2}
             // fontSize={"60px"}
             fontSize={{ xs: "45px", sm: "45px", md: "60px" }}
-            fontFamily={"robato"}
+            fontFamily={"'Codec pro', sans-serif"}
             textAlign={"start"}
             color={"white"}
           >
@@ -205,7 +209,7 @@ const ProjectDetailPage = () => {
           <Typography
             mb={2}
             fontSize={{ xs: "25px", sm: "40px", md: "40px" }}
-            fontFamily={"robato"}
+            fontFamily={"'Codec pro', sans-serif"}
             textAlign={"start"}
             color={"white"}
           >
@@ -223,7 +227,7 @@ const ProjectDetailPage = () => {
               alignItems: "center",
               gap: "8px", // Space between icon and text
               maxWidth: 220,
-
+              fontFamily: "'Codec pro', sans-serif",
               width: "100%",
               "&:hover": {
                 backgroundColor: "rgb(184, 0, 64)",
@@ -262,7 +266,7 @@ const ProjectDetailPage = () => {
           <Box>
             <Typography
               fontSize={"18px"}
-              fontFamily={"robato"}
+              fontFamily={"'Codec pro', sans-serif"}
               textAlign={"center"}
               color={"white"}
             >
@@ -278,7 +282,7 @@ const ProjectDetailPage = () => {
             />
             <Typography
               fontSize={"16px"}
-              fontFamily={"robato"}
+              fontFamily={"'Codec pro', sans-serif"}
               textAlign={"center"}
               color={"white"}
             >
@@ -288,7 +292,7 @@ const ProjectDetailPage = () => {
           <Box>
             <Typography
               fontSize={"18px"}
-              fontFamily={"robato"}
+              fontFamily={"'Codec pro', sans-serif"}
               textAlign={"center"}
               color={"white"}
             >
@@ -304,7 +308,7 @@ const ProjectDetailPage = () => {
             />
             <Typography
               fontSize={"16px"}
-              fontFamily={"robato"}
+              fontFamily={"'Codec pro', sans-serif"}
               textAlign={"center"}
               color={"white"}
             >
@@ -314,7 +318,7 @@ const ProjectDetailPage = () => {
           <Box>
             <Typography
               fontSize={"18px"}
-              fontFamily={"robato"}
+              fontFamily={"'Codec pro', sans-serif"}
               textAlign={"center"}
               color={"white"}
             >
@@ -330,7 +334,7 @@ const ProjectDetailPage = () => {
             />
             <Typography
               fontSize={"16px"}
-              fontFamily={"robato"}
+              fontFamily={"'Codec pro', sans-serif"}
               textAlign={"center"}
               color={"white"}
             >
@@ -340,7 +344,7 @@ const ProjectDetailPage = () => {
           <Box>
             <Typography
               fontSize={"18px"}
-              fontFamily={"robato"}
+              fontFamily={"'Codec pro', sans-serif"}
               textAlign={"center"}
               color={"white"}
             >
@@ -356,7 +360,7 @@ const ProjectDetailPage = () => {
             />
             <Typography
               fontSize={"16px"}
-              fontFamily={"robato"}
+              fontFamily={"'Codec pro', sans-serif"}
               textAlign={"center"}
               color={"white"}
             >
@@ -367,7 +371,7 @@ const ProjectDetailPage = () => {
           <Box>
             <Typography
               fontSize={"18px"}
-              fontFamily={"robato"}
+              fontFamily={"'Codec pro', sans-serif"}
               textAlign={"center"}
               color={"white"}
             >
@@ -383,7 +387,7 @@ const ProjectDetailPage = () => {
             />
             <Typography
               fontSize={"16px"}
-              fontFamily={"robato"}
+              fontFamily={"'Codec pro', sans-serif"}
               textAlign={"center"}
               color={"white"}
             >
@@ -414,7 +418,11 @@ const ProjectDetailPage = () => {
           padding={{ xs: "2rem ", sm: "2rem ", md: "3rem" }}
           flexWrap={"wrap"}
         >
-          <Typography fontFamily={"Robato"} color={"black"} fontSize={"45px"}>
+          <Typography
+            fontFamily={"'Codec pro', sans-serif"}
+            color={"black"}
+            fontSize={"45px"}
+          >
             Context
           </Typography>
           <Box
@@ -423,16 +431,28 @@ const ProjectDetailPage = () => {
             flexDirection={"column"}
             gap={"20px"}
           >
-            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+            <Typography
+              fontFamily={"'Codec pro', sans-serif"}
+              fontSize={"16px"}
+              color={"black"}
+            >
               In 2018, Nicole reached craftberry to rebuild and redesign her
               Shopify store. <br />
             </Typography>
 
-            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+            <Typography
+              fontFamily={"'Codec pro', sans-serif"}
+              fontSize={"16px"}
+              color={"black"}
+            >
               In 2024, the Nicole Rose brand gained popularity and had a
               significant amount of loyal customers. <br />
             </Typography>
-            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+            <Typography
+              fontFamily={"'Codec pro', sans-serif"}
+              fontSize={"16px"}
+              color={"black"}
+            >
               Still, the design was outdated and the store needed refreshments
               for easier management and conversion rate optimization.
             </Typography>
@@ -456,7 +476,11 @@ const ProjectDetailPage = () => {
           padding={{ xs: "2rem ", sm: "2rem ", md: "3rem " }}
           flexWrap={"wrap"}
         >
-          <Typography fontFamily={"Robato"} color={"black"} fontSize={"45px"}>
+          <Typography
+            fontFamily={"'Codec pro', sans-serif"}
+            color={"black"}
+            fontSize={"45px"}
+          >
             The Design Process
           </Typography>
           <Box
@@ -465,30 +489,54 @@ const ProjectDetailPage = () => {
             flexDirection={"column"}
             gap={"20px"}
           >
-            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+            <Typography
+              fontFamily={"'Codec pro', sans-serif"}
+              fontSize={"16px"}
+              color={"black"}
+            >
               To create a store that matched Nicole Rose’s commitment to quality
               gemstones, we started with rebranding.
             </Typography>
 
-            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+            <Typography
+              fontFamily={"'Codec pro', sans-serif"}
+              fontSize={"16px"}
+              color={"black"}
+            >
               Our partners CreativeCorner developed a sophisticated, soft-toned
               brand book, which served as our guide throughout the design
               process.
             </Typography>
-            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+            <Typography
+              fontFamily={"'Codec pro', sans-serif"}
+              fontSize={"16px"}
+              color={"black"}
+            >
               We set out to create a data-driven design and implement tailored
               strategies best suited to Nicole Rose’s audience.
             </Typography>
-            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+            <Typography
+              fontFamily={"'Codec pro', sans-serif"}
+              fontSize={"16px"}
+              color={"black"}
+            >
               To achieve this, we leveraged GA4 and Mouseflow and conducted
               thorough research.
             </Typography>
 
-            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+            <Typography
+              fontFamily={"'Codec pro', sans-serif"}
+              fontSize={"16px"}
+              color={"black"}
+            >
               Based on the data, we identified conversion blockers and applied
               proven CRO strategies.
             </Typography>
-            <Typography fontFamily={"Robato"} fontSize={"16px"} color={"black"}>
+            <Typography
+              fontFamily={"'Codec pro', sans-serif"}
+              fontSize={"16px"}
+              color={"black"}
+            >
               The result: an elegant, feminine, and vibrant Shopify store.
             </Typography>
           </Box>
@@ -522,11 +570,19 @@ const ProjectDetailPage = () => {
             md: "space-between",
           }}
         >
-          <Typography fontSize={"30px"} fontFamily={"Robato"} color={"black"}>
+          <Typography
+            fontSize={"30px"}
+            fontFamily={"'Codec pro', sans-serif"}
+            color={"black"}
+          >
             Related case studies{" "}
           </Typography>
           <Box display={"flex"} alignItems={"center"} gap={"10px"}>
-            <Typography fontSize={"22px"} fontFamily={"Robato"} color={"black"}>
+            <Typography
+              fontSize={"22px"}
+              fontFamily={"'Codec pro', sans-serif"}
+              color={"black"}
+            >
               View all case studies{" "}
             </Typography>
             <Link to={routes.WORK}>
@@ -577,7 +633,7 @@ const ProjectDetailPage = () => {
                   display: "flex",
                   alignItems: "center",
                   backgroundColor: "black",
-
+                  fontFamily: "'Codec pro', sans-serif",
                   gap: "8px", // Space between icon and text
                   minWidth: 250,
                   width: "100%",
@@ -633,7 +689,7 @@ const ProjectDetailPage = () => {
                   minWidth: 250,
                   width: "100%",
                   backgroundColor: "black",
-
+                  fontFamily: "'Codec pro', sans-serif",
                   "&:hover": {
                     backgroundColor: "black",
                     color: "white",
