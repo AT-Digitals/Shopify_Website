@@ -6,13 +6,13 @@ import {
   useMediaQuery,
 } from "@mui/material";
 
-import AppContainer from "./AppContainer";
-import Colors from "./Colors";
+import styled from "@emotion/styled";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
 import routes from "../routes/routes";
-import styled from "@emotion/styled";
+import AppContainer from "./AppContainer";
+import Colors from "./Colors";
 
 interface FooterProps {
   activeTab: string;
@@ -135,9 +135,10 @@ export default function AppFooter({
               <p
                 style={{
                   maxWidth: 300,
-                  fontFamily: "Roboto",
+                  fontFamily: "'Codec pro', sans-serif",
                   fontSize: "14px",
                   color: "#787878",
+                  lineHeight: "1.2",
                 }}
               >
                 We are a leading Shopify Agency, crafted by top-tier Shopify
@@ -188,17 +189,29 @@ export default function AppFooter({
                 padding: 0,
                 marginTop: "0px",
                 color: "white",
-                fontFamily: "Robato",
+                fontFamily: "'Codec pro', sans-serif",
               }}
             >
-              <Typography color={"white"}>Service We Provide</Typography>
+              <Typography
+                fontFamily={"'Codec pro', sans-serif"}
+                color={"white"}
+              >
+                Service We Provide
+              </Typography>
               <li
                 style={{
                   listStyleType: "none",
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={""}>Shopify Store Setup</StyleLink>
+                <StyleLink
+                  style={{
+                    fontFamily: "'Codec pro', sans-serif",
+                  }}
+                  to={""}
+                >
+                  Shopify Store Setup
+                </StyleLink>
               </li>
               <li
                 style={{
@@ -206,7 +219,14 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={""}>Shopify Theme Customisation</StyleLink>
+                <StyleLink
+                  style={{
+                    fontFamily: "'Codec pro', sans-serif",
+                  }}
+                  to={""}
+                >
+                  Shopify Theme Customisation
+                </StyleLink>
               </li>
               <li
                 style={{
@@ -214,7 +234,14 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={""}>Shopify Custom theme</StyleLink>
+                <StyleLink
+                  style={{
+                    fontFamily: "'Codec pro', sans-serif",
+                  }}
+                  to={""}
+                >
+                  Shopify Custom theme
+                </StyleLink>
               </li>
               <li
                 style={{
@@ -222,7 +249,14 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={""}>Shopify Migration</StyleLink>
+                <StyleLink
+                  style={{
+                    fontFamily: "'Codec pro', sans-serif",
+                  }}
+                  to={""}
+                >
+                  Shopify Migration
+                </StyleLink>
               </li>
             </ul>
             <ul
@@ -236,7 +270,12 @@ export default function AppFooter({
                 marginTop: "0px",
               }}
             >
-              <Typography color={"white"}>About us</Typography>
+              <Typography
+                fontFamily={"'Codec pro', sans-serif"}
+                color={"white"}
+              >
+                About us
+              </Typography>
 
               <li
                 style={{
@@ -244,7 +283,14 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={""}>Work</StyleLink>
+                <StyleLink
+                  style={{
+                    fontFamily: "'Codec pro', sans-serif",
+                  }}
+                  to={""}
+                >
+                  Work
+                </StyleLink>
               </li>
               <li
                 style={{
@@ -252,7 +298,14 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={routes.SERVICE}>Services</StyleLink>
+                <StyleLink
+                  style={{
+                    fontFamily: "'Codec pro', sans-serif",
+                  }}
+                  to={routes.SERVICE}
+                >
+                  Services
+                </StyleLink>
               </li>
               <li
                 style={{
@@ -260,7 +313,14 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={routes.PRIVACY}>Privacy Policy</StyleLink>
+                <StyleLink
+                  style={{
+                    fontFamily: "'Codec pro', sans-serif",
+                  }}
+                  to={routes.PRIVACY}
+                >
+                  Privacy Policy
+                </StyleLink>
               </li>
               <li
                 style={{
@@ -268,14 +328,30 @@ export default function AppFooter({
                   fontSize: "14px",
                 }}
               >
-                <StyleLink to={routes.TERMS}>Terms and Conditions</StyleLink>
+                <StyleLink
+                  style={{
+                    fontFamily: "'Codec pro', sans-serif",
+                  }}
+                  to={routes.TERMS}
+                >
+                  Terms and Conditions
+                </StyleLink>
               </li>
             </ul>
             <Box display={"flex"} flexDirection={"column"}>
-              <Typography mb={2} color={"white"}>
+              <Typography
+                fontFamily={"'Codec pro', sans-serif"}
+                mb={2}
+                color={"white"}
+              >
                 Newsletter Sign Up
               </Typography>
-              <Typography color={"white"}>Email</Typography>
+              <Typography
+                fontFamily={"'Codec pro', sans-serif"}
+                color={"white"}
+              >
+                Email
+              </Typography>
               <TextField
                 variant="standard"
                 sx={{
@@ -295,6 +371,7 @@ export default function AppFooter({
                 fontWeight={400}
                 color={"white"}
                 textAlign={"center"}
+                fontFamily={"'Codec pro', sans-serif"}
                 sx={{
                   cursor: "pointer",
                   marginTop: 3,
@@ -355,7 +432,7 @@ export default function AppFooter({
       <Box padding={"2rem 0px"}>
         <Typography
           fontSize={isSmScreen ? "16px" : "18px"}
-          fontFamily="Robatto"
+          fontFamily={"'Codec pro', sans-serif"}
           fontWeight={400}
           color={"#787878"}
           textAlign="center"

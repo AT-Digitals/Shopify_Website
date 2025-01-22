@@ -61,7 +61,7 @@ export default function AboutPage() {
         <Typography
           mt="2rem"
           color={"#ffffff5e"}
-          fontFamily={"Robato"}
+          fontFamily={"'Codec pro', sans-serif"}
           fontSize={"70px"}
         >
           About Us{" "}
@@ -71,7 +71,7 @@ export default function AboutPage() {
           mt="2rem"
           mb="2rem"
           color={"#ffffff5e"}
-          fontFamily={"Robato"}
+          fontFamily={"'Codec pro', sans-serif"}
           fontSize={"22px"}
           maxWidth={800}
         >
@@ -87,6 +87,7 @@ export default function AboutPage() {
           margin={{ xs: "20px", sm: "20px", md: "20px", lg: "auto" }}
         >
           <Typography
+            fontFamily={"'Codec pro', sans-serif"}
             variant="h2"
             sx={{
               fontSize: "2.5rem",
@@ -99,6 +100,7 @@ export default function AboutPage() {
             How do we do it?
           </Typography>
           <Typography
+            fontFamily={"'Codec pro', sans-serif"}
             sx={{
               fontSize: "1.2rem",
               lineHeight: "1.8",
@@ -156,6 +158,7 @@ export default function AboutPage() {
                 }}
               >
                 <Typography
+                  fontFamily={"'Codec pro', sans-serif"}
                   variant="h6"
                   sx={{
                     fontSize: "1.2rem",
@@ -181,6 +184,7 @@ export default function AboutPage() {
               </Box>
               <Collapse in={!!expandedIndices[index]}>
                 <Typography
+                  fontFamily={"'Codec pro', sans-serif"}
                   sx={{
                     marginTop: "10px",
                     textAlign: "left",
@@ -237,6 +241,7 @@ export default function AboutPage() {
             </Box>
             <Box display={"flex"} flexDirection={"column"}>
               <Typography
+                fontFamily={"'Codec pro', sans-serif"}
                 pt={{ xs: "25px", lg: "70px" }}
                 ml={{ xs: "20px", lg: "35px" }}
                 lineHeight={1.2}
@@ -256,6 +261,7 @@ export default function AboutPage() {
                 development
               </Typography>
               <Typography
+                fontFamily={"'Codec pro', sans-serif"}
                 ml={{ xs: "20px", lg: "35px" }}
                 sx={{
                   fontSize: { xs: "16px", lg: "22px" },
@@ -287,6 +293,7 @@ export default function AboutPage() {
                   maxWidth: "250px",
                   textTransform: "capitalize",
                   marginLeft: "35px",
+                  fontFamily: "'Codec pro', sans-serif",
                   ":hover": {
                     backgroundColor: "rgb(184, 0, 64)",
                     color: "white",

@@ -8,12 +8,11 @@ import {
   styled,
 } from "@mui/material";
 
-import Colors from "../../Colors";
-import CustomButton from "../../CustomButton";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import routes from "../../../routes/routes";
 import { useState } from "react";
+import routes from "../../../routes/routes";
+import Colors from "../../Colors";
 
 const HeaderLink = styled("a")`
   text-decoration: none;
@@ -96,7 +95,7 @@ export default function AppDrawer({
           >
             <Typography
               fontSize="16px"
-              fontFamily={`"ProximaNovaMedium", sans-serif`}
+              fontFamily={"'Codec pro', sans-serif"}
               fontWeight={500}
               padding={2}
               color={Colors.WHITE}
@@ -115,7 +114,7 @@ export default function AppDrawer({
         >
           <Typography
             fontSize="16px"
-            fontFamily={`"ProximaNovaMedium", sans-serif`}
+            fontFamily={"'Codec pro', sans-serif"}
             fontWeight={500}
             color={Colors.WHITE}
           >
@@ -138,7 +137,7 @@ export default function AppDrawer({
               >
                 <Typography
                   fontSize="14px"
-                  fontFamily={`"ProximaNovaMedium", sans-serif`}
+                  fontFamily={"'Codec pro', sans-serif"}
                   fontWeight={400}
                   padding={2}
                   color={Colors.WHITE}
@@ -160,7 +159,7 @@ export default function AppDrawer({
         >
           <Typography
             fontSize="16px"
-            fontFamily={`"ProximaNovaMedium", sans-serif`}
+            fontFamily={"'Codec pro', sans-serif"}
             fontWeight={500}
             padding={2}
             color={Colors.WHITE}
@@ -171,6 +170,7 @@ export default function AppDrawer({
       ))}
       <Stack direction={"column"} spacing={3} alignItems="start">
         <Typography
+          fontFamily={"'Codec pro', sans-serif"}
           border={"1px solid rgb(184, 0, 64)"}
           borderRadius={"50px"}
           padding={"10px 15px"}

@@ -97,7 +97,7 @@ export default function CustomDeveloperComponent({
             >
               <Box padding={"20px 30px"}>
                 <Typography
-                  fontFamily="Roboto"
+                  fontFamily={"'Codec pro', sans-serif"}
                   sx={{
                     color: "white",
                     fontSize: "20px",
@@ -106,7 +106,7 @@ export default function CustomDeveloperComponent({
                   Full time | Varna, Bulgaria
                 </Typography>
                 <Typography
-                  fontFamily="Roboto"
+                  fontFamily={"'Codec pro', sans-serif"}
                   sx={{
                     fontSize: "50px",
                     fontWeight: "400",
@@ -116,7 +116,7 @@ export default function CustomDeveloperComponent({
                   {jobTitle}
                 </Typography>
                 <Typography
-                  fontFamily="Roboto"
+                  fontFamily={"'Codec pro', sans-serif"}
                   sx={{
                     fontSize: "20px",
                     fontWeight: "400",
@@ -142,7 +142,7 @@ export default function CustomDeveloperComponent({
               }}
             >
               <Typography
-                fontFamily="Roboto"
+                fontFamily={"'Codec pro', sans-serif"}
                 sx={{
                   fontSize: "50px",
                   fontWeight: "400",
@@ -157,7 +157,7 @@ export default function CustomDeveloperComponent({
                 sx={{ width: { xs: "100%", sm: "100%", md: "50%" } }}
               >
                 <Typography
-                  fontFamily="Roboto"
+                  fontFamily={"'Codec pro', sans-serif"}
                   sx={{
                     fontSize: "20px",
                     color: "white",
@@ -168,7 +168,7 @@ export default function CustomDeveloperComponent({
                   internationally recognized, sustainable, and ethical brands?
                 </Typography>
                 <Typography
-                  fontFamily="Roboto"
+                  fontFamily={"'Codec pro', sans-serif"}
                   sx={{
                     fontSize: "20px",
                     color: "white",
@@ -194,7 +194,7 @@ export default function CustomDeveloperComponent({
                 }}
               >
                 <Typography
-                  fontFamily="Roboto"
+                  fontFamily={"'Codec pro', sans-serif"}
                   sx={{
                     fontSize: "50px",
                     fontWeight: "400",
@@ -212,7 +212,7 @@ export default function CustomDeveloperComponent({
                     idx === 0 ? null : t ? (
                       <Typography
                         key={idx}
-                        fontFamily="Roboto"
+                        fontFamily={"'Codec pro', sans-serif"}
                         sx={{ fontSize: "20px", color: "white" }}
                       >
                         {t}
@@ -234,7 +234,7 @@ export default function CustomDeveloperComponent({
               }}
             >
               <Typography
-                fontFamily="Roboto"
+                fontFamily={"'Codec pro', sans-serif"}
                 sx={{
                   fontSize: "50px",
                   fontWeight: "400",
@@ -249,7 +249,7 @@ export default function CustomDeveloperComponent({
                 sx={{ width: { xs: "100%", sm: "100%", md: "50%" } }}
               >
                 <Typography
-                  fontFamily="Roboto"
+                  fontFamily={"'Codec pro', sans-serif"}
                   sx={{
                     fontSize: "20px",
                     color: "white",
@@ -261,7 +261,7 @@ export default function CustomDeveloperComponent({
                   us your resume and motivational letter to hello@craftberry.co.
                 </Typography>
                 <Typography
-                  fontFamily="Roboto"
+                  fontFamily={"'Codec pro', sans-serif"}
                   sx={{
                     fontSize: "20px",
                     color: "white",
@@ -273,7 +273,7 @@ export default function CustomDeveloperComponent({
                   strict confidentiality and without any form of discrimination.
                 </Typography>
                 <Typography
-                  fontFamily="Roboto"
+                  fontFamily={"'Codec pro', sans-serif"}
                   display={"flex"}
                   gap={"15px"}
                   sx={{

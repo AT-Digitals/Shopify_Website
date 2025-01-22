@@ -92,6 +92,7 @@ export default function TestimonialsSection() {
       }}
     >
       <Typography
+        fontFamily={"'Codec pro', sans-serif"}
         color={"white"}
         fontSize={"50px"}
         textAlign="center"
@@ -169,6 +170,7 @@ export default function TestimonialsSection() {
                 />
               </Box>
               <Typography
+                fontFamily={"'Codec pro', sans-serif"}
                 variant="h6"
                 fontWeight="600"
                 color="rgb(184, 0, 64)"
@@ -177,6 +179,7 @@ export default function TestimonialsSection() {
                 {displayedTestimonial.heading}
               </Typography>
               <Typography
+                fontFamily={"'Codec pro', sans-serif"}
                 variant="body1"
                 color="rgb(255, 255, 255)"
                 fontSize="14px"
@@ -185,6 +188,7 @@ export default function TestimonialsSection() {
                 {displayedTestimonial.rating}
               </Typography>
               <Typography
+                fontFamily={"'Codec pro', sans-serif"}
                 variant="body1"
                 fontStyle="italic"
                 mb={2}
@@ -193,6 +197,7 @@ export default function TestimonialsSection() {
                 "{displayedTestimonial.text}"
               </Typography>
               <Typography
+                fontFamily={"'Codec pro', sans-serif"}
                 variant="body2"
                 fontWeight="600"
                 color="rgb(255, 255, 255)"

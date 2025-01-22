@@ -123,6 +123,7 @@ export default function ProjectsComponent({
               ))}
             </Box>
             <Typography
+              fontFamily={"'Codec pro', sans-serif"}
               sx={{
                 position: "absolute",
                 bottom: "45px",
@@ -154,6 +155,7 @@ export default function ProjectsComponent({
               }}
             />
             <Typography
+              fontFamily={"'Codec pro', sans-serif"}
               sx={{
                 position: "absolute",
                 bottom: "22px",
@@ -220,6 +222,7 @@ export default function ProjectsComponent({
               ))}
             </Box>
             <Typography
+              fontFamily={"'Codec pro', sans-serif"}
               sx={{
                 position: "absolute",
                 bottom: { xs: "30px", lg: "45px" },
@@ -251,6 +254,7 @@ export default function ProjectsComponent({
               }}
             />
             <Typography
+              fontFamily={"'Codec pro', sans-serif"}
               sx={{
                 position: "absolute",
                 bottom: { xs: "10px", lg: "22px" },

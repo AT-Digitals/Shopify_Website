@@ -59,13 +59,17 @@ export default function CareersPage() {
   return (
     <Box bgcolor="black" color="white" padding={"20px"}>
       <Box maxWidth={1300} margin={"auto"} mt={5} mb={3}>
-        <Typography fontSize={"19px"} fontFamily="Roboto" mb={2}>
+        <Typography
+          fontSize={"19px"}
+          fontFamily={"'Codec pro', sans-serif"}
+          mb={2}
+        >
           Who are we?
         </Typography>
         <Typography
           color={"rgba(204, 204, 204, 0.933)"}
           maxWidth={900}
-          fontFamily="Roboto"
+          fontFamily={"'Codec pro', sans-serif"}
           fontSize={{ xs: "20px", sm: "20px", md: "30px" }}
           lineHeight={1.5}
         >
@@ -85,7 +89,7 @@ export default function CareersPage() {
       <Box bgcolor="black" color="white" maxWidth={1300} margin={"auto"}>
         <Typography
           color={"rgba(204, 204, 204, 0.933)"}
-          fontFamily="Roboto"
+          fontFamily={"'Codec pro', sans-serif"}
           mb={5}
           fontSize="19px"
           lineHeight={0}
@@ -103,7 +107,7 @@ export default function CareersPage() {
               mb={5}
             >
               <Typography
-                fontFamily="Roboto"
+                fontFamily={"'Codec pro', sans-serif"}
                 fontSize={{ xs: "30px", sm: "30px", md: "66px" }}
                 mb={2}
               >
@@ -111,7 +115,7 @@ export default function CareersPage() {
               </Typography>
               <Typography
                 maxWidth={500}
-                fontFamily="Roboto"
+                fontFamily={"'Codec pro', sans-serif"}
                 fontSize="16px"
                 color={"rgba(204, 204, 204, 0.933)"}
                 mb={2}
@@ -120,14 +124,17 @@ export default function CareersPage() {
               </Typography>
               <Typography
                 maxWidth={500}
-                fontFamily="Roboto"
+                fontFamily={"'Codec pro', sans-serif"}
                 fontSize="16px"
                 mb={3}
                 color={"rgba(204, 204, 204, 0.933)"}
               >
                 {opportunity.description2}
               </Typography>
-              <Typography sx={{ color: "white" }}>
+              <Typography
+                fontFamily={"'Codec pro', sans-serif"}
+                sx={{ color: "white" }}
+              >
                 See details{" "}
                 <IconButton
                   onClick={() => Navigate(opportunity.link)}
