@@ -2,24 +2,25 @@ import {
   Box,
   CircularProgress,
   FormControl,
+  Grow,
   IconButton,
   MenuItem,
   Select,
   Stack,
   Typography,
 } from "@mui/material";
-import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-import AppContainer from "../../Shared-fronend/AppContainer";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import CountUp from "react-countup";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MyForm from "./ServiceForm";
+import CountUp from "react-countup";
+import routes from "../../routes/routes";
+import AppContainer from "../../Shared-fronend/AppContainer";
 import ProjectData from "../Data/ProjectData";
 import ProjectsComponent from "../Homepage/ProjectsComponent";
-import routes from "../../routes/routes";
+import MyForm from "./ServiceForm";
 
 // Define the FAQ structure
 interface FAQ {
@@ -134,34 +135,40 @@ export default function ServicePage() {
     navigate(`/project/${id}/${type}`);
   };
 
+  const [animate, setAnimate] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setAnimate(true);
+  }, []);
+
   return (
     <Box sx={{ fontFamily: "Robato", padding: "20px" }} bgcolor={"black"}>
       {/* Dropdown */}
+      <Grow in={animate} timeout={1000}>
+        <Box maxWidth={1300} margin={"auto"}>
+          <Typography
+            mt="2rem"
+            color={"#ffffff5e"}
+            fontFamily={"'Codec pro', sans-serif"}
+            fontSize={"70px"}
+          >
+            Our Services{" "}
+          </Typography>
 
-      <Box maxWidth={1300} margin={"auto"}>
-        <Typography
-          mt="2rem"
-          color={"#ffffff5e"}
-          fontFamily={"'Codec pro', sans-serif"}
-          fontSize={"70px"}
-        >
-          Our Services{" "}
-        </Typography>
-
-        <Typography
-          mt="2rem"
-          color={"#ffffff5e"}
-          fontFamily={"'Codec pro', sans-serif"}
-          fontSize={"18px"}
-          maxWidth={800}
-        >
-          We help you create a professional, fully functional Shopify store from
-          scratch. Our team designs visually stunning, responsive, and
-          user-friendly stores that reflect your brand's identity and engage
-          your target audience.
-        </Typography>
-      </Box>
-
+          <Typography
+            mt="2rem"
+            color={"#ffffff5e"}
+            fontFamily={"'Codec pro', sans-serif"}
+            fontSize={"18px"}
+            maxWidth={800}
+          >
+            We help you create a professional, fully functional Shopify store
+            from scratch. Our team designs visually stunning, responsive, and
+            user-friendly stores that reflect your brand's identity and engage
+            your target audience.
+          </Typography>
+        </Box>
+      </Grow>
       <Stack
         maxWidth={1300}
         margin={{ xs: "2rem auto", sm: "2rem auto", md: " 4rem auto" }}
@@ -172,204 +179,206 @@ export default function ServicePage() {
         spacing={{ xs: 3, sm: 3, md: 4 }}
         // flexWrap={"wrap"}
       >
-        <Box
-          width={"100%"}
-          maxWidth={{ xs: "100%", sm: "100%", md: 600 }}
-          sx={{ marginTop: "4rem" }}
-        >
-          <FormControl
-            sx={{
-              maxWidth: 400,
-              width: "100%",
-              background: "rgb(37, 37, 37)",
-              borderRadius: "4px",
-              "& .MuiOutlinedInput-notchedOutline": {
-                borderColor: "transparent",
-              },
-            }}
+        <Grow in={animate} timeout={2000}>
+          <Box
+            width={"100%"}
+            maxWidth={{ xs: "100%", sm: "100%", md: 600 }}
+            sx={{ marginTop: "4rem" }}
           >
-            <Select
-              value={selectedOption}
-              onChange={(e) => setSelectedOption(e.target.value)}
-              displayEmpty
+            <FormControl
               sx={{
-                color: "white",
-                fontFamily: "'Codec pro', sans-serif",
-
+                maxWidth: 400,
+                width: "100%",
                 background: "rgb(37, 37, 37)",
-                "& .MuiSelect-icon": {
-                  color: "white",
+                borderRadius: "4px",
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "transparent",
                 },
               }}
-              MenuProps={{
-                PaperProps: {
-                  sx: {
-                    backgroundColor: "rgb(37, 37, 37)",
+            >
+              <Select
+                value={selectedOption}
+                onChange={(e) => setSelectedOption(e.target.value)}
+                displayEmpty
+                sx={{
+                  color: "white",
+                  fontFamily: "'Codec pro', sans-serif",
+
+                  background: "rgb(37, 37, 37)",
+                  "& .MuiSelect-icon": {
                     color: "white",
                   },
-                },
-              }}
-            >
-              {Object.keys(faqData).map((option) => (
-                <MenuItem
-                  key={option}
-                  value={option}
-                  sx={{
-                    fontFamily: "'Codec pro', sans-serif",
-                    borderBottom: "1px solid lightgray",
-                    color: "white",
-                    backgroundColor: "rgb(37, 37, 37)",
-                    "&:hover": {
-                      backgroundColor: "rgb(50, 50, 50)",
+                }}
+                MenuProps={{
+                  PaperProps: {
+                    sx: {
+                      backgroundColor: "rgb(37, 37, 37)",
+                      color: "white",
                     },
-                    "&.Mui-selected": {
-                      backgroundColor: "rgb(50, 50, 50)",
-                    },
-                    padding: "15px",
-                  }}
-                >
-                  <Box
-                    display="flex"
-                    justifyContent="space-between"
-                    alignItems="center"
-                    width="100%"
-                  >
-                    {option}
-                  </Box>
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-          <Typography
-            mt="2rem"
-            color={"white"}
-            fontFamily={"'Codec pro', sans-serif"}
-            fontSize={"54px"}
-          >
-            {selectedOption}
-          </Typography>
-          {loading ? (
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100px",
-              }}
-            >
-              <CircularProgress style={{ color: "white" }} />
-            </Box>
-          ) : (
-            <Box sx={{ marginTop: "20px" }}>
-              {faqData[selectedOption]?.faqs.map((faq, index) => (
-                <Box
-                  key={index}
-                  sx={{
-                    marginBottom: "10px",
-                    padding: "15px",
-                    border: "1px solid #ddd",
-                    borderRadius: "5px",
-                  }}
-                >
-                  <Box
+                  },
+                }}
+              >
+                {Object.keys(faqData).map((option) => (
+                  <MenuItem
+                    key={option}
+                    value={option}
                     sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      cursor: "pointer",
+                      fontFamily: "'Codec pro', sans-serif",
+                      borderBottom: "1px solid lightgray",
+                      color: "white",
+                      backgroundColor: "rgb(37, 37, 37)",
+                      "&:hover": {
+                        backgroundColor: "rgb(50, 50, 50)",
+                      },
+                      "&.Mui-selected": {
+                        backgroundColor: "rgb(50, 50, 50)",
+                      },
+                      padding: "15px",
                     }}
-                    onClick={() => handleToggle(index)}
                   >
-                    <Typography
-                      fontFamily={"'Codec pro', sans-serif"}
-                      color="white"
-                      variant="subtitle1"
-                      sx={{ fontWeight: "bold" }}
+                    <Box
+                      display="flex"
+                      justifyContent="space-between"
+                      alignItems="center"
+                      width="100%"
                     >
-                      {faq.question}
-                    </Typography>
-                    <IconButton size="small" aria-label="expand">
-                      {expandedIndex === index ? (
-                        <IconButton
-                          sx={{
-                            background: "rgb(184, 0, 64)",
-                            color: "white",
-                            ":hover": {
-                              background: "rgb(184, 0, 64)",
-                            },
-                          }}
-                        >
-                          {" "}
-                          <ExpandLessIcon />{" "}
-                        </IconButton>
-                      ) : (
-                        <IconButton
-                          sx={{
-                            background: "rgb(184, 0, 64)",
-                            color: "white",
-                            ":hover": {
-                              background: "rgb(184, 0, 64)",
-                            },
-                          }}
-                        >
-                          {" "}
-                          <ExpandMoreIcon />{" "}
-                        </IconButton>
-                      )}
-                    </IconButton>
-                  </Box>
-                  {expandedIndex === index && (
-                    <Typography
-                      style={{
-                        maxHeight: expandedIndex === index ? "400px" : "0",
-                        overflow: "hidden",
-                        transition: "all 0.5s ease-in-out",
-                        padding:
-                          expandedIndex === index ? "1rem 3rem" : "0 3rem",
-                        color: "white",
-                        fontSize: "18px",
-                        borderRadius: expandedIndex === index ? "4px" : "0",
-                        fontFamily: "'Codec pro', sans-serif",
-                      }}
-                      // sx={{ marginTop: "10px" }}
-                      color="white"
-                    >
-                      {faq.answer}
-                    </Typography>
-                  )}
-                </Box>
-              ))}
-            </Box>
-          )}
-
-          {selectedOption && faqData[selectedOption]?.description && (
+                      {option}
+                    </Box>
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
             <Typography
               mt="2rem"
               color={"white"}
               fontFamily={"'Codec pro', sans-serif"}
+              fontSize={"54px"}
+            >
+              {selectedOption}
+            </Typography>
+            {loading ? (
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100px",
+                }}
+              >
+                <CircularProgress style={{ color: "white" }} />
+              </Box>
+            ) : (
+              <Box sx={{ marginTop: "20px" }}>
+                {faqData[selectedOption]?.faqs.map((faq, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      marginBottom: "10px",
+                      padding: "15px",
+                      border: "1px solid #ddd",
+                      borderRadius: "5px",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => handleToggle(index)}
+                    >
+                      <Typography
+                        fontFamily={"'Codec pro', sans-serif"}
+                        color="white"
+                        variant="subtitle1"
+                        sx={{ fontWeight: "bold" }}
+                      >
+                        {faq.question}
+                      </Typography>
+                      <IconButton size="small" aria-label="expand">
+                        {expandedIndex === index ? (
+                          <IconButton
+                            sx={{
+                              background: "rgb(184, 0, 64)",
+                              color: "white",
+                              ":hover": {
+                                background: "rgb(184, 0, 64)",
+                              },
+                            }}
+                          >
+                            {" "}
+                            <ExpandLessIcon />{" "}
+                          </IconButton>
+                        ) : (
+                          <IconButton
+                            sx={{
+                              background: "rgb(184, 0, 64)",
+                              color: "white",
+                              ":hover": {
+                                background: "rgb(184, 0, 64)",
+                              },
+                            }}
+                          >
+                            {" "}
+                            <ExpandMoreIcon />{" "}
+                          </IconButton>
+                        )}
+                      </IconButton>
+                    </Box>
+                    {expandedIndex === index && (
+                      <Typography
+                        style={{
+                          maxHeight: expandedIndex === index ? "400px" : "0",
+                          overflow: "hidden",
+                          transition: "all 0.5s ease-in-out",
+                          padding:
+                            expandedIndex === index ? "1rem 3rem" : "0 3rem",
+                          color: "white",
+                          fontSize: "18px",
+                          borderRadius: expandedIndex === index ? "4px" : "0",
+                          fontFamily: "'Codec pro', sans-serif",
+                        }}
+                        // sx={{ marginTop: "10px" }}
+                        color="white"
+                      >
+                        {faq.answer}
+                      </Typography>
+                    )}
+                  </Box>
+                ))}
+              </Box>
+            )}
+
+            {selectedOption && faqData[selectedOption]?.description && (
+              <Typography
+                mt="2rem"
+                color={"white"}
+                fontFamily={"'Codec pro', sans-serif"}
+                fontSize={"18px"}
+              >
+                {faqData[selectedOption]?.description}
+              </Typography>
+            )}
+
+            <Typography
+              mt="1rem"
+              color={"white"}
+              fontFamily={"'Codec pro', sans-serif"}
               fontSize={"18px"}
             >
-              {faqData[selectedOption]?.description}
+              ✅ Conversion & storytelling focused ecommerce design
             </Typography>
-          )}
-
-          <Typography
-            mt="1rem"
-            color={"white"}
-            fontFamily={"'Codec pro', sans-serif"}
-            fontSize={"18px"}
-          >
-            ✅ Conversion & storytelling focused ecommerce design
-          </Typography>
-          <Typography
-            mt="1rem"
-            color={"white"}
-            fontFamily={"'Codec pro', sans-serif"}
-            fontSize={"18px"}
-          >
-            ✅ Design within Shopify’s capabilities
-          </Typography>
-        </Box>
+            <Typography
+              mt="1rem"
+              color={"white"}
+              fontFamily={"'Codec pro', sans-serif"}
+              fontSize={"18px"}
+            >
+              ✅ Design within Shopify’s capabilities
+            </Typography>
+          </Box>
+        </Grow>
         <Box
           width={"100%"}
           maxWidth={{ xs: "100%", sm: "100%", md: 600 }}
@@ -380,106 +389,108 @@ export default function ServicePage() {
       </Stack>
 
       <AppContainer mt={"20px"} padding={"0px !important"} maxWidth={1350}>
-        <Box padding={"0 20px"}>
-          <Typography
-            paddingLeft={{ xs: "0px", sm: "30px", lg: "0px" }}
-            fontFamily={"'Codec pro', sans-serif"}
-            fontSize={"55px"}
-            lineHeight={1.2}
-            color={"white"}
-          >
-            Our work
-          </Typography>
-          <Box
-            mt={"0px !important"}
-            display={"flex"}
-            justifyContent={{
-              xs: "space-between",
-              sm: "space-around",
-              lg: "space-between",
-            }}
-            alignItems={"baseline"}
-            flexDirection={{ xs: "column", sm: "row", lg: "row" }}
-          >
-            <Box display={"flex"} gap={"20px"}>
-              <Box
-                display={"flex"}
-                alignItems={"baseline"}
-                flexDirection={{ xs: "column", lg: "row" }}
-                gap={"20px"}
-              >
-                <Typography
-                  fontFamily={"Robato"}
-                  fontSize={"70px"}
-                  maxWidth={700}
-                  color={"white"}
-                >
-                  <CountUp start={0} end={700} duration={10} />
-                </Typography>
-                <Typography
-                  fontFamily={"'Codec pro', sans-serif"}
-                  fontSize={"22px"}
-                  textAlign={"center"}
-                  maxWidth={700}
-                  color={"white"}
-                >
-                  Completed projects
-                </Typography>
-              </Box>
-              <Box
-                display={"flex"}
-                flexDirection={{ xs: "column", lg: "row" }}
-                alignItems={"baseline"}
-                gap={"20px"}
-              >
-                <Typography
-                  fontFamily={"'Codec pro', sans-serif"}
-                  fontSize={"70px"}
-                  maxWidth={700}
-                  color={"white"}
-                >
-                  <CountUp start={0} end={65} duration={10} />
-                </Typography>
-                <Typography
-                  fontFamily={"'Codec pro', sans-serif"}
-                  fontSize={"22px"}
-                  textAlign={"center"}
-                  maxWidth={700}
-                  color={"white"}
-                >
-                  Clients
-                </Typography>
-              </Box>
-            </Box>
-            <Box
-              display={"flex"}
-              padding={{ xs: "20px", lg: "0px" }}
-              alignItems={"center"}
-              gap={"10px"}
+        <Grow in={animate} timeout={4000}>
+          <Box padding={"0 20px"}>
+            <Typography
+              paddingLeft={{ xs: "0px", sm: "30px", lg: "0px" }}
+              fontFamily={"'Codec pro', sans-serif"}
+              fontSize={"55px"}
+              lineHeight={1.2}
+              color={"white"}
             >
-              <Typography
-                fontSize={"18px"}
-                color={"white"}
-                fontFamily={"'Codec pro', sans-serif"}
-              >
-                View all case studies
-              </Typography>
-              <Link to={routes.WORK}>
-                <IconButton
-                  sx={{
-                    background: "rgb(184, 0, 64)",
-                    color: "white",
-                    ":hover": {
-                      background: "rgb(184, 0, 64)",
-                    },
-                  }}
+              Our work
+            </Typography>
+            <Box
+              mt={"0px !important"}
+              display={"flex"}
+              justifyContent={{
+                xs: "space-between",
+                sm: "space-around",
+                lg: "space-between",
+              }}
+              alignItems={"baseline"}
+              flexDirection={{ xs: "column", sm: "row", lg: "row" }}
+            >
+              <Box display={"flex"} gap={"20px"}>
+                <Box
+                  display={"flex"}
+                  alignItems={"baseline"}
+                  flexDirection={{ xs: "column", lg: "row" }}
+                  gap={"20px"}
                 >
-                  <ChevronRightIcon />
-                </IconButton>
-              </Link>
+                  <Typography
+                    fontFamily={"Robato"}
+                    fontSize={"70px"}
+                    maxWidth={700}
+                    color={"white"}
+                  >
+                    <CountUp start={0} end={700} duration={10} />
+                  </Typography>
+                  <Typography
+                    fontFamily={"'Codec pro', sans-serif"}
+                    fontSize={"22px"}
+                    textAlign={"center"}
+                    maxWidth={700}
+                    color={"white"}
+                  >
+                    Completed projects
+                  </Typography>
+                </Box>
+                <Box
+                  display={"flex"}
+                  flexDirection={{ xs: "column", lg: "row" }}
+                  alignItems={"baseline"}
+                  gap={"20px"}
+                >
+                  <Typography
+                    fontFamily={"'Codec pro', sans-serif"}
+                    fontSize={"70px"}
+                    maxWidth={700}
+                    color={"white"}
+                  >
+                    <CountUp start={0} end={65} duration={10} />
+                  </Typography>
+                  <Typography
+                    fontFamily={"'Codec pro', sans-serif"}
+                    fontSize={"22px"}
+                    textAlign={"center"}
+                    maxWidth={700}
+                    color={"white"}
+                  >
+                    Clients
+                  </Typography>
+                </Box>
+              </Box>
+              <Box
+                display={"flex"}
+                padding={{ xs: "20px", lg: "0px" }}
+                alignItems={"center"}
+                gap={"10px"}
+              >
+                <Typography
+                  fontSize={"18px"}
+                  color={"white"}
+                  fontFamily={"'Codec pro', sans-serif"}
+                >
+                  View all case studies
+                </Typography>
+                <Link to={routes.WORK}>
+                  <IconButton
+                    sx={{
+                      background: "rgb(184, 0, 64)",
+                      color: "white",
+                      ":hover": {
+                        background: "rgb(184, 0, 64)",
+                      },
+                    }}
+                  >
+                    <ChevronRightIcon />
+                  </IconButton>
+                </Link>
+              </Box>
             </Box>
           </Box>
-        </Box>
+        </Grow>
       </AppContainer>
 
       {ProjectData.slice(0, 1).map((project, index) => (

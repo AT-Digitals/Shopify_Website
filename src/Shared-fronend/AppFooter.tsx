@@ -193,6 +193,7 @@ export default function AppFooter({
               }}
             >
               <Typography
+                pt={{ xs: "15px", lg: " 0px" }}
                 fontFamily={"'Codec pro', sans-serif"}
                 color={"white"}
               >
@@ -268,11 +269,14 @@ export default function AppFooter({
                 gap: "1rem",
                 padding: 0,
                 marginTop: "0px",
+                color: "white",
+                fontFamily: "'Codec pro', sans-serif",
               }}
             >
               <Typography
                 fontFamily={"'Codec pro', sans-serif"}
                 color={"white"}
+                pt={{ xs: "10px", lg: " 0px" }}
               >
                 About us
               </Typography>
@@ -343,6 +347,7 @@ export default function AppFooter({
                 fontFamily={"'Codec pro', sans-serif"}
                 mb={2}
                 color={"white"}
+                pt={{ xs: "10px", lg: " 0px" }}
               >
                 Newsletter Sign Up
               </Typography>

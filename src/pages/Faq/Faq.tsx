@@ -1,3 +1,4 @@
+import { IconButton } from "@mui/material";
 import { useState } from "react";
 
 const FaqAccordion = () => {
@@ -80,7 +81,7 @@ const FaqAccordion = () => {
               color: "white",
             }}
           >
-            <span
+            <IconButton
               style={{
                 fontSize: "18px",
                 background: "rgb(184, 0, 64)",
@@ -92,11 +93,12 @@ const FaqAccordion = () => {
               }}
             >
               {activeIndex === index ? "-" : "+"}
-            </span>
+            </IconButton>
             <span
               style={{
                 fontFamily: "'Codec pro', sans-serif",
                 fontSize: "16px",
+                lineHeight: "1.5",
               }}
             >
               {faq.question}
@@ -112,6 +114,7 @@ const FaqAccordion = () => {
               fontSize: "16px",
               borderRadius: activeIndex === index ? "4px" : "0",
               fontFamily: "'Codec pro', sans-serif",
+              lineHeight: "1.5",
             }}
           >
             {faq.answer}
