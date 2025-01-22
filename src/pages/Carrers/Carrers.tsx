@@ -1,7 +1,9 @@
+import "./CareersPage.css"; // Add CSS styles here
+
 import { Box, Divider, IconButton, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const opportunities = [
@@ -16,7 +18,6 @@ const opportunities = [
   {
     title: "Mid Front-end Developer",
     link: "/jobs-in-commerce-ui/senior",
-
     description1:
       "Do you bring along 3+ years of professional front-end/web development experience?",
     description2:
@@ -26,9 +27,35 @@ const opportunities = [
 
 export default function CareersPage() {
   const Navigate = useNavigate();
+  const [visibleCards, setVisibleCards] = useState<number[]>([]); // Explicitly define the state type as number[]
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const elements = document.querySelectorAll(".slide-up-card");
+      elements.forEach((element, index) => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          setVisibleCards((prev) => {
+            const newSet = new Set(prev); // Create a Set from the previous array
+            newSet.add(index); // Add the new index to the Set
+            return Array.from(newSet); // Convert the Set back to an array
+          });
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Trigger on page load
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <Box bgcolor="black" color="white" padding={"20px"}>
       <Box maxWidth={1300} margin={"auto"} mt={5} mb={3}>
@@ -56,7 +83,6 @@ export default function CareersPage() {
         }}
       />
       <Box bgcolor="black" color="white" maxWidth={1300} margin={"auto"}>
-        {/* Section Title */}
         <Typography
           color={"rgba(204, 204, 204, 0.933)"}
           fontFamily="Roboto"
@@ -67,13 +93,17 @@ export default function CareersPage() {
           Current Opportunities
         </Typography>
 
-        {/* Job Listings */}
         <Box>
           {opportunities.map((opportunity, index) => (
-            <Box key={index} mb={5}>
+            <Box
+              key={index}
+              className={`slide-up-card ${
+                visibleCards.includes(index) ? "visible" : ""
+              }`}
+              mb={5}
+            >
               <Typography
                 fontFamily="Roboto"
-                // fontWeight="bold"
                 fontSize={{ xs: "30px", sm: "30px", md: "66px" }}
                 mb={2}
               >
@@ -131,48 +161,7 @@ export default function CareersPage() {
             </Box>
           ))}
         </Box>
-
-        {/* Footer Section */}
       </Box>
-      <Divider
-        orientation="horizontal"
-        sx={{
-          background: "white",
-          width: "100%",
-          margin: "2rem auto",
-        }}
-      />
-      <Box maxWidth={1300} margin={"auto"} padding={"3rem 0"}>
-        <Typography variant="h6" fontFamily="Roboto" fontWeight="bold" mb={2}>
-          What’s next?
-        </Typography>
-        <Typography
-          color={"rgba(204, 204, 204, 0.933)"}
-          maxWidth={500}
-          fontFamily="Roboto"
-          fontSize="16px"
-          lineHeight={1.5}
-        >
-          If you are willing to work full-time mainly from our office in Varna
-          or remotely and you are interested in one of our positions, please
-          email us at{" "}
-          <a
-            href="mailto:hello@commerce-ui.co"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            hello@commerce-ui.co
-          </a>
-          .
-        </Typography>
-      </Box>
-      <Divider
-        orientation="horizontal"
-        sx={{
-          background: "white",
-          width: "100%",
-          margin: "2rem auto",
-        }}
-      />
     </Box>
   );
 }
