@@ -60,7 +60,7 @@ const FaqAccordion = () => {
           color: "white",
           fontWeight: 400,
           fontSize: "50px",
-          fontFamily: "Roboto",
+          fontFamily: "'Codec pro', sans-serif",
         }}
       >
         FAQ
@@ -95,7 +95,7 @@ const FaqAccordion = () => {
             </span>
             <span
               style={{
-                fontFamily: "Roboto",
+                fontFamily: "'Codec pro', sans-serif",
                 fontSize: "16px",
               }}
             >
@@ -111,7 +111,7 @@ const FaqAccordion = () => {
               color: "white",
               fontSize: "16px",
               borderRadius: activeIndex === index ? "4px" : "0",
-              fontFamily: "Roboto",
+              fontFamily: "'Codec pro', sans-serif",
             }}
           >
             {faq.answer}

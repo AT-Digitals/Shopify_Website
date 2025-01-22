@@ -133,7 +133,7 @@ export default function Homepage() {
             <Typography
               paddingLeft={{ xs: "0px", sm: "30px", lg: "0px" }}
               fontFamily={"'Codec pro', sans-serif"}
-              fontSize={"28px"}
+              fontSize={"30px"}
               lineHeight={1.2}
             >
               Our work
@@ -157,14 +157,14 @@ export default function Homepage() {
                   gap={"20px"}
                 >
                   <Typography
-                    fontFamily={"Robato"}
+                    fontFamily={"'Codec pro', sans-serif"}
                     fontSize={"70px"}
                     maxWidth={700}
                   >
                     <CountUp start={0} end={700} duration={10} />
                   </Typography>
                   <Typography
-                    fontFamily={"Robato"}
+                    fontFamily={"'Codec pro', sans-serif"}
                     fontSize={"22px"}
                     textAlign={"center"}
                     maxWidth={700}
@@ -179,14 +179,14 @@ export default function Homepage() {
                   gap={"20px"}
                 >
                   <Typography
-                    fontFamily={"Robato"}
+                    fontFamily={"'Codec pro', sans-serif"}
                     fontSize={"70px"}
                     maxWidth={700}
                   >
                     <CountUp start={0} end={65} duration={10} />
                   </Typography>
                   <Typography
-                    fontFamily={"Robato"}
+                    fontFamily={"'Codec pro', sans-serif"}
                     fontSize={"22px"}
                     textAlign={"center"}
                     maxWidth={700}
@@ -201,7 +201,10 @@ export default function Homepage() {
                 alignItems={"center"}
                 gap={"10px"}
               >
-                <Typography fontSize={"18px"} fontFamily={"Robato"}>
+                <Typography
+                  fontSize={"18px"}
+                  fontFamily={"'Codec pro', sans-serif"}
+                >
                   View all case studies
                 </Typography>
                 <Link to={routes.WORK}>
@@ -269,7 +272,7 @@ export default function Homepage() {
         <Typography
           padding={"2rem 0"}
           color={"white"}
-          fontFamily={"Robato"}
+          fontFamily={"'Codec pro', sans-serif"}
           fontSize={{ xs: "25px", sm: "30px", md: "60px" }}
           textAlign={"center"}
         >
@@ -289,6 +292,7 @@ export default function Homepage() {
         }}
       >
         <Typography
+          fontFamily={"'Codec pro', sans-serif"}
           pt={{ xs: "30px", lg: "70px" }}
           pl={{ xs: "25px", lg: "50px" }}
           sx={{
@@ -322,6 +326,7 @@ export default function Homepage() {
             alignItems: "center",
             justifyContent: "center",
             gap: "10px",
+            fontFamily: "'Codec pro', sans-serif",
             ":before": {
               content: '""',
               position: "absolute",

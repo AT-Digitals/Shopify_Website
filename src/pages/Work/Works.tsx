@@ -1,9 +1,9 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ProjectData from "../Data/ProjectData";
 import ProjectsComponent from "../Homepage/ProjectsComponent";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 export default function WorkPage() {
   const [filter, setFilter] = useState<string | null>(null);
@@ -37,7 +37,7 @@ export default function WorkPage() {
         <Typography
           mt="2rem"
           color={"#ffffff5e"}
-          fontFamily={"Robato"}
+          fontFamily={"'Codec pro', sans-serif"}
           fontSize={"70px"}
         >
           Our Works{" "}
@@ -47,7 +47,7 @@ export default function WorkPage() {
           mt="2rem"
           mb="2rem"
           color={"#ffffff5e"}
-          fontFamily={"Robato"}
+          fontFamily={"'Codec pro', sans-serif"}
           fontSize={"22px"}
           maxWidth={800}
         >
@@ -60,6 +60,7 @@ export default function WorkPage() {
 
       <Box bgcolor={"white"}>
         <Typography
+          fontFamily={"'Codec pro', sans-serif"}
           sx={{
             paddingTop: "20px",
             fontSize: { xs: "25px", sm: "30px", md: "50px" },
@@ -82,6 +83,7 @@ export default function WorkPage() {
           <Button
             sx={{
               border: "1px solid black",
+              fontFamily: "'Codec pro', sans-serif",
               color: filter === "Health & Wellness" ? "white" : "black",
               backgroundColor:
                 filter === "Health & Wellness"
@@ -103,6 +105,7 @@ export default function WorkPage() {
           <Button
             sx={{
               border: "1px solid black",
+              fontFamily: "'Codec pro', sans-serif",
               color: filter === "Beauty & Personal Care" ? "white" : "black",
               backgroundColor:
                 filter === "Beauty & Personal Care"
@@ -126,6 +129,7 @@ export default function WorkPage() {
           <Button
             sx={{
               border: "1px solid black",
+              fontFamily: "'Codec pro', sans-serif",
               color: "black", // Ensure it is not pre-selected
               backgroundColor: "transparent", // Always transparent on load
               fontWeight: "700",
