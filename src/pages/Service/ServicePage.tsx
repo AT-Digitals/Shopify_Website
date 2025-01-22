@@ -142,7 +142,7 @@ export default function ServicePage() {
         <Typography
           mt="2rem"
           color={"#ffffff5e"}
-          fontFamily={"Robato"}
+          fontFamily={"'Codec pro', sans-serif"}
           fontSize={"70px"}
         >
           Our Services{" "}
@@ -151,8 +151,8 @@ export default function ServicePage() {
         <Typography
           mt="2rem"
           color={"#ffffff5e"}
-          fontFamily={"Robato"}
-          fontSize={"22px"}
+          fontFamily={"'Codec pro', sans-serif"}
+          fontSize={"18px"}
           maxWidth={800}
         >
           We help you create a professional, fully functional Shopify store from
@@ -194,7 +194,7 @@ export default function ServicePage() {
               displayEmpty
               sx={{
                 color: "white",
-                fontFamily: "Robato",
+                fontFamily: "'Codec pro', sans-serif",
 
                 background: "rgb(37, 37, 37)",
                 "& .MuiSelect-icon": {
@@ -215,7 +215,7 @@ export default function ServicePage() {
                   key={option}
                   value={option}
                   sx={{
-                    fontFamily: "Robato",
+                    fontFamily: "'Codec pro', sans-serif",
                     borderBottom: "1px solid lightgray",
                     color: "white",
                     backgroundColor: "rgb(37, 37, 37)",
@@ -243,7 +243,7 @@ export default function ServicePage() {
           <Typography
             mt="2rem"
             color={"white"}
-            fontFamily={"Robato"}
+            fontFamily={"'Codec pro', sans-serif"}
             fontSize={"54px"}
           >
             {selectedOption}
@@ -281,6 +281,7 @@ export default function ServicePage() {
                     onClick={() => handleToggle(index)}
                   >
                     <Typography
+                      fontFamily={"'Codec pro', sans-serif"}
                       color="white"
                       variant="subtitle1"
                       sx={{ fontWeight: "bold" }}
@@ -326,9 +327,9 @@ export default function ServicePage() {
                         padding:
                           expandedIndex === index ? "1rem 3rem" : "0 3rem",
                         color: "white",
-                        fontSize: "16px",
+                        fontSize: "18px",
                         borderRadius: expandedIndex === index ? "4px" : "0",
-                        fontFamily: "Roboto",
+                        fontFamily: "'Codec pro', sans-serif",
                       }}
                       // sx={{ marginTop: "10px" }}
                       color="white"
@@ -345,7 +346,7 @@ export default function ServicePage() {
             <Typography
               mt="2rem"
               color={"white"}
-              fontFamily={"Robato"}
+              fontFamily={"'Codec pro', sans-serif"}
               fontSize={"18px"}
             >
               {faqData[selectedOption]?.description}
@@ -355,7 +356,7 @@ export default function ServicePage() {
           <Typography
             mt="1rem"
             color={"white"}
-            fontFamily={"Robato"}
+            fontFamily={"'Codec pro', sans-serif"}
             fontSize={"18px"}
           >
             ✅ Conversion & storytelling focused ecommerce design
@@ -363,7 +364,7 @@ export default function ServicePage() {
           <Typography
             mt="1rem"
             color={"white"}
-            fontFamily={"Robato"}
+            fontFamily={"'Codec pro', sans-serif"}
             fontSize={"18px"}
           >
             ✅ Design within Shopify’s capabilities
@@ -382,8 +383,8 @@ export default function ServicePage() {
         <Box padding={"0 20px"}>
           <Typography
             paddingLeft={{ xs: "0px", sm: "30px", lg: "0px" }}
-            fontFamily={"Robato"}
-            fontSize={"28px"}
+            fontFamily={"'Codec pro', sans-serif"}
+            fontSize={"55px"}
             lineHeight={1.2}
             color={"white"}
           >
@@ -416,7 +417,7 @@ export default function ServicePage() {
                   <CountUp start={0} end={700} duration={10} />
                 </Typography>
                 <Typography
-                  fontFamily={"Robato"}
+                  fontFamily={"'Codec pro', sans-serif"}
                   fontSize={"22px"}
                   textAlign={"center"}
                   maxWidth={700}
@@ -432,7 +433,7 @@ export default function ServicePage() {
                 gap={"20px"}
               >
                 <Typography
-                  fontFamily={"Robato"}
+                  fontFamily={"'Codec pro', sans-serif"}
                   fontSize={"70px"}
                   maxWidth={700}
                   color={"white"}
@@ -440,7 +441,7 @@ export default function ServicePage() {
                   <CountUp start={0} end={65} duration={10} />
                 </Typography>
                 <Typography
-                  fontFamily={"Robato"}
+                  fontFamily={"'Codec pro', sans-serif"}
                   fontSize={"22px"}
                   textAlign={"center"}
                   maxWidth={700}
@@ -459,7 +460,7 @@ export default function ServicePage() {
               <Typography
                 fontSize={"18px"}
                 color={"white"}
-                fontFamily={"Robato"}
+                fontFamily={"'Codec pro', sans-serif"}
               >
                 View all case studies
               </Typography>

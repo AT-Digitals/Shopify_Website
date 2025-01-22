@@ -15,7 +15,7 @@ const MyForm = () => {
   // Styled component for TextField
   const StyledTextField = styled(TextField)({
     color: "white",
-    fontFamily: "Robato !important",
+    fontFamily: "'Codec pro', sans-serif",
     fontWeight: 400,
     "& .MuiInputBase-root": {
       color: "white", // Input text color
@@ -45,7 +45,11 @@ const MyForm = () => {
         color: "white",
       }}
     >
-      <Typography fontFamily={"Robato"} fontSize={"35px"} gutterBottom>
+      <Typography
+        fontFamily={"'Codec pro', sans-serif"}
+        fontSize={"30px"}
+        gutterBottom
+      >
         Let’s launch and grow your <br /> Shopify store together
       </Typography>
 
@@ -55,8 +59,11 @@ const MyForm = () => {
         gap={"10px"}
         alignItems={"center"}
       >
-        <Typography fontFamily={"Robato"}> ✅ No Strings Attached </Typography>
-        <Typography fontFamily={"Robato"}> ✅ NDA</Typography>
+        <Typography fontFamily={"'Codec pro', sans-serif"}>
+          {" "}
+          ✅ No Strings Attached{" "}
+        </Typography>
+        <Typography fontFamily={"'Codec pro', sans-serif"}> ✅ NDA</Typography>
       </Box>
 
       <form
@@ -111,7 +118,10 @@ const MyForm = () => {
               Evaluate my project
             </Button>
             <Box mt={2} gap="10px" display={"flex"} alignItems={"center"}>
-              <Typography fontFamily={"Robato"} fontSize={"12px"}>
+              <Typography
+                fontFamily={"'Codec pro', sans-serif"}
+                fontSize={"12px"}
+              >
                 We will get back to you within 24 hours
               </Typography>
               <ReportSharpIcon
