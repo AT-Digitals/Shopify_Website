@@ -1,4 +1,4 @@
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import { Box, Grow, IconButton, Stack, Typography } from "@mui/material";
 import { animated, useSpring } from "@react-spring/web";
 import { useEffect, useState } from "react";
 
@@ -38,7 +38,11 @@ const testimonials = [
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState("right");
-
+  const [animate, setAnimate] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setAnimate(true);
+  }, []);
   useEffect(() => {
     const intervalId = setInterval(() => {
       setDirection("left");
@@ -91,150 +95,154 @@ export default function TestimonialsSection() {
         px: 2,
       }}
     >
-      <Typography
-        fontFamily={"'Codec pro', sans-serif"}
-        color={"white"}
-        fontSize={"50px"}
-        textAlign="center"
-        mb={4}
-        fontWeight="700"
-      >
-        Testimonials
-      </Typography>
-      <Stack
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        spacing={2}
-        sx={{ position: "relative" }}
-      >
-        <IconButton
-          sx={{
-            color: "white",
-            position: "absolute",
-            left: { xs: "-12px", sm: 0, md: 0, lg: 0 },
-            top: "50%",
-            transform: "translateY(-50%)",
-            zIndex: 1,
-          }}
-          onClick={handlePrevTestimonial}
-          aria-label="Previous"
-        >
-          <ArrowBackIosIcon
-            sx={{
-              color: "white",
-              fontSize: {
-                xs: "1.5rem",
-                sm: "2.5rem",
-                md: "2.5rem",
-                lg: "2.5rem",
-              },
-            }}
-          />
-        </IconButton>
-        <animated.div style={props}>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "100%",
-              maxWidth: { xs: "90%", lg: "100%" },
-              overflow: "hidden",
-              textAlign: "center",
-              backgroundColor: "#1e1e1e",
-              p: { xs: "10px", lg: "24px" },
-              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)",
-            }}
+      <Grow in={animate} timeout={6000}>
+        <Box>
+          <Typography
+            fontFamily={"'Codec pro', sans-serif"}
+            color={"white"}
+            fontSize={"50px"}
+            textAlign="center"
+            mb={4}
+            fontWeight="700"
           >
-            <Box sx={{ textAlign: "center", width: "100%" }}>
+            Testimonials
+          </Typography>
+          <Stack
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            spacing={2}
+            sx={{ position: "relative" }}
+          >
+            <IconButton
+              sx={{
+                color: "white",
+                position: "absolute",
+                left: { xs: "-12px", sm: 0, md: 0, lg: 0 },
+                top: "50%",
+                transform: "translateY(-50%)",
+                zIndex: 1,
+              }}
+              onClick={handlePrevTestimonial}
+              aria-label="Previous"
+            >
+              <ArrowBackIosIcon
+                sx={{
+                  color: "white",
+                  fontSize: {
+                    xs: "1.5rem",
+                    sm: "2.5rem",
+                    md: "2.5rem",
+                    lg: "2.5rem",
+                  },
+                }}
+              />
+            </IconButton>
+            <animated.div style={props}>
               <Box
                 sx={{
-                  width: "150px",
-                  height: "150px",
-                  margin: "0 auto",
-                  padding: "5px",
-                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  maxWidth: { xs: "90%", lg: "100%" },
                   overflow: "hidden",
+                  textAlign: "center",
+                  backgroundColor: "#1e1e1e",
+                  p: { xs: "10px", lg: "24px" },
+                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)",
                 }}
               >
-                <img
-                  src={displayedTestimonial.imgSrc}
-                  alt={displayedTestimonial.name}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "50%",
-                  }}
-                />
+                <Box sx={{ textAlign: "center", width: "100%" }}>
+                  <Box
+                    sx={{
+                      width: "150px",
+                      height: "150px",
+                      margin: "0 auto",
+                      padding: "5px",
+                      borderRadius: "50%",
+                      overflow: "hidden",
+                    }}
+                  >
+                    <img
+                      src={displayedTestimonial.imgSrc}
+                      alt={displayedTestimonial.name}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        borderRadius: "50%",
+                      }}
+                    />
+                  </Box>
+                  <Typography
+                    fontFamily={"'Codec pro', sans-serif"}
+                    variant="h6"
+                    fontWeight="600"
+                    color="rgb(184, 0, 64)"
+                    mb={1}
+                  >
+                    {displayedTestimonial.heading}
+                  </Typography>
+                  <Typography
+                    fontFamily={"'Codec pro', sans-serif"}
+                    variant="body1"
+                    color="rgb(255, 255, 255)"
+                    fontSize="14px"
+                    mb={2}
+                  >
+                    {displayedTestimonial.rating}
+                  </Typography>
+                  <Typography
+                    fontFamily={"'Codec pro', sans-serif"}
+                    variant="body1"
+                    fontStyle="italic"
+                    mb={2}
+                    color="rgb(220, 220, 220)"
+                  >
+                    "{displayedTestimonial.text}"
+                  </Typography>
+                  <Typography
+                    fontFamily={"'Codec pro', sans-serif"}
+                    variant="body2"
+                    fontWeight="600"
+                    color="rgb(255, 255, 255)"
+                  >
+                    {displayedTestimonial.name}
+                  </Typography>
+                  <Typography variant="caption" color="rgb(180, 180, 180)">
+                    {displayedTestimonial.role}
+                  </Typography>
+                </Box>
               </Box>
-              <Typography
-                fontFamily={"'Codec pro', sans-serif"}
-                variant="h6"
-                fontWeight="600"
-                color="rgb(184, 0, 64)"
-                mb={1}
-              >
-                {displayedTestimonial.heading}
-              </Typography>
-              <Typography
-                fontFamily={"'Codec pro', sans-serif"}
-                variant="body1"
-                color="rgb(255, 255, 255)"
-                fontSize="14px"
-                mb={2}
-              >
-                {displayedTestimonial.rating}
-              </Typography>
-              <Typography
-                fontFamily={"'Codec pro', sans-serif"}
-                variant="body1"
-                fontStyle="italic"
-                mb={2}
-                color="rgb(220, 220, 220)"
-              >
-                "{displayedTestimonial.text}"
-              </Typography>
-              <Typography
-                fontFamily={"'Codec pro', sans-serif"}
-                variant="body2"
-                fontWeight="600"
-                color="rgb(255, 255, 255)"
-              >
-                {displayedTestimonial.name}
-              </Typography>
-              <Typography variant="caption" color="rgb(180, 180, 180)">
-                {displayedTestimonial.role}
-              </Typography>
-            </Box>
-          </Box>
-        </animated.div>
-        <IconButton
-          sx={{
-            color: "white",
-            position: "absolute",
-            right: { xs: "-12px", sm: 0, md: 0, lg: 0 },
-            top: "50%",
-            transform: "translateY(-50%)",
-            zIndex: 1,
-          }}
-          onClick={handleNextTestimonial}
-          aria-label="Next"
-        >
-          <ArrowForwardIosIcon
-            sx={{
-              color: "white",
-              fontSize: {
-                xs: "1.5rem",
-                sm: "2.5rem",
-                md: "2.5rem",
-                lg: "2.5rem",
-              },
-            }}
-          />
-        </IconButton>
-      </Stack>
+            </animated.div>
+            <IconButton
+              sx={{
+                color: "white",
+                position: "absolute",
+                right: { xs: "-12px", sm: 0, md: 0, lg: 0 },
+                top: "50%",
+                transform: "translateY(-50%)",
+                zIndex: 1,
+              }}
+              onClick={handleNextTestimonial}
+              aria-label="Next"
+            >
+              <ArrowForwardIosIcon
+                sx={{
+                  color: "white",
+                  fontSize: {
+                    xs: "1.5rem",
+                    sm: "2.5rem",
+                    md: "2.5rem",
+                    lg: "2.5rem",
+                  },
+                }}
+              />
+            </IconButton>
+          </Stack>
+        </Box>
+      </Grow>
     </Box>
   );
 }
