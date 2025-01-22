@@ -70,8 +70,8 @@ export default function ServiceSection() {
   return (
     <Box maxWidth={1350} padding={"0 20px"} margin={"auto"}>
       <Typography
-        fontFamily={"Robato"}
-        fontSize={"22px"}
+        fontFamily={"'Codec pro', sans-serif"}
+        fontSize={"30px"}
         textAlign={"start"}
         lineHeight={1.2}
         color={"white"}
@@ -90,7 +90,7 @@ export default function ServiceSection() {
           >
             <Box mt={2}>
               <Typography
-                fontFamily={"Robato"}
+                fontFamily={"'Codec pro', sans-serif"}
                 fontSize={{ xs: "32px", sm: "32px", md: "60px" }}
                 textAlign={"start"}
                 lineHeight={1.2}
@@ -99,7 +99,7 @@ export default function ServiceSection() {
                 {service.serviceName}{" "}
               </Typography>
               <Typography
-                fontFamily={"Robato"}
+                fontFamily={"'Codec pro', sans-serif"}
                 fontSize={"20px"}
                 textAlign={"start"}
                 maxWidth={550}
@@ -111,14 +111,14 @@ export default function ServiceSection() {
                 <Typography
                   fontSize={"18px"}
                   color={"white"}
-                  fontFamily={"Robato"}
+                  fontFamily={"'Codec pro', sans-serif"}
                 >
                   Learn more
                 </Typography>
                 <Link to={service.link}>
                   <IconButton
                     sx={{
-                      border: "1px solid white",
+                      background: "rgb(184, 0, 64)",
                     }}
                   >
                     <ChevronRightIcon
