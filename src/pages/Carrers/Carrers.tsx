@@ -17,7 +17,7 @@ const opportunities = [
   },
   {
     title: "Mid Front-end Developer",
-    link: "/",
+    link: "/jobs-in-commerce-ui/senior",
     description1:
       "Do you bring along 3+ years of professional front-end/web development experience?",
     description2:
