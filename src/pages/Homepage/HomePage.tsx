@@ -1,20 +1,20 @@
 import { Box, Button, Divider, IconButton, Typography } from "@mui/material";
-import { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useRef, useState } from "react";
 
+import AppContainer from "../../Shared-fronend/AppContainer";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import React from "react";
 import CountUp from "react-countup";
-import routes from "../../routes/routes";
-import AppContainer from "../../Shared-fronend/AppContainer";
+import FaqAccordion from "../Faq/Faq";
 import GetinTouch from "../../Shared-fronend/GetIntouch/GetInTouch";
 import MasonryImageList from "../CaseStudy/MasinoryImageList";
 import ProjectData from "../Data/ProjectData";
-import FaqAccordion from "../Faq/Faq";
 import ProjectsComponent from "./ProjectsComponent";
+import React from "react";
 import ReviewsSection from "./ReviewsSection";
 import ServiceSection from "./ServiceSection";
+import routes from "../../routes/routes";
 
 export default function Homepage() {
   const [backgroundPosition, setBackgroundPosition] = useState({
@@ -79,8 +79,9 @@ export default function Homepage() {
       >
         <Typography
           lineHeight={1.2}
-          fontSize={{ xs: "32px", sm: "32px", md: "50px" }}
+          fontSize={{ xs: "32px", sm: "32px", md: "70px" }}
           textAlign={"center"}
+          fontFamily={"'Codec pro', sans-serif"}
           fontWeight={"700"}
         >
           Transforming Ideas <br />
@@ -90,6 +91,8 @@ export default function Homepage() {
           style={{
             maxWidth: 500,
             textAlign: "center",
+            fontFamily: "'Codec pro', sans-serif",
+            lineHeight: 1.4,
           }}
         >
           Shopify developers, designers, and e-commerce experts leveraging
