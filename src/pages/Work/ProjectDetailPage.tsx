@@ -10,96 +10,34 @@ import {
 } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 
-import { useEffect } from "react";
 import routes from "../../routes/routes";
+import { useEffect } from "react";
 
 // Sample data for projects (you can replace this with an API call or context)
 const projectData = [
+  // 1
   {
     id: "1",
     type: "big",
-    title: "Nupure",
+    title: "pmdbeauty",
     description:
-      "Nupure is a health and wellness brand that focuses on creating sustainable solutions for modern lifestyles.",
+      "Aware Nutrition offers personalized nutrition products crafted to meet individual dietary needs.",
     image:
-      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/663af09b40262b45c1563c88_Frame%2012352%20copy.webp",
-    tags: ["Health & Wellness", "Shopify Plus"],
-    siteLink: "https://www.upure.com",
+      "https://pmdbeauty.com/cdn/shop/files/Banner.png?v=1726594526&width=1500",
+    tags: ["Beauty & Personal Care"],
+    siteLink: "https://pmdbeauty.com",
     location: "San fransico,US",
     Technology: "Shopify Plus",
-    subImage1:
-      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/660f8a30d085aac8281aae2a_image-final-3-1%20copy.webp",
+    subImage1: "https://cssnectar.com/wp-content/uploads/2019/09/avone.jpg",
   },
   {
     id: "1",
     type: "small",
-    title: "Ingarden",
-    description:
-      "Ingarden specializes in hydroponic gardening systems designed for homes, enabling fresh produce year-round.",
-    image:
-      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/635b5c4b26c897e86ed3a95d_Frame%201198(2).jpg",
-    tags: ["Health & Wellness"],
-    siteLink: "https://www.Ingarden.com",
-    location: "San fransico,US",
-    Technology: "Shopify Plus",
-    subImage1:
-      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/63522a7ced30bfda3d4f745a_title-image%20copy.webp",
-  },
-  {
-    id: "2",
-    type: "big",
-    title: "DS Laboratories",
-    description:
-      "A leader in beauty and personal care, DS Laboratories delivers cutting-edge hair and skincare solutions.",
-    image:
-      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/62d749256bb311283bed562d_607d8f9932261b46db184cdc_Frame%20181(1).webp",
-    tags: ["Beauty & Personal Care", "Shopify Plus"],
-    siteLink: "https://www.DS Laboratories.com",
-    location: "San fransico,US",
-    Technology: "Shopify ",
-    subImage1:
-      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/60aba81c6c028daeef36004a_title-image.jpg",
-  },
-  {
-    id: "2",
-    type: "small",
-    title: "Aware Nutrition",
+    title: "indulgentfoods",
     description:
       "Aware Nutrition offers personalized nutrition products crafted to meet individual dietary needs.",
     image:
-      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/65fcffb8d4eef1ebc6bb64dd_Frame%2012349%20copy.webp",
-    tags: ["Beauty & Personal Care"],
-    siteLink: "https://www.AwareNutrition.com",
-    location: "San fransico,US",
-    Technology: "Shopify Plus",
-    subImage1:
-      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/65fd00661d264d1857909790_title-image%20copy.webp",
-  },
-  // 3
-
-  {
-    id: "3",
-    type: "small",
-    title: "Lakanto",
-    description:
-      "Aware Nutrition offers personalized nutrition products crafted to meet individual dietary needs.",
-    image:
-      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/65811b35ec3819bfd7b85f96_Frame%202563.webp",
-    tags: ["Beauty & Personal Care"],
-    siteLink: "https://www.Lakanto.com",
-    location: "San fransico,US",
-    Technology: "Shopify ",
-    subImage1:
-      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/658124e023f87c32766f4f59_title-image.webp",
-  },
-  {
-    id: "3",
-    type: "big",
-    title: "Avon",
-    description:
-      "Aware Nutrition offers personalized nutrition products crafted to meet individual dietary needs.",
-    image:
-      "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/663c5601bef4c956d4ac7aa1_Frame%2012353%20copy.webp",
+      "https://indulgentfoods.com/cdn/shop/files/mobile-home-image.webp?v=1682715631&width=900",
     tags: ["Beauty & Personal Care"],
     siteLink: "https://www.Avon.com",
     location: "San fransico,US",
