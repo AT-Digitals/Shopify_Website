@@ -1,20 +1,20 @@
 import { Box, Button, Divider, IconButton, Typography } from "@mui/material";
-import { Link, useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-import AppContainer from "../../Shared-fronend/AppContainer";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import React from "react";
 import CountUp from "react-countup";
-import FaqAccordion from "../Faq/Faq";
+import routes from "../../routes/routes";
+import AppContainer from "../../Shared-fronend/AppContainer";
 import GetinTouch from "../../Shared-fronend/GetIntouch/GetInTouch";
 import MasonryImageList from "../CaseStudy/MasinoryImageList";
 import ProjectData from "../Data/ProjectData";
+import FaqAccordion from "../Faq/Faq";
 import ProjectsComponent from "./ProjectsComponent";
-import React from "react";
 import ReviewsSection from "./ReviewsSection";
 import ServiceSection from "./ServiceSection";
-import routes from "../../routes/routes";
 
 export default function Homepage() {
   const [backgroundPosition, setBackgroundPosition] = useState({
@@ -132,7 +132,7 @@ export default function Homepage() {
           <Box padding={"0 20px"}>
             <Typography
               paddingLeft={{ xs: "0px", sm: "30px", lg: "0px" }}
-              fontFamily={"Robato"}
+              fontFamily={"'Codec pro', sans-serif"}
               fontSize={"28px"}
               lineHeight={1.2}
             >
