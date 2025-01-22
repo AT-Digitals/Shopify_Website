@@ -10,10 +10,10 @@ export default function TermsandConditions() {
     <Box bgcolor={"White"}>
       <Box maxWidth={1300} margin={"auto"}>
         <Typography
-          fontFamily={"Roboto"}
+          fontFamily={"'Codec pro', sans-serif"}
           color={"black"}
           textAlign={"center"}
-          fontSize={"50px"}
+          fontSize={"55px"}
           margin={"20px auto"}
           textTransform={"uppercase"}
         >
@@ -21,9 +21,9 @@ export default function TermsandConditions() {
           Terms and Conditions
         </Typography>
         <Typography
-          fontFamily={"Roboto"}
+          fontFamily={"'Codec pro', sans-serif"}
           color={"black"}
-          fontSize={"20px"}
+          fontSize={"18px"}
           mb={5}
         >
           <br />

@@ -7,11 +7,11 @@ import {
   useTheme,
 } from "@mui/material";
 
-import React from "react";
-import { Link } from "react-router-dom";
-import routes from "../../routes/routes";
 import AppContainer from "../AppContainer";
 import GetinTouch from "../GetIntouch/GetInTouch";
+import { Link } from "react-router-dom";
+import React from "react";
+import routes from "../../routes/routes";
 
 const HeaderLink = styled("a")`
   text-decoration: none;
@@ -166,8 +166,9 @@ export default function AlterknitHeader({
                 }}
               >
                 <Typography
+                  textTransform={"uppercase"}
                   fontFamily={"'Codec pro', sans-serif"}
-                  fontSize="20px"
+                  fontSize="15px"
                   fontWeight={400}
                 >
                   {service.linkname}
@@ -179,7 +180,8 @@ export default function AlterknitHeader({
               border={"1px solid rgb(184, 0, 64)"}
               borderRadius={"50px"}
               padding={"10px 15px"}
-              fontSize="17px"
+              fontSize="15px"
+              textTransform={"uppercase"}
               fontWeight={400}
               fontFamily={"'Codec pro', sans-serif"}
               color={"white"}
