@@ -1,8 +1,8 @@
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import { Box, Button, Grid, Grow, TextField, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 
 import styled from "@emotion/styled";
 import ReportSharpIcon from "@mui/icons-material/ReportSharp";
-import React from "react";
 
 const MyForm = () => {
   // Separate useState hooks for each field
@@ -35,105 +35,116 @@ const MyForm = () => {
     },
   });
 
+  const [animate, setAnimate] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setAnimate(true);
+  }, []);
+
   return (
-    <Box
-      sx={{
-        mx: "auto",
-        padding: { xs: "20px", sm: "20px", md: "80px" },
-        background: "rgb(37, 37, 37)",
-        borderRadius: "30px",
-        color: "white",
-      }}
-    >
-      <Typography
-        fontFamily={"'Codec pro', sans-serif"}
-        fontSize={"30px"}
-        gutterBottom
-      >
-        Let’s launch and grow your <br /> Shopify store together
-      </Typography>
-
+    <Grow in={animate} timeout={3000}>
       <Box
-        padding={"10px 0"}
-        display={"flex"}
-        gap={"10px"}
-        alignItems={"center"}
-      >
-        <Typography fontFamily={"'Codec pro', sans-serif"}>
-          {" "}
-          ✅ No Strings Attached{" "}
-        </Typography>
-        <Typography fontFamily={"'Codec pro', sans-serif"}> ✅ NDA</Typography>
-      </Box>
-
-      <form
-        style={{
-          marginTop: "10px",
+        sx={{
+          mx: "auto",
+          padding: { xs: "20px", sm: "20px", md: "80px" },
+          background: "rgb(37, 37, 37)",
+          borderRadius: "30px",
+          color: "white",
         }}
-        onSubmit={handleSubmit}
       >
-        <Grid container spacing={2} rowSpacing={2} rowGap={3}>
-          <Grid item xs={12}>
-            <StyledTextField
-              placeholder="Full Name"
-              fullWidth
-              required
-              variant="standard"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <StyledTextField
-              fullWidth
-              placeholder="Email"
-              required
-              variant="standard"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <StyledTextField
-              fullWidth
-              placeholder="Website link (Leave if blank)"
-              variant="standard"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <StyledTextField
-              fullWidth
-              required
-              placeholder="Message"
-              multiline
-              rows={4}
-              variant="standard"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Button
-              style={{
-                background: "rgb(184, 0, 64)",
-                textTransform: "none",
-              }}
-              type="submit"
-              variant="contained"
-            >
-              Evaluate my project
-            </Button>
-            <Box mt={2} gap="10px" display={"flex"} alignItems={"center"}>
-              <Typography
-                fontFamily={"'Codec pro', sans-serif"}
-                fontSize={"12px"}
-              >
-                We will get back to you within 24 hours
-              </Typography>
-              <ReportSharpIcon
-                style={{
-                  color: "rgb(184, 0, 64)",
-                }}
+        <Typography
+          fontFamily={"'Codec pro', sans-serif"}
+          fontSize={"30px"}
+          gutterBottom
+        >
+          Let’s launch and grow your <br /> Shopify store together
+        </Typography>
+
+        <Box
+          padding={"10px 0"}
+          display={"flex"}
+          gap={"10px"}
+          alignItems={"center"}
+        >
+          <Typography fontFamily={"'Codec pro', sans-serif"}>
+            {" "}
+            ✅ No Strings Attached{" "}
+          </Typography>
+          <Typography fontFamily={"'Codec pro', sans-serif"}>
+            {" "}
+            ✅ NDA
+          </Typography>
+        </Box>
+
+        <form
+          style={{
+            marginTop: "10px",
+          }}
+          onSubmit={handleSubmit}
+        >
+          <Grid container spacing={2} rowSpacing={2} rowGap={3}>
+            <Grid item xs={12}>
+              <StyledTextField
+                placeholder="Full Name"
+                fullWidth
+                required
+                variant="standard"
               />
-            </Box>
+            </Grid>
+            <Grid item xs={12}>
+              <StyledTextField
+                fullWidth
+                placeholder="Email"
+                required
+                variant="standard"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <StyledTextField
+                fullWidth
+                placeholder="Website link (Leave if blank)"
+                variant="standard"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <StyledTextField
+                fullWidth
+                required
+                placeholder="Message"
+                multiline
+                rows={4}
+                variant="standard"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <Button
+                style={{
+                  background: "rgb(184, 0, 64)",
+                  textTransform: "none",
+                }}
+                type="submit"
+                variant="contained"
+              >
+                Evaluate my project
+              </Button>
+              <Box mt={2} gap="10px" display={"flex"} alignItems={"center"}>
+                <Typography
+                  fontFamily={"'Codec pro', sans-serif"}
+                  fontSize={"12px"}
+                >
+                  We will get back to you within 24 hours
+                </Typography>
+                <ReportSharpIcon
+                  style={{
+                    color: "rgb(184, 0, 64)",
+                  }}
+                />
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
-      </form>
-    </Box>
+        </form>
+      </Box>
+    </Grow>
   );
 };
 
