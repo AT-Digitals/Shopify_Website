@@ -10,8 +10,8 @@ import {
 } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 
-import routes from "../../routes/routes";
 import { useEffect } from "react";
+import routes from "../../routes/routes";
 
 // Sample data for projects (you can replace this with an API call or context)
 const projectData = [
@@ -28,9 +28,17 @@ const projectData = [
     siteLink: "https://pmdbeauty.com",
     location: "San fransico,US",
     Technology: "Shopify Plus",
-    subImage1: "https://cssnectar.com/wp-content/uploads/2019/09/avone.jpg",
-    context: "",
-    design: "",
+    subImage1: "https://atdigitals.com/wp-content/uploads/2024/07/PD1.png",
+    context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >AlterKnit New York stands as a premier online destination offering a wide array of services, including sweater repairs, invisible mending, French reweaving, knit alterations, suit reparation, shoe and bag repair, knit restyling, and beyond.</li>
+                <li>Operating within both the B2C and B2B spheres, our platform caters to discerning customers seeking bespoke tailoring solutions.</li>
+                <li>AlterKnit aspired to pioneer the next frontier in traditional tailoring by launching an innovative E-commerce application</li>
+                <li>For their distinctive services and offerings, including their groundbreaking re-knitting technique—harvesting yarn from existing garments.</li></ul>`,
+    design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >With the ambitious goal of expanding their services nationwide, Miriam Mades, the founder of AlterKnit New York LLC, envisions reaching every city across the United States</li>
+                <li>In alignment with AlterKnit's philosophy of prioritizing organic growth over paid advertising, the team sought to cultivate a strong online presence.</li>
+                <li>AT Digitals was enlisted to leverage their expertise in crafting an unparalleled user experience for the web application, ensuring seamless navigation and customer engagement.</li>
+                <li>AlterKnit's transition from a longstanding offline establishment to a digital platform marks a significant milestone in its evolution. </li>
+                <li>We take great pride in facilitating this transformation, ushering a century-old traditional company into the digital era.</li>
+                </ul>`,
   },
   {
     id: "1",
@@ -44,9 +52,17 @@ const projectData = [
     siteLink: "https://www.Avon.com",
     location: "San fransico,US",
     Technology: "Shopify Plus",
-    subImage1: "https://cssnectar.com/wp-content/uploads/2019/09/avone.jpg",
-    context: "",
-    design: "",
+    subImage1: "https://atdigitals.com/wp-content/uploads/2024/07/PD4.png",
+    context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >AlterKnit New York stands as a premier online destination offering a wide array of services, including sweater repairs, invisible mending, French reweaving, knit alterations, suit reparation, shoe and bag repair, knit restyling, and beyond.</li>
+                <li>Operating within both the B2C and B2B spheres, our platform caters to discerning customers seeking bespoke tailoring solutions.</li>
+                <li>AlterKnit aspired to pioneer the next frontier in traditional tailoring by launching an innovative E-commerce application</li>
+                <li>For their distinctive services and offerings, including their groundbreaking re-knitting technique—harvesting yarn from existing garments.</li></ul>`,
+    design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >With the ambitious goal of expanding their services nationwide, Miriam Mades, the founder of AlterKnit New York LLC, envisions reaching every city across the United States</li>
+                <li>In alignment with AlterKnit's philosophy of prioritizing organic growth over paid advertising, the team sought to cultivate a strong online presence.</li>
+                <li>AT Digitals was enlisted to leverage their expertise in crafting an unparalleled user experience for the web application, ensuring seamless navigation and customer engagement.</li>
+                <li>AlterKnit's transition from a longstanding offline establishment to a digital platform marks a significant milestone in its evolution. </li>
+                <li>We take great pride in facilitating this transformation, ushering a century-old traditional company into the digital era.</li>
+                </ul>`,
   },
   // 2
 
@@ -62,9 +78,17 @@ const projectData = [
     siteLink: "https://www.Avon.com",
     location: "San fransico,US",
     Technology: "Shopify Plus",
-    subImage1: "https://cssnectar.com/wp-content/uploads/2019/09/avone.jpg",
-    context: "",
-    design: "",
+    subImage1: "https://atdigitals.com/wp-content/uploads/2024/07/PD2.png",
+    context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >AlterKnit New York stands as a premier online destination offering a wide array of services, including sweater repairs, invisible mending, French reweaving, knit alterations, suit reparation, shoe and bag repair, knit restyling, and beyond.</li>
+                <li>Operating within both the B2C and B2B spheres, our platform caters to discerning customers seeking bespoke tailoring solutions.</li>
+                <li>AlterKnit aspired to pioneer the next frontier in traditional tailoring by launching an innovative E-commerce application</li>
+                <li>For their distinctive services and offerings, including their groundbreaking re-knitting technique—harvesting yarn from existing garments.</li></ul>`,
+    design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >With the ambitious goal of expanding their services nationwide, Miriam Mades, the founder of AlterKnit New York LLC, envisions reaching every city across the United States</li>
+                <li>In alignment with AlterKnit's philosophy of prioritizing organic growth over paid advertising, the team sought to cultivate a strong online presence.</li>
+                <li>AT Digitals was enlisted to leverage their expertise in crafting an unparalleled user experience for the web application, ensuring seamless navigation and customer engagement.</li>
+                <li>AlterKnit's transition from a longstanding offline establishment to a digital platform marks a significant milestone in its evolution. </li>
+                <li>We take great pride in facilitating this transformation, ushering a century-old traditional company into the digital era.</li>
+                </ul>`,
   },
   // 2
   {
@@ -79,9 +103,17 @@ const projectData = [
     siteLink: "https://www.Avon.com",
     location: "San fransico,US",
     Technology: "Shopify Plus",
-    subImage1: "https://cssnectar.com/wp-content/uploads/2019/09/avone.jpg",
-    context: "",
-    design: "",
+    subImage1: "https://atdigitals.com/wp-content/uploads/2024/07/PD3.png",
+    context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >AlterKnit New York stands as a premier online destination offering a wide array of services, including sweater repairs, invisible mending, French reweaving, knit alterations, suit reparation, shoe and bag repair, knit restyling, and beyond.</li>
+    <li>Operating within both the B2C and B2B spheres, our platform caters to discerning customers seeking bespoke tailoring solutions.</li>
+    <li>AlterKnit aspired to pioneer the next frontier in traditional tailoring by launching an innovative E-commerce application</li>
+    <li>For their distinctive services and offerings, including their groundbreaking re-knitting technique—harvesting yarn from existing garments.</li></ul>`,
+    design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >With the ambitious goal of expanding their services nationwide, Miriam Mades, the founder of AlterKnit New York LLC, envisions reaching every city across the United States</li>
+    <li>In alignment with AlterKnit's philosophy of prioritizing organic growth over paid advertising, the team sought to cultivate a strong online presence.</li>
+    <li>AT Digitals was enlisted to leverage their expertise in crafting an unparalleled user experience for the web application, ensuring seamless navigation and customer engagement.</li>
+    <li>AlterKnit's transition from a longstanding offline establishment to a digital platform marks a significant milestone in its evolution. </li>
+    <li>We take great pride in facilitating this transformation, ushering a century-old traditional company into the digital era.</li>
+    </ul>`,
   },
 
   // 3
@@ -99,8 +131,16 @@ const projectData = [
     location: "San fransico,US",
     Technology: "Shopify Plus",
     subImage1: "https://atdigitals.com/wp-content/uploads/2024/07/PD5.png",
-    context: "",
-    design: "",
+    context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >AlterKnit New York stands as a premier online destination offering a wide array of services, including sweater repairs, invisible mending, French reweaving, knit alterations, suit reparation, shoe and bag repair, knit restyling, and beyond.</li>
+                <li>Operating within both the B2C and B2B spheres, our platform caters to discerning customers seeking bespoke tailoring solutions.</li>
+                <li>AlterKnit aspired to pioneer the next frontier in traditional tailoring by launching an innovative E-commerce application</li>
+                <li>For their distinctive services and offerings, including their groundbreaking re-knitting technique—harvesting yarn from existing garments.</li></ul>`,
+    design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >With the ambitious goal of expanding their services nationwide, Miriam Mades, the founder of AlterKnit New York LLC, envisions reaching every city across the United States</li>
+                <li>In alignment with AlterKnit's philosophy of prioritizing organic growth over paid advertising, the team sought to cultivate a strong online presence.</li>
+                <li>AT Digitals was enlisted to leverage their expertise in crafting an unparalleled user experience for the web application, ensuring seamless navigation and customer engagement.</li>
+                <li>AlterKnit's transition from a longstanding offline establishment to a digital platform marks a significant milestone in its evolution. </li>
+                <li>We take great pride in facilitating this transformation, ushering a century-old traditional company into the digital era.</li>
+                </ul>`,
   },
 ];
 
@@ -431,27 +471,8 @@ const ProjectDetailPage = () => {
               fontFamily={"'Codec pro', sans-serif"}
               fontSize={"16px"}
               color={"black"}
-            >
-              In 2018, Nicole reached craftberry to rebuild and redesign her
-              Shopify store. <br />
-            </Typography>
-
-            <Typography
-              fontFamily={"'Codec pro', sans-serif"}
-              fontSize={"16px"}
-              color={"black"}
-            >
-              In 2024, the Nicole Rose brand gained popularity and had a
-              significant amount of loyal customers. <br />
-            </Typography>
-            <Typography
-              fontFamily={"'Codec pro', sans-serif"}
-              fontSize={"16px"}
-              color={"black"}
-            >
-              Still, the design was outdated and the store needed refreshments
-              for easier management and conversion rate optimization.
-            </Typography>
+              dangerouslySetInnerHTML={{ __html: project["context"] }}
+            />
           </Box>
         </Box>
       </Box>
@@ -490,50 +511,12 @@ const ProjectDetailPage = () => {
               fontSize={"16px"}
               color={"black"}
             >
-              To create a store that matched Nicole Rose’s commitment to quality
-              gemstones, we started with rebranding.
-            </Typography>
-
-            <Typography
-              fontFamily={"'Codec pro', sans-serif"}
-              fontSize={"16px"}
-              color={"black"}
-            >
-              Our partners CreativeCorner developed a sophisticated, soft-toned
-              brand book, which served as our guide throughout the design
-              process.
-            </Typography>
-            <Typography
-              fontFamily={"'Codec pro', sans-serif"}
-              fontSize={"16px"}
-              color={"black"}
-            >
-              We set out to create a data-driven design and implement tailored
-              strategies best suited to Nicole Rose’s audience.
-            </Typography>
-            <Typography
-              fontFamily={"'Codec pro', sans-serif"}
-              fontSize={"16px"}
-              color={"black"}
-            >
-              To achieve this, we leveraged GA4 and Mouseflow and conducted
-              thorough research.
-            </Typography>
-
-            <Typography
-              fontFamily={"'Codec pro', sans-serif"}
-              fontSize={"16px"}
-              color={"black"}
-            >
-              Based on the data, we identified conversion blockers and applied
-              proven CRO strategies.
-            </Typography>
-            <Typography
-              fontFamily={"'Codec pro', sans-serif"}
-              fontSize={"16px"}
-              color={"black"}
-            >
-              The result: an elegant, feminine, and vibrant Shopify store.
+              <Typography
+                fontFamily={"'Codec pro', sans-serif"}
+                fontSize={"16px"}
+                color={"black"}
+                dangerouslySetInnerHTML={{ __html: project["design"] }}
+              />
             </Typography>
           </Box>
         </Box>
