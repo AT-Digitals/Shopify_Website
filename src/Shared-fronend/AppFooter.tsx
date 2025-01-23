@@ -6,13 +6,13 @@ import {
   useMediaQuery,
 } from "@mui/material";
 
-import styled from "@emotion/styled";
+import AppContainer from "./AppContainer";
+import Colors from "./Colors";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
 import routes from "../routes/routes";
-import AppContainer from "./AppContainer";
-import Colors from "./Colors";
+import styled from "@emotion/styled";
 
 interface FooterProps {
   activeTab: string;
@@ -342,7 +342,15 @@ export default function AppFooter({
                 </StyleLink>
               </li>
             </ul>
-            <Box display={"flex"} flexDirection={"column"}>
+            <Box
+              width={{
+                xs: "100% !important",
+                sm: "100% !important ",
+                md: "auto !important",
+              }}
+              display={"flex"}
+              flexDirection={"column"}
+            >
               <Typography
                 fontFamily={"'Codec pro', sans-serif"}
                 mb={2}
