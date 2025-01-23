@@ -3,6 +3,18 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import alter1 from "../../assets/PD2.png";
+import alter2 from "../../assets/PD4.png";
+import alter3 from "../../assets/PD5.png";
+import gunner1 from "../../assets/GunnerPDVIEW-1536x997.png";
+import gunner2 from "../../assets/GunnerPD1.png";
+import gunner3 from "../../assets/GunnerPD2.png";
+import gunner4 from "../../assets/GunnerPD3.png";
+import pink1 from "../../assets/PMDPD1.png";
+import pmd1 from "../../assets/PMD_BANNER-1-1536x292.png";
+import pmd2 from "../../assets/PinkPD1 (1).png";
+import pmd3 from "../../assets/PinkPD2.png";
+import pmd4 from "../../assets/PinkPD4.png";
 
 export default function MasonryImageList() {
   return (
@@ -45,23 +57,23 @@ export default function MasonryImageList() {
 
 const itemData = [
   {
-    img: "https://cdn.prod.website-files.com/6033a387edbf91dc8a542135/62d749256bb311283bed562d_607d8f9932261b46db184cdc_Frame%20181(1).webp",
-    title: "Bed",
+    img: pmd1,
+    title: "pmd",
   },
   {
-    img: "https://shopidevs.com/wp-content/uploads/2022/05/opi-beauty-stores.jpg",
-    title: "Books",
+    img: gunner1,
+    title: "gunner1",
   },
   {
-    img: "https://www.fatbit.com/fab/wp-content/uploads/2017/08/Perfect-Solution-for-Online-Grocery-Store.png",
+    img: alter1,
     title: "Sink",
   },
   {
-    img: "https://cosmoprofnorthamerica.com/wp-content/uploads/Single-Dose-Beauty.jpg",
+    img: pmd2,
     title: "Beauty",
   },
   {
-    img: "https://essential-addons.com/wp-content/uploads/2021/05/Banner-2.jpg",
+    img: gunner2,
     title: "Blinds",
   },
   {
@@ -69,7 +81,7 @@ const itemData = [
     title: "Chairs",
   },
   {
-    img: "https://agentestudio.com/uploads/ckeditor/pictures/1807/atterley.jpg",
+    img: "https://cdn.shopify.com/s/files/1/1789/7273/files/shopify-shop-her-one.png?v=1723556161",
     title: "Clothing",
   },
   {
@@ -77,17 +89,17 @@ const itemData = [
     title: "coffee",
   },
   {
-    img: "https://a.storyblok.com/f/156985/1292x641/fa8fc8eb0e/haus-shopify-store-example.webp/m/",
+    img: gunner3,
     title: "Coffee",
   },
   //   2
 
   {
-    img: "https://genovawebart.com/hubfs/img/webp/blog-article-best-shopify-clothing-stores-modcloth-online-clothing-store-on-shopify-homepage-and-navigation-menu-screenshot.webp",
+    img: pink1,
     title: "Coffee",
   },
   {
-    img: "https://www.optimonk.com/wp-content/uploads/mott-and-bow.png",
+    img: alter3,
     title: "Coffee",
   },
   {
@@ -95,7 +107,7 @@ const itemData = [
     title: "Coffee",
   },
   {
-    img: " https://a.storyblok.com/f/156985/1284x651/4c4618307e/bombas-shopify-store-example.png/m/",
+    img: pmd4,
     title: "Coffee",
   },
   //   {
@@ -105,12 +117,12 @@ const itemData = [
   //   3
 
   {
-    img: "https://cdn.shopify.com/s/files/1/0070/7032/files/shopify-store-kulala.png?v=1694802725",
+    img: gunner4,
     title: "Coffee",
   },
 
   {
-    img: "  https://www.digitalsilk.com/wp-content/uploads/2024/09/DryRobe.jpg",
+    img: alter2,
     title: "Coffee",
   },
   {
@@ -118,7 +130,7 @@ const itemData = [
     title: "Coffee",
   },
   {
-    img: "  https://cdn.shopify.com/s/files/1/0070/7032/files/shopify-store-blkbold.png?v=1694804551",
+    img: pmd3,
     title: "Coffee",
   },
 ];
