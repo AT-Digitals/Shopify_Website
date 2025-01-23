@@ -28,16 +28,19 @@ const projectData = [
     siteLink: "https://pmdbeauty.com",
     location: "San fransico,US",
     Technology: "Shopify Plus",
-    subImage1: "https://atdigitals.com/wp-content/uploads/2024/07/PD1.png",
-    context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >AlterKnit New York stands as a premier online destination offering a wide array of services, including sweater repairs, invisible mending, French reweaving, knit alterations, suit reparation, shoe and bag repair, knit restyling, and beyond.</li>
-                <li>Operating within both the B2C and B2B spheres, our platform caters to discerning customers seeking bespoke tailoring solutions.</li>
-                <li>AlterKnit aspired to pioneer the next frontier in traditional tailoring by launching an innovative E-commerce application</li>
-                <li>For their distinctive services and offerings, including their groundbreaking re-knitting technique—harvesting yarn from existing garments.</li></ul>`,
-    design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >With the ambitious goal of expanding their services nationwide, Miriam Mades, the founder of AlterKnit New York LLC, envisions reaching every city across the United States</li>
-                <li>In alignment with AlterKnit's philosophy of prioritizing organic growth over paid advertising, the team sought to cultivate a strong online presence.</li>
-                <li>AT Digitals was enlisted to leverage their expertise in crafting an unparalleled user experience for the web application, ensuring seamless navigation and customer engagement.</li>
-                <li>AlterKnit's transition from a longstanding offline establishment to a digital platform marks a significant milestone in its evolution. </li>
-                <li>We take great pride in facilitating this transformation, ushering a century-old traditional company into the digital era.</li>
+    subImage1: "https://atdigitals.com/wp-content/uploads/2024/07/PinkPD1.png",
+    context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;">
+    PMD Beauty sought a robust e-commerce solution to cater to their international customer base. They desired a platform that offered:
+    <li>1. Scalability: A future-proof solution to accommodate growth.</li>
+                <li>2. Regionalization: Ability to support multiple regions with localized experiences.</li>
+                <li>3. Flexibility: A headless architecture for independent front-end development.</li>
+                <li>4. Streamlined Operations: Integration with existing back-end systems for efficient order fulfillment.</li></ul>`,
+    design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;">
+    PMD Beauty's new headless e-commerce store boasts:
+    <li>1. Enhanced Scalability: The platform can handle growing traffic and future product expansions.</li>
+                <li>2. Regionalized Reach: PMD Beauty can cater to diverse audiences with localized experiences.</li>
+                <li>3. Flexible Development: The headless architecture empowers independent front-end innovation.</li>
+                <li>4. Streamlined Operations: Efficient order management through seamless integration with back-end systems.</li>
                 </ul>`,
   },
   {
@@ -52,16 +55,13 @@ const projectData = [
     siteLink: "https://www.Avon.com",
     location: "San fransico,US",
     Technology: "Shopify Plus",
-    subImage1: "https://atdigitals.com/wp-content/uploads/2024/07/PD4.png",
+    subImage1: "https://atdigitals.com/wp-content/uploads/2024/07/PMDPD1.png",
     context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >AlterKnit New York stands as a premier online destination offering a wide array of services, including sweater repairs, invisible mending, French reweaving, knit alterations, suit reparation, shoe and bag repair, knit restyling, and beyond.</li>
-                <li>Operating within both the B2C and B2B spheres, our platform caters to discerning customers seeking bespoke tailoring solutions.</li>
-                <li>AlterKnit aspired to pioneer the next frontier in traditional tailoring by launching an innovative E-commerce application</li>
-                <li>For their distinctive services and offerings, including their groundbreaking re-knitting technique—harvesting yarn from existing garments.</li></ul>`,
+                <li>1. Website Revamp: Refresh the website design to align with Pinkanee's brand identity and create a visually appealing and intuitive user experience.</li>
+                <li>2. Mobile Responsiveness: Ensure the website is fully responsive across all devices to cater to the growing mobile audience.</li>
+                <li>3. Sustainability Focus: Highlight Pinkanee's commitment to sustainability throughout the website to resonate with environmentally conscious consumers.</li></ul>`,
     design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >With the ambitious goal of expanding their services nationwide, Miriam Mades, the founder of AlterKnit New York LLC, envisions reaching every city across the United States</li>
-                <li>In alignment with AlterKnit's philosophy of prioritizing organic growth over paid advertising, the team sought to cultivate a strong online presence.</li>
-                <li>AT Digitals was enlisted to leverage their expertise in crafting an unparalleled user experience for the web application, ensuring seamless navigation and customer engagement.</li>
-                <li>AlterKnit's transition from a longstanding offline establishment to a digital platform marks a significant milestone in its evolution. </li>
-                <li>We take great pride in facilitating this transformation, ushering a century-old traditional company into the digital era.</li>
+               Pinkanee's new website serves as a testament to AT Digitals' expertise in crafting user-centric and impactful e-commerce solutions. The website empowers Pinkanee to connect with a wider audience and revolutionize the period care experience for women seeking organic, comfortable, and sustainable solutions.
                 </ul>`,
   },
   // 2
@@ -78,16 +78,15 @@ const projectData = [
     siteLink: "https://www.Avon.com",
     location: "San fransico,US",
     Technology: "Shopify Plus",
-    subImage1: "https://atdigitals.com/wp-content/uploads/2024/07/PD2.png",
-    context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >AlterKnit New York stands as a premier online destination offering a wide array of services, including sweater repairs, invisible mending, French reweaving, knit alterations, suit reparation, shoe and bag repair, knit restyling, and beyond.</li>
-                <li>Operating within both the B2C and B2B spheres, our platform caters to discerning customers seeking bespoke tailoring solutions.</li>
-                <li>AlterKnit aspired to pioneer the next frontier in traditional tailoring by launching an innovative E-commerce application</li>
-                <li>For their distinctive services and offerings, including their groundbreaking re-knitting technique—harvesting yarn from existing garments.</li></ul>`,
-    design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >With the ambitious goal of expanding their services nationwide, Miriam Mades, the founder of AlterKnit New York LLC, envisions reaching every city across the United States</li>
-                <li>In alignment with AlterKnit's philosophy of prioritizing organic growth over paid advertising, the team sought to cultivate a strong online presence.</li>
-                <li>AT Digitals was enlisted to leverage their expertise in crafting an unparalleled user experience for the web application, ensuring seamless navigation and customer engagement.</li>
-                <li>AlterKnit's transition from a longstanding offline establishment to a digital platform marks a significant milestone in its evolution. </li>
-                <li>We take great pride in facilitating this transformation, ushering a century-old traditional company into the digital era.</li>
+    subImage1:
+      "https://atdigitals.com/wp-content/uploads/2024/07/GunnerPD1.png",
+    context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;">
+    With a focus on innovation and user engagement, GUNNAR partnered with our team to scale their e-commerce platform on WooCommerce. The goal was to provide unique features like Virtual Try-On. Ensure smooth platform functionality and address plugin-related issues. Provide ongoing support and maintenance for a consistently optimized online store.
+    </ul>`,
+    design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;">
+    The collaboration between GUNNAR Optiks® and our team resulted in the successful development of upgradable version of WooCommerce e-commerce platform, delivering tangible benefits and enhanced experiences for both GUNNAR and its customers.
+                <li>1. Elevated User Engagement: The Virtual Try-On feature has revolutionized the online shopping experience for GUNNAR's customers, allowing them to virtually try on eyewear before making a purchase.</li>
+                <li>2. Optimized Functionality: Through expert plugin management and ongoing maintenance, we have ensured a consistently smooth and secure platform.</li>
                 </ul>`,
   },
   // 2
@@ -103,16 +102,23 @@ const projectData = [
     siteLink: "https://www.Avon.com",
     location: "San fransico,US",
     Technology: "Shopify Plus",
-    subImage1: "https://atdigitals.com/wp-content/uploads/2024/07/PD3.png",
-    context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >AlterKnit New York stands as a premier online destination offering a wide array of services, including sweater repairs, invisible mending, French reweaving, knit alterations, suit reparation, shoe and bag repair, knit restyling, and beyond.</li>
-    <li>Operating within both the B2C and B2B spheres, our platform caters to discerning customers seeking bespoke tailoring solutions.</li>
-    <li>AlterKnit aspired to pioneer the next frontier in traditional tailoring by launching an innovative E-commerce application</li>
-    <li>For their distinctive services and offerings, including their groundbreaking re-knitting technique—harvesting yarn from existing garments.</li></ul>`,
-    design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >With the ambitious goal of expanding their services nationwide, Miriam Mades, the founder of AlterKnit New York LLC, envisions reaching every city across the United States</li>
-    <li>In alignment with AlterKnit's philosophy of prioritizing organic growth over paid advertising, the team sought to cultivate a strong online presence.</li>
-    <li>AT Digitals was enlisted to leverage their expertise in crafting an unparalleled user experience for the web application, ensuring seamless navigation and customer engagement.</li>
-    <li>AlterKnit's transition from a longstanding offline establishment to a digital platform marks a significant milestone in its evolution. </li>
-    <li>We take great pride in facilitating this transformation, ushering a century-old traditional company into the digital era.</li>
+    subImage1:
+      "https://imageio.forbes.com/specials-images/imageserve/632a293c35623bf21be7dacd/Assortment-of-indulgent-products/960x0.jpg?height=474&width=711&fit=bounds",
+    context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;">
+    Over 20 years ago, Indulgent Foods began its journey with the introduction of Stephen’s Gourmet Hot Cocoa in local grocery stores across Utah and Idaho. What started as a small-scale operation has now blossomed into one of North America's premier manufacturers and distributors of innovative and delicious food products.
+    Today, Indulgent Foods proudly offers over 30 exceptional products under four market-leading brands:
+    <li>1. Stephen’s Gourmet Hot Cocoa: Renowned for its rich and indulgent cocoa mixes.</li>
+    <li>2. Double Dips Dipping Sauces: Flavorful sauces perfect for any occasion.</li>
+    <li>3. Pacific Chai Lattes: A comforting selection of spiced chai beverages.</li>
+    <li>4. Straw Propeller Gourmet Oatmeal: Premium oatmeal blends crafted for on-the-go lifestyles.</li>
+    With distribution in all 50 states and Canada, Indulgent Foods continues to delight customers with its commitment to quality and innovation, making every bite and sip a memorable experience.
+    </ul>`,
+    design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;">
+    At Indulgent Foods, our design process is at the core of creating exceptional food products that delight our customers. Guided by innovation, quality, and customer satisfaction, our process involves the following key stages:
+    <li>1. Research & Ideation: Identifying trends, customer preferences, and market gaps. Collaborating with industry experts and food enthusiasts to generate innovative ideas.</li>
+    <li>2. Concept Development: Crafting unique product concepts that align with our brand values. Testing flavor profiles, ingredient combinations, and presentation ideas to ensure a standout experience.</li>
+    <li>3. Prototyping & Testing: Developing initial recipes and prototypes for taste tests. Conducting rigorous quality checks and collecting feedback from focus groups to refine products.</li>
+    <li>4. Design & Branding: Creating visually appealing packaging that resonates with our target audience. Ensuring compliance with food safety and labeling regulations while reflecting our commitment to sustainability.</li>
     </ul>`,
   },
 
