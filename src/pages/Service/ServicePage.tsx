@@ -479,8 +479,13 @@ export default function ServicePage() {
                     sx={{
                       background: "rgb(184, 0, 64)",
                       color: "white",
+                      width: "31px",
+                      height: "31px",
+                      transition: "width 0.3s ease",
                       ":hover": {
                         background: "rgb(184, 0, 64)",
+                        width: "51px",
+                        borderRadius: "30px",
                       },
                     }}
                   >

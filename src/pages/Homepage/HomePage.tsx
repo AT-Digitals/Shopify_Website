@@ -1,20 +1,20 @@
 import { Box, Button, Divider, IconButton, Typography } from "@mui/material";
-import { Link, useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-import AppContainer from "../../Shared-fronend/AppContainer";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import React from "react";
 import CountUp from "react-countup";
-import FaqAccordion from "../Faq/Faq";
+import routes from "../../routes/routes";
+import AppContainer from "../../Shared-fronend/AppContainer";
 import GetinTouch from "../../Shared-fronend/GetIntouch/GetInTouch";
 import MasonryImageList from "../CaseStudy/MasinoryImageList";
 import ProjectData from "../Data/ProjectData";
+import FaqAccordion from "../Faq/Faq";
 import ProjectsComponent from "./ProjectsComponent";
-import React from "react";
 import ReviewsSection from "./ReviewsSection";
 import ServiceSection from "./ServiceSection";
-import routes from "../../routes/routes";
 
 export default function Homepage() {
   const [backgroundPosition, setBackgroundPosition] = useState({
@@ -215,8 +215,13 @@ export default function Homepage() {
                     sx={{
                       background: "rgb(184, 0, 64)",
                       color: "white",
+                      width: "31px",
+                      height: "31px",
+                      transition: "width 0.3s ease",
                       ":hover": {
                         background: "rgb(184, 0, 64)",
+                        width: "51px",
+                        borderRadius: "30px",
                       },
                     }}
                   >
