@@ -17,7 +17,7 @@ export default function MasonryImageList() {
     >
       <ImageList
         variant="masonry"
-        cols={3}
+        // cols={3}
         gap={10}
         style={{
           marginTop: 0,

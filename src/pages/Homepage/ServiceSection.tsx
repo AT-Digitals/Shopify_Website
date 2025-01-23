@@ -12,7 +12,7 @@ const ServicesWeProviding = [
     serviceName: "Shopify Design + Build",
     Description:
       " We specialize in crafting world-class Shopify Plus and Shopify stores.Our approach combines psychology-based strategies, captivating aesthetics, and modern technology to boost customer experience and conversion.",
-    link: "/",
+    link: "https://www.shopify.com/blog/diy-ecommerce-store-design-as-a-beginner",
     iCon: (
       <BuildIcon
         style={{
@@ -26,7 +26,7 @@ const ServicesWeProviding = [
     serviceName: "Shopify Theme Customisation",
     Description:
       " We specialize in crafting world-class Shopify Plus and Shopify stores.Our approach combines psychology-based strategies, captivating aesthetics, and modern technology to boost customer experience and conversion.",
-    link: "/",
+    link: "https://help.shopify.com/en/manual/online-store/themes/customizing-themes",
     iCon: (
       <BrushIcon
         style={{
@@ -40,7 +40,7 @@ const ServicesWeProviding = [
     serviceName: "Shopify Custom theme",
     Description:
       " We specialize in crafting world-class Shopify Plus and Shopify stores.Our approach combines psychology-based strategies, captivating aesthetics, and modern technology to boost customer experience and conversion.",
-    link: "/",
+    link: "https://help.shopify.com/en/manual/online-store/themes/customizing-themes",
     iCon: (
       <DashboardCustomizeIcon
         style={{
@@ -54,7 +54,7 @@ const ServicesWeProviding = [
     serviceName: "Migrate to Shopify",
     Description:
       "Shopify is the world-leading e-Commerce platform for creating, managing, and growing your online store. Leverage craftberry’s expertise when migrating to Shopify for a seamless and reliable transition to more sales.",
-    link: "/",
+    link: "https://help.shopify.com/en/manual/migrating-to-shopify",
     iCon: (
       <InsightsIcon
         style={{
