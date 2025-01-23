@@ -593,150 +593,68 @@ const ProjectDetailPage = () => {
           </Box>
         </Box>
 
-        <Box
-          display={"flex"}
-          justifyContent={"space-between"}
-          // flexWrap={"wrap"}
-          gap={{ xs: 0, sm: 0, md: "2rem" }}
-          flexDirection={{ xs: "column", sm: "column", md: "row" }}
-        >
-          <Box sx={{ position: "relative", marginBottom: "-10px" }}>
-            <img
-              style={{
-                objectFit: "cover",
-                height: "auto", // Default to auto for responsiveness
-                maxHeight: 600,
-              }}
-              width="100%"
-              src={prevProject.image}
-              alt="projectbanner"
-            />
-            <Stack
-              direction="row"
-              spacing={1}
-              sx={{
-                position: "absolute",
-                bottom: "10%", // Adjust distance from the bottom
-                left: { xs: "20%", sm: "20%", md: "8%" }, // Adjust distance from the left
-              }}
-            >
-              <Button
-                sx={{
-                  borderRadius: "50px",
-                  textTransform: "capitalize",
-                  color: "white",
-                  border: "1px solid black",
-                  display: "flex",
-                  alignItems: "center",
-                  backgroundColor: "black",
-                  fontFamily: "'Codec pro', sans-serif",
-                  gap: "8px", // Space between icon and text
-                  minWidth: 250,
-                  width: "100%",
-                  padding: "10px",
-                  "&:hover": {
-                    backgroundColor: "black",
-                    color: "white",
-                    border: "1px solid black",
-                  },
-                  "&:hover .MuiSvgIcon-root": {
-                    transform: "scale(1.2) translateX(-20px)", // Move icon to the right and scale
-                    transition: "all 1s ease", // Smooth transition for the icon
-                  }, // Smooth transition for the icon
-                }}
-                variant="outlined"
-                onClick={handlePrev}
-              >
-                <ArrowBack /> {/* Left Arrow Icon */}
-                {prevProject.title}
-              </Button>
-            </Stack>
-          </Box>
-          <Box sx={{ position: "relative" }}>
-            <img
-              style={{
-                objectFit: "cover",
-                height: "auto", // Default to auto for responsiveness
-                maxHeight: 600,
-              }}
-              width="100%"
-              src={nextProject.image}
-              alt="projectbanner"
-            />
-            <Stack
-              direction="row"
-              spacing={1}
-              sx={{
-                position: "absolute",
-                bottom: "10%", // Adjust distance from the bottom
-                right: { xs: "20%", sm: "20%", md: "8%" }, // Adjust distance from the left
-              }}
-            >
-              <Button
-                sx={{
-                  borderRadius: "50px",
-                  textTransform: "capitalize",
-                  color: "white",
-                  padding: "10px",
-                  border: "1px solid black",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px", // Space between icon and text
-                  minWidth: 250,
-                  width: "100%",
-                  backgroundColor: "black",
-                  fontFamily: "'Codec pro', sans-serif",
-                  "&:hover": {
-                    backgroundColor: "black",
-                    color: "white",
-                    border: "1px solid black",
-                  },
-                  "&:hover .MuiSvgIcon-root": {
-                    transform: "scale(1.2) translateX(20px)", // Move icon to the right and scale
-                    transition: "all 1s ease", // Smooth transition for the icon
-                  },
-                }}
-                variant="outlined"
-                onClick={handleNext}
-              >
-                {nextProject.title}
-                <ArrowForward /> {/* Right Arrow Icon */}
-              </Button>
-            </Stack>
-          </Box>
-        </Box>
+        <Stack direction={"row"} justifyContent={"space-between"}>
+          <Button
+            sx={{
+              borderRadius: "50px",
+              textTransform: "capitalize",
+              color: "black",
+              padding: "10px",
+              border: "1px solid black",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px", // Space between icon and text
+              maxWidth: 220,
+              width: "100%",
+              "&:hover": {
+                backgroundColor: "black",
+                color: "white",
+                border: "1px solid black",
+              },
+              "&:hover .MuiSvgIcon-root": {
+                transform: "scale(1.2) translateX(20px)", // Move icon to the right and scale
+                transition: "all 1s ease", // Smooth transition for the icon
+              },
+            }}
+            variant="outlined"
+            onClick={handlePrev}
+          >
+            <ArrowBack /> {/* Left Arrow Icon */}
+            {prevProject.title}
+          </Button>
+
+          <Button
+            sx={{
+              borderRadius: "50px",
+              textTransform: "capitalize",
+              color: "black",
+              padding: "10px",
+              border: "1px solid black",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px", // Space between icon and text
+              maxWidth: 220,
+              width: "100%",
+              "&:hover": {
+                backgroundColor: "black",
+                color: "white",
+                border: "1px solid black",
+              },
+              "&:hover .MuiSvgIcon-root": {
+                transform: "scale(1.2) translateX(20px)", // Move icon to the right and scale
+                transition: "all 1s ease", // Smooth transition for the icon
+              },
+            }}
+            variant="outlined"
+            onClick={handleNext}
+          >
+            {nextProject.title}
+            <ArrowForward /> {/* Right Arrow Icon */}
+          </Button>
+        </Stack>
 
         {/* <img width={"50%"} src={prevProject.image} alt="" />
         <img width={"50%"} src={nextProject.image} alt="" /> */}
-
-        {/* <Button
-          sx={{
-            borderRadius: "50px",
-            textTransform: "capitalize",
-            color: "black",
-            padding: "10px",
-            border: "1px solid black",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px", // Space between icon and text
-            maxWidth: 220,
-            width: "100%",
-            "&:hover": {
-              backgroundColor: "black",
-              color: "white",
-              border: "1px solid black",
-            },
-            "&:hover .MuiSvgIcon-root": {
-              transform: "scale(1.2) translateX(20px)", // Move icon to the right and scale
-              transition: "all 1s ease", // Smooth transition for the icon
-            },
-          }}
-          variant="outlined"
-          onClick={handleNext}
-        >
-          {nextProject.title}
-          <ArrowForward /> {/* Right Arrow Icon */}
-        {/* </Button> */}
       </Box>
 
       <Box
