@@ -1,9 +1,9 @@
 import { Box, Button, Grow, Stack, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
-import { useNavigate } from "react-router-dom";
 import ProjectData from "../Data/ProjectData";
 import ProjectsComponent from "../Homepage/ProjectsComponent";
+import { useNavigate } from "react-router-dom";
 
 export default function WorkPage() {
   const [filter, setFilter] = useState<string | null>(null);
@@ -139,6 +139,32 @@ export default function WorkPage() {
               >
                 Beauty & Personal Care
               </Button>
+
+              <Button
+                sx={{
+                  border: "1px solid black",
+                  fontFamily: "'Codec pro', sans-serif",
+                  color: filter === "Style & Clothing" ? "white" : "black",
+                  backgroundColor:
+                    filter === "Style & Clothing"
+                      ? "rgb(184, 0, 64)"
+                      : "transparent",
+                  fontWeight: "700",
+                  fontSize: "16px",
+                  padding: { xs: "10px 20px", sm: "8px 16px" }, // Adjust padding for smaller screens
+                  "&:hover": {
+                    backgroundColor: "rgb(184, 0, 64)",
+                    color: "white",
+                  },
+                }}
+                variant={
+                  filter === "Style & Clothing" ? "contained" : "outlined"
+                }
+                onClick={() => handleFilter("Style & Clothing")}
+              >
+                Style & Clothing
+              </Button>
+
               <Button
                 sx={{
                   border: "1px solid black",

@@ -18,7 +18,7 @@ const projectData = [
   // 1
   {
     id: "1",
-    type: "big",
+    type: "small",
     title: "pmdbeauty",
     description:
       "Aware Nutrition offers personalized nutrition products crafted to meet individual dietary needs.",
@@ -29,9 +29,46 @@ const projectData = [
     location: "San fransico,US",
     Technology: "Shopify Plus",
     subImage1: "https://cssnectar.com/wp-content/uploads/2019/09/avone.jpg",
+    context: "",
+    design: "",
   },
   {
     id: "1",
+    type: "big",
+    title: "pinkanee",
+    description:
+      "Aware Nutrition offers personalized nutrition products crafted to meet individual dietary needs.",
+    image:
+      "https://www.pinkanee.com/cdn/shop/files/banner-02_7a823ae0-506e-4f2e-ab50-933e77d18228.jpg?v=1657186662&width=2000",
+    tags: ["Beauty & Personal Care"],
+    siteLink: "https://www.Avon.com",
+    location: "San fransico,US",
+    Technology: "Shopify Plus",
+    subImage1: "https://cssnectar.com/wp-content/uploads/2019/09/avone.jpg",
+    context: "",
+    design: "",
+  },
+  // 2
+
+  {
+    id: "3",
+    type: "big",
+    title: "Gunner",
+    description:
+      "Aware Nutrition offers personalized nutrition products crafted to meet individual dietary needs.",
+    image:
+      "https://gunnar.com/cdn/shop/files/DUME_Desktop_Banner_ENGLISH_1920x.jpg?v=1736318735",
+    tags: ["Health &Wellnes"],
+    siteLink: "https://www.Avon.com",
+    location: "San fransico,US",
+    Technology: "Shopify Plus",
+    subImage1: "https://cssnectar.com/wp-content/uploads/2019/09/avone.jpg",
+    context: "",
+    design: "",
+  },
+  // 2
+  {
+    id: "3",
     type: "small",
     title: "indulgentfoods",
     description:
@@ -43,6 +80,27 @@ const projectData = [
     location: "San fransico,US",
     Technology: "Shopify Plus",
     subImage1: "https://cssnectar.com/wp-content/uploads/2019/09/avone.jpg",
+    context: "",
+    design: "",
+  },
+
+  // 3
+
+  {
+    id: "2",
+    type: "big",
+    title: "AlterKnit",
+    description:
+      "Aware Nutrition offers personalized nutrition products crafted to meet individual dietary needs.",
+    image:
+      "https://alterknitnewyork.com/wp-content/uploads/2024/10/subwaygirl-darkened-1-min.jpg",
+    tags: ["Style & Clothing"],
+    siteLink: "https://www.Avon.com",
+    location: "San fransico,US",
+    Technology: "Shopify Plus",
+    subImage1: "https://atdigitals.com/wp-content/uploads/2024/07/PD5.png",
+    context: "",
+    design: "",
   },
 ];
 
