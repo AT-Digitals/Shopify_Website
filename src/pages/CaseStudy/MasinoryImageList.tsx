@@ -11,7 +11,6 @@ import gunner2 from "../../assets/GunnerPD1.png";
 import gunner3 from "../../assets/GunnerPD2.png";
 import gunner4 from "../../assets/GunnerPD3.png";
 import pink1 from "../../assets/PMDPD1.png";
-import pmd1 from "../../assets/PMD_BANNER-1-1536x292.png";
 import pmd2 from "../../assets/PinkPD1 (1).png";
 import pmd3 from "../../assets/PinkPD2.png";
 import pmd4 from "../../assets/PinkPD4.png";
