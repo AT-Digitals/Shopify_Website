@@ -60,7 +60,7 @@ const projectData = [
                 <li>1. Website Revamp: Refresh the website design to align with Pinkanee's brand identity and create a visually appealing and intuitive user experience.</li>
                 <li>2. Mobile Responsiveness: Ensure the website is fully responsive across all devices to cater to the growing mobile audience.</li>
                 <li>3. Sustainability Focus: Highlight Pinkanee's commitment to sustainability throughout the website to resonate with environmentally conscious consumers.</li></ul>`,
-    design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >With the ambitious goal of expanding their services nationwide, Miriam Mades, the founder of AlterKnit New York LLC, envisions reaching every city across the United States</li>
+    design: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;">
                Pinkanee's new website serves as a testament to AT Digitals' expertise in crafting user-centric and impactful e-commerce solutions. The website empowers Pinkanee to connect with a wider audience and revolutionize the period care experience for women seeking organic, comfortable, and sustainable solutions.
                 </ul>`,
   },
