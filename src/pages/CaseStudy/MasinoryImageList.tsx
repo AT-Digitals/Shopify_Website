@@ -37,7 +37,13 @@ export default function MasonryImageList() {
         }}
       >
         {itemData.map((item) => (
-          <ImageListItem key={item.img}>
+          <ImageListItem
+            style={{
+              overflow: "hidden", // Ensures the zoom effect doesn't overflow the container
+              borderRadius: "20px",
+            }}
+            key={item.img}
+          >
             <img
               srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -46,7 +52,9 @@ export default function MasonryImageList() {
               width={"100%"}
               style={{
                 borderRadius: "20px",
+                transition: "transform 0.3s ease, filter 0.3s ease",
               }}
+              className="hover-zoom-blur"
             />
           </ImageListItem>
         ))}

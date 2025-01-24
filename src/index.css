@@ -54,3 +54,13 @@ code {
   position: relative; /* Ensure text and other content sit above the overlay */
   z-index: 2;
 }
+
+.hover-zoom-blur {
+  transform: scale(1); /* Default scale */
+  filter: blur(0); /* Default blur */
+}
+
+.hover-zoom-blur:hover {
+  transform: scale(1.1); /* Zoom in on hover */
+  filter: blur(2px); /* Apply blur on hover */
+}
