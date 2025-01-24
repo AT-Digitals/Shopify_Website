@@ -29,7 +29,7 @@ export default function MasonryImageList() {
     >
       <ImageList
         variant="masonry"
-        // cols={3}
+        cols={3}
         gap={10}
         style={{
           marginTop: 0,
@@ -57,10 +57,6 @@ export default function MasonryImageList() {
 
 const itemData = [
   {
-    img: pmd1,
-    title: "pmd",
-  },
-  {
     img: gunner1,
     title: "gunner1",
   },
@@ -77,15 +73,15 @@ const itemData = [
     title: "Blinds",
   },
   {
-    img: "https://printify.com/wp-content/uploads/2023/10/Best-Shopify-Store-Examples-to-Learn-From.png",
-    title: "Chairs",
+    img: "https://indulgentfoods.com/cdn/shop/files/FrySauce_20-10-21_1.png?v=1729195913&width=600",
+    title: "food",
   },
   {
     img: "https://cdn.shopify.com/s/files/1/1789/7273/files/shopify-shop-her-one.png?v=1723556161",
     title: "Clothing",
   },
   {
-    img: "https://cdn.shopify.com/s/files/1/0070/7032/files/shopify-store-verve.png?v=1694804615",
+    img: "https://www.pinkanee.com/cdn/shop/files/section-07-new.jpg?v=1654779857&width=2000",
     title: "coffee",
   },
   {
@@ -110,11 +106,10 @@ const itemData = [
     img: pmd4,
     title: "Coffee",
   },
-  //   {
-  //     img: "https://cdn.shopify.com/s/files/1/1789/7273/files/shopify-shop-her-one.png?v=1723556161",
-  //     title: "Coffee",
-  //   },
-  //   3
+  {
+    img: "https://indulgentfoods.com/cdn/shop/files/Chkn.jpg?v=1629319454&width=900",
+    title: "Coffee",
+  },
 
   {
     img: gunner4,
@@ -126,7 +121,7 @@ const itemData = [
     title: "Coffee",
   },
   {
-    img: "  https://www.shipbob.com/wp-content/uploads/2019/01/Screen-Shot-2020-01-06-at-10.10.33-AM.png",
+    img: " https://indulgentfoods.com/cdn/shop/files/Fry_Sauce.jpg?v=1629239222&width=1000",
     title: "Coffee",
   },
   {
