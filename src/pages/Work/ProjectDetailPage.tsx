@@ -10,8 +10,8 @@ import {
 } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 
-import routes from "../../routes/routes";
 import { useEffect } from "react";
+import routes from "../../routes/routes";
 
 // Sample data for projects (you can replace this with an API call or context)
 const projectData = [
@@ -56,7 +56,7 @@ const projectData = [
     location: "San fransico,US",
     Technology: "Shopify Plus",
     subImage1: "https://atdigitals.com/wp-content/uploads/2024/07/PMDPD1.png",
-    context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;"><li  >AlterKnit New York stands as a premier online destination offering a wide array of services, including sweater repairs, invisible mending, French reweaving, knit alterations, suit reparation, shoe and bag repair, knit restyling, and beyond.</li>
+    context: `<ul style="list-style-type: none; display: flex; flex-direction: column; gap: 13px;">
                 <li>1. Website Revamp: Refresh the website design to align with Pinkanee's brand identity and create a visually appealing and intuitive user experience.</li>
                 <li>2. Mobile Responsiveness: Ensure the website is fully responsive across all devices to cater to the growing mobile audience.</li>
                 <li>3. Sustainability Focus: Highlight Pinkanee's commitment to sustainability throughout the website to resonate with environmentally conscious consumers.</li></ul>`,
