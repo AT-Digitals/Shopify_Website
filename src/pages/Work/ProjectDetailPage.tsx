@@ -554,7 +554,11 @@ const ProjectDetailPage = () => {
           flexDirection={{ xs: "column", sm: "column", md: "row" }}
         >
           <Box display={"flex"} flexDirection={"column"} gap="10px">
-            <Typography>Previous story</Typography>
+            <Typography
+              textAlign={{ xs: "center", sm: "center", md: "center" }}
+            >
+              Previous story
+            </Typography>
             <Button
               sx={{
                 borderRadius: "50px",
@@ -598,7 +602,11 @@ const ProjectDetailPage = () => {
             </IconButton>{" "}
           </Link>
           <Box display={"flex"} flexDirection={"column"} gap={"10px"}>
-            <Typography>Next story</Typography>
+            <Typography
+              textAlign={{ xs: "center", sm: "center", md: "center" }}
+            >
+              Next story
+            </Typography>
             <Button
               sx={{
                 borderRadius: "50px",
