@@ -551,13 +551,9 @@ const ProjectDetailPage = () => {
           direction={"row"}
           alignItems={"center"}
           justifyContent={"space-between"}
+          flexDirection={{ xs: "column", sm: "column", md: "row" }}
         >
-          <Box
-            display={"flex"}
-            flexDirection={"column"}
-            gap="10px"
-            textAlign={"end"}
-          >
+          <Box display={"flex"} flexDirection={"column"} gap="10px">
             <Typography>Previous story</Typography>
             <Button
               sx={{
