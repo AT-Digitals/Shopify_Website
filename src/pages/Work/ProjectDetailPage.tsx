@@ -10,8 +10,9 @@ import {
 } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 
-import { useEffect } from "react";
+import HomeIcon from "@mui/icons-material/Home";
 import routes from "../../routes/routes";
+import { useEffect } from "react";
 
 // Sample data for projects (you can replace this with an API call or context)
 const projectData = [
@@ -546,100 +547,91 @@ const ProjectDetailPage = () => {
         gap={"2rem"}
         p={"0 2rem"}
       >
-        <Box
-          display={"flex"}
-          flexWrap={"wrap"}
-          justifyContent={{
-            xs: "center",
-            sm: "space-between",
-            md: "space-between",
-          }}
+        <Stack
+          direction={"row"}
+          alignItems={"center"}
+          justifyContent={"space-between"}
         >
-          <Typography
-            fontSize={"30px"}
-            fontFamily={"'Codec pro', sans-serif"}
-            color={"black"}
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            gap="10px"
+            textAlign={"end"}
           >
-            Related case studies{" "}
-          </Typography>
-          <Box display={"flex"} alignItems={"center"} gap={"10px"}>
-            <Typography
-              fontSize={"22px"}
-              fontFamily={"'Codec pro', sans-serif"}
-              color={"black"}
+            <Typography>Previous story</Typography>
+            <Button
+              sx={{
+                borderRadius: "50px",
+                textTransform: "capitalize",
+                color: "black",
+                padding: "10px",
+                border: "1px solid black",
+                display: "flex",
+                alignItems: "center",
+                textAlign: "end",
+
+                gap: "8px", // Space between icon and text
+                minWidth: 220,
+                width: "100%",
+                "&:hover": {
+                  backgroundColor: "black",
+                  color: "white",
+                  border: "1px solid black",
+                },
+                "&:hover .MuiSvgIcon-root": {
+                  transform: "scale(1.2) translateX(-20px)", // Move icon to the right and scale
+                  transition: "all 1s ease", // Smooth transition for the icon
+                },
+              }}
+              variant="outlined"
+              onClick={handlePrev}
             >
-              View all case studies{" "}
-            </Typography>
-            <Link to={routes.WORK}>
-              <IconButton
-                style={{
-                  background: "lightgray",
-                }}
-              >
-                <ArrowForward />
-              </IconButton>
-            </Link>
+              <ArrowBack /> {/* Left Arrow Icon */}
+              {prevProject.title}
+            </Button>
           </Box>
-        </Box>
 
-        <Stack direction={"row"} justifyContent={"space-between"}>
-          <Button
-            sx={{
-              borderRadius: "50px",
-              textTransform: "capitalize",
-              color: "black",
-              padding: "10px",
-              border: "1px solid black",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px", // Space between icon and text
-              maxWidth: 220,
-              width: "100%",
-              "&:hover": {
-                backgroundColor: "black",
-                color: "white",
+          <Link to={routes.WORK}>
+            {" "}
+            <IconButton>
+              <HomeIcon
+                style={{
+                  color: "black",
+                }}
+              />
+            </IconButton>{" "}
+          </Link>
+          <Box display={"flex"} flexDirection={"column"} gap={"10px"}>
+            <Typography>Next story</Typography>
+            <Button
+              sx={{
+                borderRadius: "50px",
+                textTransform: "capitalize",
+                color: "black",
+                padding: "10px",
                 border: "1px solid black",
-              },
-              "&:hover .MuiSvgIcon-root": {
-                transform: "scale(1.2) translateX(-20px)", // Move icon to the right and scale
-                transition: "all 1s ease", // Smooth transition for the icon
-              },
-            }}
-            variant="outlined"
-            onClick={handlePrev}
-          >
-            <ArrowBack /> {/* Left Arrow Icon */}
-            {prevProject.title}
-          </Button>
-
-          <Button
-            sx={{
-              borderRadius: "50px",
-              textTransform: "capitalize",
-              color: "black",
-              padding: "10px",
-              border: "1px solid black",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px", // Space between icon and text
-              maxWidth: 220,
-              width: "100%",
-              "&:hover": {
-                backgroundColor: "black",
-                color: "white",
-                border: "1px solid black",
-              },
-              "&:hover .MuiSvgIcon-root": {
-                transform: "scale(1.2) translateX(20px)", // Move icon to the right and scale
-                transition: "all 1s ease", // Smooth transition for the icon
-              },
-            }}
-            variant="outlined"
-            onClick={handleNext}
-          >
-            {nextProject.title}
-            <ArrowForward /> {/* Right Arrow Icon */}
-          </Button>
+                display: "flex",
+                alignItems: "center",
+                gap: "8px", // Space between icon and text
+                minWidth: 220,
+                width: "100%",
+                "&:hover": {
+                  backgroundColor: "black",
+                  color: "white",
+                  border: "1px solid black",
+                },
+                "&:hover .MuiSvgIcon-root": {
+                  transform: "scale(1.2) translateX(20px)", // Move icon to the right and scale
+                  transition: "all 1s ease", // Smooth transition for the icon
+                },
+              }}
+              variant="outlined"
+              onClick={handleNext}
+            >
+              {nextProject.title}
+              <ArrowForward /> {/* Right Arrow Icon */}
+            </Button>
+          </Box>
         </Stack>
 
         {/* <img width={"50%"} src={prevProject.image} alt="" />
