@@ -10,8 +10,8 @@ import {
 } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 
-import { useEffect } from "react";
 import routes from "../../routes/routes";
+import { useEffect } from "react";
 
 // Sample data for projects (you can replace this with an API call or context)
 const projectData = [
@@ -601,7 +601,7 @@ const ProjectDetailPage = () => {
                 border: "1px solid black",
               },
               "&:hover .MuiSvgIcon-root": {
-                transform: "scale(1.2) translateX(20px)", // Move icon to the right and scale
+                transform: "scale(1.2) translateX(-20px)", // Move icon to the right and scale
                 transition: "all 1s ease", // Smooth transition for the icon
               },
             }}
